@@ -76,7 +76,3 @@ src/
 - **Reactividad Optimizada**: Uso de `useShallow` en selectores para evitar re-renderizados innecesarios y bucles infinitos en el mapa.
 
 ---
-
-## 📄 Licencia
-
-Este proyecto está bajo la licencia [insertar tipo de licencia]. Desarrollado para MPPC Venezuela.
