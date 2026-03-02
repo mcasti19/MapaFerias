@@ -1,0 +1,17 @@
+import { PageProps } from '@inertiajs/core';
+
+export interface User {
+    id: number;
+    name: string;
+    email: string;
+    email_verified_at?: string;
+}
+
+export type AppStackProps<T = Record<string, unknown>> = T & {
+    auth: {
+        user: User;
+    };
+    // Aquí puedes agregar más props globales como 'flash', 'errors', etc.
+};
+
+export type PageProps<T extends Record<string, unknown> = Record<string, unknown>> = AppStackProps<T>;
