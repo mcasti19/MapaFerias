@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('permision', function (Blueprint $table) {
-            $table->unsignedInteger('id_permision')->primary(); 
-            $table->integer('permision');
+            $table->unsignedInteger('id_permision')->autoIncrement() -> primary(); 
+            $table->string('permision');
         });
     }
 
