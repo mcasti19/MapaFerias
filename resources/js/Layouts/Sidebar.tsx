@@ -56,8 +56,8 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                     <Map className="w-4 h-4" />
                     Mapa de Ferias
                 </Link>
-                {/* <Link
-                    href={route('historico-ferias')}
+                <Link
+                    href={route('lista-ferias')}
                     className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${(route as any)().current('ferias')
                         ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
                         : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800/50'
@@ -65,7 +65,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                 >
                     <Map className="w-4 h-4" />
                     Historial de Ferias
-                </Link> */}
+                </Link>
             </nav>
 
             {/* Register button */}
