@@ -39,8 +39,8 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                 <Link
                     href={route('dashboard')}
                     className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${(route as any)().current('dashboard')
-                            ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800/50'
+                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800/50'
                         }`}
                 >
                     <LayoutDashboard className="w-4 h-4" />
@@ -49,13 +49,23 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                 <Link
                     href={route('ferias')}
                     className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${(route as any)().current('ferias')
-                            ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800/50'
+                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800/50'
                         }`}
                 >
                     <Map className="w-4 h-4" />
                     Mapa de Ferias
                 </Link>
+                {/* <Link
+                    href={route('historico-ferias')}
+                    className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${(route as any)().current('ferias')
+                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800/50'
+                        }`}
+                >
+                    <Map className="w-4 h-4" />
+                    Historial de Ferias
+                </Link> */}
             </nav>
 
             {/* Register button */}
