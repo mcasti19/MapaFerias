@@ -123,4 +123,3 @@ El proyecto estará disponible desde `http://localhost:8000`
 3.  **Persistencia Segura**: El ThemeStore y el FeriasStore guardan datos inofensivos de sesión visual en el `LocalStorage` del navegador sin riesgo cross-site.
 
 ***
-> **Mercal, C.A.** | Gobierno Bolivariano de Venezuela. Todos los Derechos Reservados © 2026.
