@@ -11,14 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rubros_entrega', function (Blueprint $table) {
-            //$table->unsignedInteger('id_users'); 
-           
+        Schema::create('items_marketeds', function (Blueprint $table) {
+            $table->id('id_items_marketeds');
             $table->string('item', 50);
             $table->string('tons', 50);
-            $table->timestamp('fecha_entrega')->useCurrent();
+            $table->date('date_attention');
+            $table->bigInteger('id_users')->unsigned();
+            $table->timestamps();
 
-            //$table->foreign('id_users')->references('id_users')->on('users')->onDelete('cascade');
+            $table->foreign('id_users')->references('id_users')->on('users')->onDelete('cascade');
+
         });
     }
 
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('item_table_');
+        Schema::dropIfExists('items_marketeds');
     }
 };
