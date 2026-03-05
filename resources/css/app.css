@@ -29,6 +29,29 @@
         scrollbar-width: none;
         /* Firefox */
     }
+
+    /* Modern subtle scrollbar */
+    .modern-scrollbar::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .modern-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .modern-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(148, 163, 184, 0.2);
+        border-radius: 10px;
+    }
+
+    .modern-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(148, 163, 184, 0.4);
+    }
+
+    .modern-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(148, 163, 184, 0.2) transparent;
+    }
 }
 
 /* Leaflet Popup Theme Overrides */

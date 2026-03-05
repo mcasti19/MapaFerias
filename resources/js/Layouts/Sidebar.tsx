@@ -164,14 +164,9 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                 )}
 
                 {/* Scrollable content (Filters only visible on Ferias map) */}
-                <div className={`flex-1 overflow-y-auto overflow-x-hidden ${isSidebarCollapsed ? 'hidden md:block' : ''}`}>
+                <div className={`flex-1 overflow-y-auto overflow-x-hidden modern-scrollbar ${isSidebarCollapsed ? 'hidden md:block' : ''}`}>
                     {isCurrent('ferias') && !isSidebarCollapsed ? (
                         <div className="animate-in fade-in duration-300">
-                            {/* Summary */}
-                            <div className="px-4 pt-4 pb-2">
-                                <SummaryPanel />
-                            </div>
-
                             {/* Divider */}
                             <div className="mx-4 border-t border-slate-200 dark:border-slate-800 my-2 transition-colors duration-300" />
 
