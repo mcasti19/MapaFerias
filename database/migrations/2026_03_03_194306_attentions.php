@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('circuit_communes', function (Blueprint $table) {
-            $table->id('id_circuit_communes');
-            $table->text('circuit');
+        Schema::create('attentions', function (Blueprint $table) {
+            $table->id("id_attentions");
+            $table->integer('clap');
+            $table->integer('family'); 
+            $table->integer('proteicos');
+            $table->bigInteger('id_feria')->unsigned();
+
+            $table->foreign('id_feria')->references('id_feria')->on('feria');
             $table->timestamps();
         });
     }
@@ -23,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('circuit_communes');
+        //
     }
 };

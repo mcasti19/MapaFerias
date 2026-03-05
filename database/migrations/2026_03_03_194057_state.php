@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('parishes_analitic', function (Blueprint $table) {
-            $table->id('id_parishes');
-            $table->text('parishes');
-            $table->bigInteger('id_municipalities')->unsigned();
+        Schema::create('state', function (Blueprint $table) {
+            $table->id("id_state");
+            $table->string('name_state');
             $table->timestamps();
-
-            $table->foreign('id_municipalities')->references('id_municipalities')->on('municipalities_analitic')->onDelete('cascade');
         });
     }
 
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('parishes');
+        //
     }
 };

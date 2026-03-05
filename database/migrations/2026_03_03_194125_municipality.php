@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-         Schema::create('attention', function (Blueprint $table) {
-            // Asegúrate de que sea unsignedInteger
-            $table->unsignedInteger('id_attention')->autoIncrement();
-            $table->string('clap', 50);
-            $table->string('family', 50);
-            $table->string('proteicos', 50);
+        Schema::create('municipalities', function (Blueprint $table) {
+            $table->id("id_municipality");
+            $table->string('municipality');
+            $table->bigInteger('id_state')->unsigned();
+            $table->foreign('id_state')->references('id_state')->on('state');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-       Schema::dropIfExists('attention');
+        //
     }
 };

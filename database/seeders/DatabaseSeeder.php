@@ -15,10 +15,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-       $this->call([
-            StatesSeeder::class,
-            MunicipalitySeeder::class,
-            ParishSeeder::class
+
+        $this->call([
+        StateSeeder::class,
+        
         ]);
+        
+        $this->call([
+        MunicipalitySeeder::class,
+        ]);
+
+        $this->call([
+            ItemsSeeder::class,
+        ]);
+        
+        $this->call([
+            ParishSeeder::class,
+        ]);
+    
+        $this->call([
+           UsersSeeder::class,
+        ]);
+    
     }
 }

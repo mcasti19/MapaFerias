@@ -2,30 +2,29 @@
 
 namespace Database\Seeders;
 
-use App\Models\Municipality;
-use App\Models\States;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\File;
+use App\Models\Municipalities; // Asegúrate de que el import sea correcto
 
 class MunicipalitySeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        //
-        $json = File::get('database/data/DataMunicipality.json');
-        $data = json_decode($json, true);
-        foreach ($data as $obj) {
-            Municipality::create([
-                'id_municipalities' => $obj['id_municipalities'],
-                'municipalities' => $obj['municipalities'],
-                'id_states' => $obj['id_states']
-            ]);
+        $json = file_get_contents(database_path('seeders/json/DataMunicipio.json'));
+        $municipalities = json_decode($json, true);
+
+
+        foreach ($municipalities as $municipalityData) {
+            Municipalities::updateOrCreate(
+                [
+                    
+                    'id_municipality' => $municipalityData['id_municipality'], 
+                ],
+                [
+                    'municipality' => $municipalityData['municipality'],
+                    
+                    'id_state'          => $municipalityData['id_states'], 
+                ]
+            );
         }
     }
 }
-
-

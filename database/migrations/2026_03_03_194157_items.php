@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('states', function (Blueprint $table) {
-            // Usar unsignedInteger asegura compatibilidad con int(11) de MariaDB
-            $table->unsignedInteger('id_states')->autoIncrement(); 
-            $table->string('states', 100);
-     });
-
+        Schema::create('items', function (Blueprint $table) {
+            $table->id("id_item");
+            $table->string('item');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -24,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-       Schema::dropIfExists('states');
+        //
     }
 };

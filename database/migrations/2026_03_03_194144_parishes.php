@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('circuit_or_communes', function (Blueprint $table) {
-    
-            $table->unsignedInteger('id_circuit')->autoIncrement(); 
-            $table->string('circuit', 200);
+        Schema::create('parishes', function (Blueprint $table) {
+            $table->id("id_parish");
+            $table->string('parish');
+            $table->bigInteger('id_municipality')->unsigned();
+            $table->foreign('id_municipality')->references('id_municipality')->on('municipalities');
+            $table->timestamps();
         });
     }
 
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('circuit_or_communes');
+        //
     }
 };
