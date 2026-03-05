@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('attentions', function (Blueprint $table) {
+            $table->id("id_attentions");
+            $table->integer('clap');
+            $table->integer('family'); 
+            $table->integer('proteicos');
+            $table->bigInteger('id_feria')->unsigned();
+
+            $table->foreign('id_feria')->references('id_feria')->on('feria');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        //
+    }
+};

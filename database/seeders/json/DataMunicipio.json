@@ -1,0 +1,1667 @@
+[
+  {
+    "id_municipality": "101",
+    "municipality": "LIBERTADOR",
+    "id_states": "1"
+  },
+  {
+    "id_municipality": "201",
+    "municipality": "ALTO ORINOCO",
+    "id_states": "2"
+  },
+  {
+    "id_municipality": "202",
+    "municipality": "ATABAPO",
+    "id_states": "2"
+  },
+  {
+    "id_municipality": "203",
+    "municipality": "ATURES",
+    "id_states": "2"
+  },
+  {
+    "id_municipality": "204",
+    "municipality": "AUTANA",
+    "id_states": "2"
+  },
+  {
+    "id_municipality": "205",
+    "municipality": "MAROA",
+    "id_states": "2"
+  },
+  {
+    "id_municipality": "206",
+    "municipality": "MANAPIARE",
+    "id_states": "2"
+  },
+  {
+    "id_municipality": "207",
+    "municipality": "RIO NEGRO",
+    "id_states": "2"
+  },
+  {
+    "id_municipality": "301",
+    "municipality": "ANACO",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "302",
+    "municipality": "ARAGUA",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "303",
+    "municipality": "FERNANDO DE PEÑALVER",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "304",
+    "municipality": "FRANCISCO DE CARMEN CARVAJAL",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "305",
+    "municipality": "FRANCISCO DE MIRANDA",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "306",
+    "municipality": "GUANTA",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "307",
+    "municipality": "INDEPENDENCIA",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "308",
+    "municipality": "JUAN ANTONIO SOTILLO",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "309",
+    "municipality": "SAN MANUEL CAJIGAL",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "310",
+    "municipality": "JOSE GREGORIO MONAGAS",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "311",
+    "municipality": "LIBERTAD",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "312",
+    "municipality": "MANUEL EZEQUIEL BRUZUAL",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "313",
+    "municipality": "PEDRO MARIA FREITES",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "314",
+    "municipality": "PIRITU",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "315",
+    "municipality": "SAN JOSE DE GUANIPA",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "316",
+    "municipality": "SAN JUAN DE CAPISTRANO",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "317",
+    "municipality": "SANTA ANA",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "318",
+    "municipality": "SIMON BOLIVAR",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "319",
+    "municipality": "SIMON RODRIGUEZ",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "320",
+    "municipality": "SIR ARTUR MC GREGOR",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "321",
+    "municipality": "TURISTICO DIEGO BAUTISTA URBAN",
+    "id_states": "3"
+  },
+  {
+    "id_municipality": "401",
+    "municipality": "ACHAGUAS",
+    "id_states": "4"
+  },
+  {
+    "id_municipality": "402",
+    "municipality": "BIRUACA",
+    "id_states": "4"
+  },
+  {
+    "id_municipality": "403",
+    "municipality": "MUÑOZ",
+    "id_states": "4"
+  },
+  {
+    "id_municipality": "404",
+    "municipality": "PAEZ",
+    "id_states": "4"
+  },
+  {
+    "id_municipality": "405",
+    "municipality": "PEDRO CAMEJO",
+    "id_states": "4"
+  },
+  {
+    "id_municipality": "406",
+    "municipality": "ROMULO GALLEGOS",
+    "id_states": "4"
+  },
+  {
+    "id_municipality": "407",
+    "municipality": "SAN FERNANDO",
+    "id_states": "4"
+  },
+  {
+    "id_municipality": "501",
+    "municipality": "BOLIVAR",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "502",
+    "municipality": "CAMATAGUA",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "503",
+    "municipality": "GIRARDOT",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "504",
+    "municipality": "JOSE ANGEL LAMAS",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "505",
+    "municipality": "JOSE FELIX RIVAS",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "506",
+    "municipality": "JOSE RAFAEL REVENGA",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "507",
+    "municipality": "LIBERTADOR",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "508",
+    "municipality": "MARIO BRICEÑO IRAGORRY",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "509",
+    "municipality": "SAN CASIMIRO",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "510",
+    "municipality": "SAN SEBASTIAN",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "511",
+    "municipality": "SANTIAGO MARIÑO",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "512",
+    "municipality": "SANTOS MICHELENA",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "513",
+    "municipality": "SUCRE",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "514",
+    "municipality": "TOVAR",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "515",
+    "municipality": "URDANETA",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "516",
+    "municipality": "ZAMORA",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "517",
+    "municipality": "FRANCISCO LINARES ALCANTARA",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "518",
+    "municipality": "OCUMARE DE LA COSTA DE ORO",
+    "id_states": "5"
+  },
+  {
+    "id_municipality": "601",
+    "municipality": "ALBERTO ARVELO TORREALBA",
+    "id_states": "6"
+  },
+  {
+    "id_municipality": "602",
+    "municipality": "ANTONIO JOSE DE SUCRE",
+    "id_states": "6"
+  },
+  {
+    "id_municipality": "603",
+    "municipality": "ARISMENDI",
+    "id_states": "6"
+  },
+  {
+    "id_municipality": "604",
+    "municipality": "BARINAS",
+    "id_states": "6"
+  },
+  {
+    "id_municipality": "605",
+    "municipality": "BOLIVAR",
+    "id_states": "6"
+  },
+  {
+    "id_municipality": "606",
+    "municipality": "CRUZ PAREDES",
+    "id_states": "6"
+  },
+  {
+    "id_municipality": "607",
+    "municipality": "ZAMORA",
+    "id_states": "6"
+  },
+  {
+    "id_municipality": "608",
+    "municipality": "PEDRAZA",
+    "id_states": "6"
+  },
+  {
+    "id_municipality": "609",
+    "municipality": "ROJAS",
+    "id_states": "6"
+  },
+  {
+    "id_municipality": "610",
+    "municipality": "SOSA",
+    "id_states": "6"
+  },
+  {
+    "id_municipality": "611",
+    "municipality": "ANDRES ELOY BLANCO",
+    "id_states": "6"
+  },
+  {
+    "id_municipality": "701",
+    "municipality": "CARONI",
+    "id_states": "7"
+  },
+  {
+    "id_municipality": "702",
+    "municipality": "CEDEÑO",
+    "id_states": "7"
+  },
+  {
+    "id_municipality": "703",
+    "municipality": "EL CALLAO",
+    "id_states": "7"
+  },
+  {
+    "id_municipality": "704",
+    "municipality": "GRAN SABANA",
+    "id_states": "7"
+  },
+  {
+    "id_municipality": "705",
+    "municipality": "HERES",
+    "id_states": "7"
+  },
+  {
+    "id_municipality": "706",
+    "municipality": "PIAR",
+    "id_states": "7"
+  },
+  {
+    "id_municipality": "707",
+    "municipality": "RAUL LEON",
+    "id_states": "7"
+  },
+  {
+    "id_municipality": "708",
+    "municipality": "ROSCIO",
+    "id_states": "7"
+  },
+  {
+    "id_municipality": "709",
+    "municipality": "SIFONTES",
+    "id_states": "7"
+  },
+  {
+    "id_municipality": "710",
+    "municipality": "SUCRE",
+    "id_states": "7"
+  },
+  {
+    "id_municipality": "711",
+    "municipality": "PADRE PEDRO CHIEN",
+    "id_states": "7"
+  },
+  {
+    "id_municipality": "801",
+    "municipality": "BEJUMA",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "802",
+    "municipality": "CARLOS ARVELO",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "803",
+    "municipality": "DIEGO IBARRA",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "804",
+    "municipality": "GUACARA",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "805",
+    "municipality": "JUAN JOSE MORA",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "806",
+    "municipality": "LIBERTADOR",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "807",
+    "municipality": "LOS GUAYOS",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "808",
+    "municipality": "MIRANDA",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "809",
+    "municipality": "MONTALBAN",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "810",
+    "municipality": "NAGUANAGUA",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "811",
+    "municipality": "PUERTO CABELLO",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "812",
+    "municipality": "SAN DIEGO",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "813",
+    "municipality": "SAN JOAQUIN",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "814",
+    "municipality": "VALENCIA",
+    "id_states": "8"
+  },
+  {
+    "id_municipality": "901",
+    "municipality": "ANZOATEGUI",
+    "id_states": "9"
+  },
+  {
+    "id_municipality": "902",
+    "municipality": "FALCON",
+    "id_states": "9"
+  },
+  {
+    "id_municipality": "903",
+    "municipality": "GIRARDOT",
+    "id_states": "9"
+  },
+  {
+    "id_municipality": "904",
+    "municipality": "LIMA BLANCO",
+    "id_states": "9"
+  },
+  {
+    "id_municipality": "905",
+    "municipality": "PAO DE SAN JUAN BAUTISTA",
+    "id_states": "9"
+  },
+  {
+    "id_municipality": "906",
+    "municipality": "RICAUTE",
+    "id_states": "9"
+  },
+  {
+    "id_municipality": "907",
+    "municipality": "ROMULO GALLEGOS",
+    "id_states": "9"
+  },
+  {
+    "id_municipality": "908",
+    "municipality": "SAN CARLOS",
+    "id_states": "9"
+  },
+  {
+    "id_municipality": "909",
+    "municipality": "TINACO",
+    "id_states": "9"
+  },
+  {
+    "id_municipality": "1001",
+    "municipality": "ANTONIO DIAZ",
+    "id_states": "10"
+  },
+  {
+    "id_municipality": "1002",
+    "municipality": "CASACOIMA",
+    "id_states": "10"
+  },
+  {
+    "id_municipality": "1003",
+    "municipality": "PEDERNALES",
+    "id_states": "10"
+  },
+  {
+    "id_municipality": "1004",
+    "municipality": "TUCUPITA",
+    "id_states": "10"
+  },
+  {
+    "id_municipality": "1101",
+    "municipality": "ACOSTA",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1102",
+    "municipality": "BOLIVAR",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1103",
+    "municipality": "BUCHIVACOA",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1104",
+    "municipality": "CACIQUE MANAURE",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1105",
+    "municipality": "CARIRUBANA",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1106",
+    "municipality": "COLINA",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1107",
+    "municipality": "DABAJURO",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1108",
+    "municipality": "DEMOCRACIA",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1109",
+    "municipality": "FALCON",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1110",
+    "municipality": "FEDERACION",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1111",
+    "municipality": "JACURA",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1112",
+    "municipality": "LOS TAQUES",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1113",
+    "municipality": "MAUROA",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1114",
+    "municipality": "MIRANDA",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1115",
+    "municipality": "MONSEÑOR ITURRIZA",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1116",
+    "municipality": "PALMASOLA",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1117",
+    "municipality": "PETIT",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1118",
+    "municipality": "PIRITU",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1119",
+    "municipality": "SAN FRANCISCO",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1120",
+    "municipality": "SILVA",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1121",
+    "municipality": "SUCRE",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1122",
+    "municipality": "TOCOPERO",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1123",
+    "municipality": "UNION",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1124",
+    "municipality": "URUMACO",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1125",
+    "municipality": "ZAMORA",
+    "id_states": "11"
+  },
+  {
+    "id_municipality": "1201",
+    "municipality": "CAMAGUAN",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1202",
+    "municipality": "CHAGUARAMAS",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1203",
+    "municipality": "EL SOCORRO",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1204",
+    "municipality": "SAN GERONIMO DE GUAYABAL",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1205",
+    "municipality": "LEONARDO INFANTE",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1206",
+    "municipality": "LAS MERCEDES",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1207",
+    "municipality": "JULIAN MELLADO",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1208",
+    "municipality": "FRANCISCO DE MIRANDA",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1209",
+    "municipality": "JOSE TADEO MONAGAS",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1210",
+    "municipality": "ORTIZ",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1211",
+    "municipality": "JOSE FELIX RIVAS",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1212",
+    "municipality": "SAN JOSE DE GUARIBE",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1213",
+    "municipality": "SANTA MARIA DE IPIRRE",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1214",
+    "municipality": "PEDRO ZARAZA",
+    "id_states": "12"
+  },
+  {
+    "id_municipality": "1301",
+    "municipality": "ANDRES ELOY BLANCO",
+    "id_states": "13"
+  },
+  {
+    "id_municipality": "1302",
+    "municipality": "CRESPO",
+    "id_states": "13"
+  },
+  {
+    "id_municipality": "1303",
+    "municipality": "IRIBARREN",
+    "id_states": "13"
+  },
+  {
+    "id_municipality": "1304",
+    "municipality": "JIMENEZ",
+    "id_states": "13"
+  },
+  {
+    "id_municipality": "1305",
+    "municipality": "MORAN",
+    "id_states": "13"
+  },
+  {
+    "id_municipality": "1306",
+    "municipality": "PALAVECINO",
+    "id_states": "13"
+  },
+  {
+    "id_municipality": "1307",
+    "municipality": "SIMON PALMAS",
+    "id_states": "13"
+  },
+  {
+    "id_municipality": "1308",
+    "municipality": "TORRES",
+    "id_states": "13"
+  },
+  {
+    "id_municipality": "1309",
+    "municipality": "URDANETA",
+    "id_states": "13"
+  },
+  {
+    "id_municipality": "1401",
+    "municipality": "ALBERTO ADRIANI",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1402",
+    "municipality": "ANDRES BELLO",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1403",
+    "municipality": "ANTONIO PINTO SALINAS",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1404",
+    "municipality": "ARICAGUA",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1405",
+    "municipality": "ARZOBISPO CHACON",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1406",
+    "municipality": "CAMPO ELIAS",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1407",
+    "municipality": "CARACIOLO PARRA OLMEDO",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1408",
+    "municipality": "CARDENAL QUINTERO",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1409",
+    "municipality": "GUARAQUE",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1410",
+    "municipality": "JULIO CESAR SALAS",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1411",
+    "municipality": "JUSTO BRICEÑO",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1412",
+    "municipality": "LIBERTADOR",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1413",
+    "municipality": "MIRANDA",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1414",
+    "municipality": "OBISPO RAMOS DE LORA",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1415",
+    "municipality": "PADRE NOGUERA",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1416",
+    "municipality": "PUEBLO LLANO",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1417",
+    "municipality": "RANGEL",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1418",
+    "municipality": "RIVAS DAVILA",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1419",
+    "municipality": "SANTOS MARQUINA",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1420",
+    "municipality": "SUCRE",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1421",
+    "municipality": "TOVAR",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1422",
+    "municipality": "TULIO FEBRES CORDERO",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1423",
+    "municipality": "ZEA",
+    "id_states": "14"
+  },
+  {
+    "id_municipality": "1501",
+    "municipality": "ACEVEDO",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1502",
+    "municipality": "ANDRES BELLO",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1503",
+    "municipality": "BARUTA",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1504",
+    "municipality": "BRION",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1505",
+    "municipality": "BUROZ",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1506",
+    "municipality": "CHACAO",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1507",
+    "municipality": "CRISTOBAL ROJAS",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1508",
+    "municipality": "EL HATILLO",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1509",
+    "municipality": "GUAICAIPURO",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1510",
+    "municipality": "INDEPENDENCIA",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1511",
+    "municipality": "LANDER",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1512",
+    "municipality": "LOS SALIAS",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1513",
+    "municipality": "PAEZ",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1514",
+    "municipality": "PAZ CASTILLO",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1515",
+    "municipality": "PEDRO GUAL",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1516",
+    "municipality": "PLAZA",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1517",
+    "municipality": "SIMON BOLIVAR",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1518",
+    "municipality": "SUCRE",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1519",
+    "municipality": "URDANETA",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1520",
+    "municipality": "ZAMORA",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1521",
+    "municipality": "CARRIZAL",
+    "id_states": "15"
+  },
+  {
+    "id_municipality": "1601",
+    "municipality": "ACOSTA",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1602",
+    "municipality": "AGUASAY",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1603",
+    "municipality": "BOLIVAR",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1604",
+    "municipality": "CARIPE",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1605",
+    "municipality": "CEDEÑO",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1606",
+    "municipality": "EZEQUIEL ZAMORA",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1607",
+    "municipality": "LIBERTADOR",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1608",
+    "municipality": "MATURIN",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1609",
+    "municipality": "PIAR",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1610",
+    "municipality": "PUNCERES",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1611",
+    "municipality": "SANTA BARBARA",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1612",
+    "municipality": "SOTILLO",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1613",
+    "municipality": "URACOA",
+    "id_states": "16"
+  },
+  {
+    "id_municipality": "1701",
+    "municipality": "ANTOLIN DE CAMPO",
+    "id_states": "17"
+  },
+  {
+    "id_municipality": "1702",
+    "municipality": "ARISMENDI",
+    "id_states": "17"
+  },
+  {
+    "id_municipality": "1703",
+    "municipality": "DIAZ",
+    "id_states": "17"
+  },
+  {
+    "id_municipality": "1704",
+    "municipality": "GARCIA",
+    "id_states": "17"
+  },
+  {
+    "id_municipality": "1705",
+    "municipality": "GOMEZ",
+    "id_states": "17"
+  },
+  {
+    "id_municipality": "1706",
+    "municipality": "MANEIRO",
+    "id_states": "17"
+  },
+  {
+    "id_municipality": "1707",
+    "municipality": "MARCANO",
+    "id_states": "17"
+  },
+  {
+    "id_municipality": "1708",
+    "municipality": "MARIÑO",
+    "id_states": "17"
+  },
+  {
+    "id_municipality": "1709",
+    "municipality": "PENINSULA DE MACANAO",
+    "id_states": "17"
+  },
+  {
+    "id_municipality": "1710",
+    "municipality": "TUBORES",
+    "id_states": "17"
+  },
+  {
+    "id_municipality": "1711",
+    "municipality": "VILLALBA",
+    "id_states": "17"
+  },
+  {
+    "id_municipality": "1801",
+    "municipality": "AGUA BLANCA",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1802",
+    "municipality": "ARAURE",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1803",
+    "municipality": "ESTELLER",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1804",
+    "municipality": "GUANARE",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1805",
+    "municipality": "GUANARITO",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1806",
+    "municipality": "MONSEÑOR JOSE DE VICENTE",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1807",
+    "municipality": "OSPINO",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1808",
+    "municipality": "PAEZ",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1809",
+    "municipality": "PAPELON",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1810",
+    "municipality": "SAN GENARO DE BOCONOITO",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1811",
+    "municipality": "SAN RAFAEL DE ONOTO",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1812",
+    "municipality": "SANTA ROSALIA",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1813",
+    "municipality": "SUCRE",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1814",
+    "municipality": "TUREN",
+    "id_states": "18"
+  },
+  {
+    "id_municipality": "1901",
+    "municipality": "ANDRES ELOY BLANCO",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1902",
+    "municipality": "ANDRES MATA",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1903",
+    "municipality": "ARISMENDI",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1904",
+    "municipality": "BENITEZ",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1905",
+    "municipality": "BERMUDEZ",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1906",
+    "municipality": "BOLIVAR",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1907",
+    "municipality": "CAJIBAL",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1908",
+    "municipality": "CRUZ SALMERON ACOSTA",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1909",
+    "municipality": "LIBERTADOR",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1910",
+    "municipality": "MARIÑO",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1911",
+    "municipality": "MEJIA",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1912",
+    "municipality": "MONTES",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1913",
+    "municipality": "RIBERO",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1914",
+    "municipality": "SUCRE",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "1915",
+    "municipality": "VALDEZ",
+    "id_states": "19"
+  },
+  {
+    "id_municipality": "2001",
+    "municipality": "ANDRES BELLO",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2002",
+    "municipality": "ANTONIO ROMULO COSTA",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2003",
+    "municipality": "AYACUCHO",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2004",
+    "municipality": "BOLIVAR",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2005",
+    "municipality": "CARDENAS",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2006",
+    "municipality": "CORDOBA",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2007",
+    "municipality": "FERNANDO FEO",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2008",
+    "municipality": "FRANCISCO DE MIRANDA",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2009",
+    "municipality": "GARCIA DE HEVIA",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2010",
+    "municipality": "GUASIMOS",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2011",
+    "municipality": "INDEPEDENCIA",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2012",
+    "municipality": "JUAREGUI",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2013",
+    "municipality": "JOSE MARIA VARGAS",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2014",
+    "municipality": "JUNIN",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2015",
+    "municipality": "LIBERTAD",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2016",
+    "municipality": "LIBERTADOR",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2017",
+    "municipality": "LOBATERA",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2018",
+    "municipality": "MICHELENA",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2019",
+    "municipality": "PANAMERICANO",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2020",
+    "municipality": "PEDRO MARIA UREÑA",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2021",
+    "municipality": "RAFAEL URDANETA",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2022",
+    "municipality": "SAMUEL DARIO MALDONADO",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2023",
+    "municipality": "SAN CRISTOBAL",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2024",
+    "municipality": "SEBORUCO",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2025",
+    "municipality": "SIMON RODRIGUEZ",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2026",
+    "municipality": "SUCRE",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2027",
+    "municipality": "TORRES",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2028",
+    "municipality": "URIBANTE",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2029",
+    "municipality": "SAN JUDAS TADEO",
+    "id_states": "20"
+  },
+  {
+    "id_municipality": "2101",
+    "municipality": "ANDRES BELLO",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2102",
+    "municipality": "BOCONO",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2103",
+    "municipality": "BOLIVAR",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2104",
+    "municipality": "CANDELARIA",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2105",
+    "municipality": "CARACHE",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2106",
+    "municipality": "ESCUQUE",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2107",
+    "municipality": "JOSE FELIPE MARQUEZ CAÑIZALES",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2108",
+    "municipality": "JUAN VICENTE CAMPO ELIAS",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2109",
+    "municipality": "LA CEIBA",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2110",
+    "municipality": "MIRANDA",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2111",
+    "municipality": "MONTE CARMELO",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2112",
+    "municipality": "MOTATAN",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2113",
+    "municipality": "PAMPAN",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2114",
+    "municipality": "PAMPANITO",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2115",
+    "municipality": "RAFAEL RANGEL",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2116",
+    "municipality": "SAN RAFAEL DE CARVAJAL",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2117",
+    "municipality": "SUCRE",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2118",
+    "municipality": "TRUJILLO",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2119",
+    "municipality": "URDANETA",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2120",
+    "municipality": "VALERA",
+    "id_states": "21"
+  },
+  {
+    "id_municipality": "2201",
+    "municipality": "ARTIDES BASTIDAS",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2202",
+    "municipality": "BOLIVAR",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2203",
+    "municipality": "BRUZUAL",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2204",
+    "municipality": "COCOROTE",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2205",
+    "municipality": "INDEPENDENCIA",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2206",
+    "municipality": "JOSE ANTONIO PAEZ",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2207",
+    "municipality": "LA TRINIDAD",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2208",
+    "municipality": "MANUEL MONGE",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2209",
+    "municipality": "NIRGUA",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2210",
+    "municipality": "PEÑA",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2211",
+    "municipality": "SAN FELIPE",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2212",
+    "municipality": "SUCRE",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2213",
+    "municipality": "URACHE",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2214",
+    "municipality": "VEROES",
+    "id_states": "22"
+  },
+  {
+    "id_municipality": "2301",
+    "municipality": "ALMIRANTE PADILLA",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2302",
+    "municipality": "BARALT",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2303",
+    "municipality": "CABIMAS",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2304",
+    "municipality": "CATATUMBO",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2305",
+    "municipality": "COLON",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2306",
+    "municipality": "FRANCISCO JAVIER PULGAR",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2307",
+    "municipality": "JESUS ENRIQUE LOSADA",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2308",
+    "municipality": "JESUS MARIA SEMPRUM",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2309",
+    "municipality": "LA CAÑADA DE URDANETA",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2310",
+    "municipality": "LAGUNILLAS",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2311",
+    "municipality": "MACHIQUES DE PERIJA",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2312",
+    "municipality": "MARA",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2313",
+    "municipality": "MARACAIBO",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2314",
+    "municipality": "MIRANDA",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2315",
+    "municipality": "PAEZ",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2316",
+    "municipality": "ROSARIO DE PERIJA",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2317",
+    "municipality": "SAN FRANCISCO",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2318",
+    "municipality": "SANTA RITA",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2319",
+    "municipality": "SIMON BOLIVAR",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2320",
+    "municipality": "SUCRE",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2321",
+    "municipality": "VALMORE RODRIGUEZ",
+    "id_states": "23"
+  },
+  {
+    "id_municipality": "2401",
+    "municipality": "VARGAS",
+    "id_states": "24"
+  }
+]

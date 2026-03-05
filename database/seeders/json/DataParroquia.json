@@ -1,0 +1,4510 @@
+[
+  {
+    "parish": "23 DE ENERO",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "ACEQUIAS",
+    "id_municipality": "1406"
+  },
+  {
+    "parish": "ACURIGUA",
+    "id_municipality": "1106"
+  },
+  {
+    "parish": "ADAURE",
+    "id_municipality": "1109"
+  },
+  {
+    "parish": "ADÍCORA",
+    "id_municipality": "1109"
+  },
+  {
+    "parish": "ADRIÁN",
+    "id_municipality": "1707"
+  },
+  {
+    "parish": "AGUA CALIENTE",
+    "id_municipality": "2110"
+  },
+  {
+    "parish": "AGUA CLARA",
+    "id_municipality": "1108"
+  },
+  {
+    "parish": "AGUA LARGA",
+    "id_municipality": "1110"
+  },
+  {
+    "parish": "AGUA LINDA",
+    "id_municipality": "1111"
+  },
+  {
+    "parish": "AGUA SALADA",
+    "id_municipality": "705"
+  },
+  {
+    "parish": "AGUA SANTA",
+    "id_municipality": "2110"
+  },
+  {
+    "parish": "AGUA VIVA",
+    "id_municipality": "1306"
+  },
+  {
+    "parish": "AGUEDO FELIPE ALVARADO",
+    "id_municipality": "1303"
+  },
+  {
+    "parish": "AGUIRRE",
+    "id_municipality": "1706"
+  },
+  {
+    "parish": "ALBARICO",
+    "id_municipality": "2211"
+  },
+  {
+    "parish": "ALBERTO ADRIANI",
+    "id_municipality": "2007"
+  },
+  {
+    "parish": "ALFREDO ARVELO LARRIVA",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "ALMIRANTE LUIS BRIÓN",
+    "id_municipality": "1001"
+  },
+  {
+    "parish": "ALONSO DE OJEDA",
+    "id_municipality": "2310"
+  },
+  {
+    "parish": "ALTAGRACIA",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "ALTAGRACIA",
+    "id_municipality": "702"
+  },
+  {
+    "parish": "ALTAGRACIA",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "ALTAGRACIA",
+    "id_municipality": "1914"
+  },
+  {
+    "parish": "ALTAGRACIA",
+    "id_municipality": "2314"
+  },
+  {
+    "parish": "ALTAGRACIA DE LA MONTAÑA",
+    "id_municipality": "1510"
+  },
+  {
+    "parish": "ALTAGRACIA DE ORITUCO",
+    "id_municipality": "1209"
+  },
+  {
+    "parish": "ALTA GUAJIRA",
+    "id_municipality": "2315"
+  },
+  {
+    "parish": "ALTAMIRA",
+    "id_municipality": "605"
+  },
+  {
+    "parish": "ALTAMIRA",
+    "id_municipality": "1214"
+  },
+  {
+    "parish": "ALTO BARINAS",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "ALTO DE LOS GODOS",
+    "id_municipality": "1608"
+  },
+  {
+    "parish": "ALTO VENTUARI",
+    "id_municipality": "206"
+  },
+  {
+    "parish": "AMBROSIO",
+    "id_municipality": "2303"
+  },
+  {
+    "parish": "AMENODORO RANGEL LAMÙS",
+    "id_municipality": "2005"
+  },
+  {
+    "parish": "ANACO",
+    "id_municipality": "301"
+  },
+  {
+    "parish": "ANA MARÍA CAMPOS",
+    "id_municipality": "2314"
+  },
+  {
+    "parish": "ANDRÉS BELLO",
+    "id_municipality": "602"
+  },
+  {
+    "parish": "ANDRÉS BELLO",
+    "id_municipality": "2309"
+  },
+  {
+    "parish": "ANDRÉS ELOY BLANCO",
+    "id_municipality": "706"
+  },
+  {
+    "parish": "ANDRÉS ELOY BLANCO",
+    "id_municipality": "1413"
+  },
+  {
+    "parish": "ANDRÉS LINARES",
+    "id_municipality": "2118"
+  },
+  {
+    "parish": "ANTÍMANO",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "ANTOLÍN TOVAR",
+    "id_municipality": "1810"
+  },
+  {
+    "parish": "ANTONIO BORJAS ROMERO",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "ANTONIO DÍAZ",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "ANTONIO JOSÉ DE SUCRE",
+    "id_municipality": "1903"
+  },
+  {
+    "parish": "ANTONIO JOSÉ DE SUCRE",
+    "id_municipality": "2107"
+  },
+  {
+    "parish": "ANTONIO NICOLAS BRICEÑO",
+    "id_municipality": "2116"
+  },
+  {
+    "parish": "ANTONIO SPINETTI DINI",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "ANZOÁTEGUI",
+    "id_municipality": "1305"
+  },
+  {
+    "parish": "APARICIO",
+    "id_municipality": "1609"
+  },
+  {
+    "parish": "APARICIÓN",
+    "id_municipality": "1807"
+  },
+  {
+    "parish": "APURITO",
+    "id_municipality": "401"
+  },
+  {
+    "parish": "ARACUA",
+    "id_municipality": "1102"
+  },
+  {
+    "parish": "ARAGUA",
+    "id_municipality": "302"
+  },
+  {
+    "parish": "ARAGÜITA",
+    "id_municipality": "1501"
+  },
+  {
+    "parish": "ARAMENDI",
+    "id_municipality": "404"
+  },
+  {
+    "parish": "ARAURIMA",
+    "id_municipality": "1111"
+  },
+  {
+    "parish": "ARAYA",
+    "id_municipality": "1908"
+  },
+  {
+    "parish": "ARENAS",
+    "id_municipality": "1912"
+  },
+  {
+    "parish": "AREO",
+    "id_municipality": "1605"
+  },
+  {
+    "parish": "AREVALO GONZÁLEZ",
+    "id_municipality": "1501"
+  },
+  {
+    "parish": "ARIAS",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "ARICAGUA",
+    "id_municipality": "1912"
+  },
+  {
+    "parish": "ARIPAO",
+    "id_municipality": "710"
+  },
+  {
+    "parish": "ARISMENDI",
+    "id_municipality": "603"
+  },
+  {
+    "parish": "ARISTIDES CALVANI",
+    "id_municipality": "2303"
+  },
+  {
+    "parish": "ARNOLDO GABALDÓN",
+    "id_municipality": "2104"
+  },
+  {
+    "parish": "ARNOLDO GABALDÓN",
+    "id_municipality": "2108"
+  },
+  {
+    "parish": "ASCENCIÓN FARRERAS",
+    "id_municipality": "702"
+  },
+  {
+    "parish": "ATAPIRIRE",
+    "id_municipality": "305"
+  },
+  {
+    "parish": "AVARIA",
+    "id_municipality": "1108"
+  },
+  {
+    "parish": "AYACUCHO",
+    "id_municipality": "1914"
+  },
+  {
+    "parish": "AYACUCHO",
+    "id_municipality": "2102"
+  },
+  {
+    "parish": "BAJO VENTUARI",
+    "id_municipality": "206"
+  },
+  {
+    "parish": "BARAIVED",
+    "id_municipality": "1109"
+  },
+  {
+    "parish": "BARCELONETA",
+    "id_municipality": "707"
+  },
+  {
+    "parish": "BARÍ",
+    "id_municipality": "2308"
+  },
+  {
+    "parish": "BARINAS",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "BARINITAS",
+    "id_municipality": "605"
+  },
+  {
+    "parish": "BARIRO",
+    "id_municipality": "1103"
+  },
+  {
+    "parish": "BARRANCAS",
+    "id_municipality": "606"
+  },
+  {
+    "parish": "BARTOLOMÉ DE LAS CASAS",
+    "id_municipality": "2311"
+  },
+  {
+    "parish": "BARUTA",
+    "id_municipality": "1503"
+  },
+  {
+    "parish": "BEATRÍZ",
+    "id_municipality": "2120"
+  },
+  {
+    "parish": "BERGANTÍN",
+    "id_municipality": "318"
+  },
+  {
+    "parish": "BETIJOQUE",
+    "id_municipality": "2115"
+  },
+  {
+    "parish": "BIDEAU",
+    "id_municipality": "1915"
+  },
+  {
+    "parish": "BOBURES",
+    "id_municipality": "2320"
+  },
+  {
+    "parish": "BOCA DE AROA",
+    "id_municipality": "1120"
+  },
+  {
+    "parish": "BOCA DE CHÁVEZ",
+    "id_municipality": "316"
+  },
+  {
+    "parish": "BOCA DE GRITA",
+    "id_municipality": "2009"
+  },
+  {
+    "parish": "BOCA DEL PAO",
+    "id_municipality": "305"
+  },
+  {
+    "parish": "BOCA DE TOCUYO",
+    "id_municipality": "1115"
+  },
+  {
+    "parish": "BOCA DE UCHIRE",
+    "id_municipality": "316"
+  },
+  {
+    "parish": "BOCONÓ",
+    "id_municipality": "2022"
+  },
+  {
+    "parish": "BOCONÓ",
+    "id_municipality": "2102"
+  },
+  {
+    "parish": "BOLÍVAR",
+    "id_municipality": "1305"
+  },
+  {
+    "parish": "BOLÍVAR",
+    "id_municipality": "1521"
+  },
+  {
+    "parish": "BOLÍVAR",
+    "id_municipality": "1705"
+  },
+  {
+    "parish": "BOLÍVAR",
+    "id_municipality": "1905"
+  },
+  {
+    "parish": "BOLÍVAR",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "BOLIVIA",
+    "id_municipality": "2104"
+  },
+  {
+    "parish": "BOQUERÓN",
+    "id_municipality": "1608"
+  },
+  {
+    "parish": "BOROJÓ",
+    "id_municipality": "1103"
+  },
+  {
+    "parish": "BRAMÓN",
+    "id_municipality": "2014"
+  },
+  {
+    "parish": "BRUZUAL",
+    "id_municipality": "1124"
+  },
+  {
+    "parish": "BUENA VISTA",
+    "id_municipality": "1109"
+  },
+  {
+    "parish": "BUENA VISTA",
+    "id_municipality": "1303"
+  },
+  {
+    "parish": "BUENA VISTA",
+    "id_municipality": "2111"
+  },
+  {
+    "parish": "BURBUSAY",
+    "id_municipality": "2102"
+  },
+  {
+    "parish": "BURÌA",
+    "id_municipality": "1307"
+  },
+  {
+    "parish": "CABIMBÚ",
+    "id_municipality": "2119"
+  },
+  {
+    "parish": "CABRUTA",
+    "id_municipality": "1206"
+  },
+  {
+    "parish": "CABUDARE",
+    "id_municipality": "1306"
+  },
+  {
+    "parish": "CABURE",
+    "id_municipality": "1117"
+  },
+  {
+    "parish": "CACHAMAY",
+    "id_municipality": "701"
+  },
+  {
+    "parish": "CACHIPO",
+    "id_municipality": "302"
+  },
+  {
+    "parish": "CACHIPO",
+    "id_municipality": "1610"
+  },
+  {
+    "parish": "CACIQUE MARA",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "CACUTE",
+    "id_municipality": "1417"
+  },
+  {
+    "parish": "CAIGUA",
+    "id_municipality": "318"
+  },
+  {
+    "parish": "CALABOZO",
+    "id_municipality": "1208"
+  },
+  {
+    "parish": "CALDERAS",
+    "id_municipality": "605"
+  },
+  {
+    "parish": "CAMACARO",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "CAMPO ALEGRE",
+    "id_municipality": "2116"
+  },
+  {
+    "parish": "CAMPO CLARO",
+    "id_municipality": "1910"
+  },
+  {
+    "parish": "CAMPO ELIAS",
+    "id_municipality": "1909"
+  },
+  {
+    "parish": "CAMPO ELIAS",
+    "id_municipality": "2203"
+  },
+  {
+    "parish": "CAMPO ELÍAS",
+    "id_municipality": "2108"
+  },
+  {
+    "parish": "CAMPO LARA",
+    "id_municipality": "2310"
+  },
+  {
+    "parish": "CANAME",
+    "id_municipality": "202"
+  },
+  {
+    "parish": "CANDELARIA",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "CANELONES",
+    "id_municipality": "1814"
+  },
+  {
+    "parish": "CANTAGALLO",
+    "id_municipality": "1212"
+  },
+  {
+    "parish": "CANTAURA",
+    "id_municipality": "313"
+  },
+  {
+    "parish": "CAÑO DELGADITO",
+    "id_municipality": "1809"
+  },
+  {
+    "parish": "CAÑO EL TIGRE",
+    "id_municipality": "1423"
+  },
+  {
+    "parish": "CAPADARE",
+    "id_municipality": "1101"
+  },
+  {
+    "parish": "CAPATÁRIDA",
+    "id_municipality": "1103"
+  },
+  {
+    "parish": "CAPAYA",
+    "id_municipality": "1501"
+  },
+  {
+    "parish": "CAPURÍ",
+    "id_municipality": "1405"
+  },
+  {
+    "parish": "CARABALLEDA",
+    "id_municipality": "2401"
+  },
+  {
+    "parish": "CARACCIOLO PARRA PÉREZ",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "CARACHE",
+    "id_municipality": "2105"
+  },
+  {
+    "parish": "CARAYACA",
+    "id_municipality": "2401"
+  },
+  {
+    "parish": "CARDENAS",
+    "id_municipality": "2028"
+  },
+  {
+    "parish": "CARIACO",
+    "id_municipality": "1913"
+  },
+  {
+    "parish": "CARICUAO",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "CARIRUBANA",
+    "id_municipality": "1105"
+  },
+  {
+    "parish": "CARLOS QUEVEDO",
+    "id_municipality": "2306"
+  },
+  {
+    "parish": "CARLOS SOUBLETTE",
+    "id_municipality": "2401"
+  },
+  {
+    "parish": "CARMEN HERRERA",
+    "id_municipality": "2303"
+  },
+  {
+    "parish": "CARRILLO",
+    "id_municipality": "2104"
+  },
+  {
+    "parish": "CARRIZAL",
+    "id_municipality": "1506"
+  },
+  {
+    "parish": "CARUAO",
+    "id_municipality": "2401"
+  },
+  {
+    "parish": "CARVAJAL",
+    "id_municipality": "2116"
+  },
+  {
+    "parish": "CASIGUA",
+    "id_municipality": "1113"
+  },
+  {
+    "parish": "CASIQUIARE",
+    "id_municipality": "207"
+  },
+  {
+    "parish": "CASTAÑEDA",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "CATEDRAL",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "CATEDRAL",
+    "id_municipality": "705"
+  },
+  {
+    "parish": "CATEDRAL",
+    "id_municipality": "1303"
+  },
+  {
+    "parish": "CATIA LA MAR",
+    "id_municipality": "2401"
+  },
+  {
+    "parish": "CATUARO",
+    "id_municipality": "1913"
+  },
+  {
+    "parish": "CAUCAGUA",
+    "id_municipality": "1501"
+  },
+  {
+    "parish": "CAUCAGÜITA",
+    "id_municipality": "1519"
+  },
+  {
+    "parish": "CAZORLA",
+    "id_municipality": "1204"
+  },
+  {
+    "parish": "CECILIO ACOSTA",
+    "id_municipality": "1510"
+  },
+  {
+    "parish": "CECILIO ACOSTA",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "CECILIO ZUBILLAGA",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "CEGARRA",
+    "id_municipality": "2104"
+  },
+  {
+    "parish": "CHACANTÁ",
+    "id_municipality": "1405"
+  },
+  {
+    "parish": "CHACAO",
+    "id_municipality": "1507"
+  },
+  {
+    "parish": "CHACOPATA",
+    "id_municipality": "1908"
+  },
+  {
+    "parish": "CHAGUARAMAL",
+    "id_municipality": "1609"
+  },
+  {
+    "parish": "CHAGUARAMAS",
+    "id_municipality": "1202"
+  },
+  {
+    "parish": "CHAGUARAMAS",
+    "id_municipality": "1607"
+  },
+  {
+    "parish": "CHARALLAVE",
+    "id_municipality": "1508"
+  },
+  {
+    "parish": "CHEJENDÉ",
+    "id_municipality": "2104"
+  },
+  {
+    "parish": "CHEREGUE",
+    "id_municipality": "2103"
+  },
+  {
+    "parish": "CHICHIRIVICHE",
+    "id_municipality": "1115"
+  },
+  {
+    "parish": "CHIGUARÁ",
+    "id_municipality": "1420"
+  },
+  {
+    "parish": "CHIQUINQUIRÁ",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "CHIQUINQUIRÁ",
+    "id_municipality": "2118"
+  },
+  {
+    "parish": "CHIQUINQUIRÁ",
+    "id_municipality": "2309"
+  },
+  {
+    "parish": "CHIQUINQUIRÁ",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "CHIRICA",
+    "id_municipality": "701"
+  },
+  {
+    "parish": "CHORRERÓN",
+    "id_municipality": "306"
+  },
+  {
+    "parish": "CHURUGUARA",
+    "id_municipality": "1110"
+  },
+  {
+    "parish": "CINCO DE JULIO",
+    "id_municipality": "1002"
+  },
+  {
+    "parish": "CIPRIANO CASTRO",
+    "id_municipality": "2015"
+  },
+  {
+    "parish": "CIUDAD BOLIVIA",
+    "id_municipality": "609"
+  },
+  {
+    "parish": "CIUDAD DE NUTRIAS",
+    "id_municipality": "611"
+  },
+  {
+    "parish": "CLARINES",
+    "id_municipality": "312"
+  },
+  {
+    "parish": "COCHE",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "COCOLLAR",
+    "id_municipality": "1912"
+  },
+  {
+    "parish": "COCUY",
+    "id_municipality": "207"
+  },
+  {
+    "parish": "CODAZZI",
+    "id_municipality": "405"
+  },
+  {
+    "parish": "COJEDES",
+    "id_municipality": "901"
+  },
+  {
+    "parish": "COLINA",
+    "id_municipality": "1117"
+  },
+  {
+    "parish": "COMUNIDAD",
+    "id_municipality": "205"
+  },
+  {
+    "parish": "CONCEPCIÓN",
+    "id_municipality": "1303"
+  },
+  {
+    "parish": "CONCEPCIÓN",
+    "id_municipality": "1813"
+  },
+  {
+    "parish": "CONCEPCIÓN",
+    "id_municipality": "2309"
+  },
+  {
+    "parish": "CONSTITUCIÓN",
+    "id_municipality": "2017"
+  },
+  {
+    "parish": "COQUIVACOA",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "CORAZÓN DE JESÚS",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "CÓRDOBA",
+    "id_municipality": "1804"
+  },
+  {
+    "parish": "CORONEL MARIANO PERAZA",
+    "id_municipality": "1304"
+  },
+  {
+    "parish": "CRISTOBAL COLÓN",
+    "id_municipality": "1915"
+  },
+  {
+    "parish": "CRISTÓBAL MENDOZA",
+    "id_municipality": "2118"
+  },
+  {
+    "parish": "CRISTO DE ARANZA",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "CRUZ CARRILLO",
+    "id_municipality": "2118"
+  },
+  {
+    "parish": "CÚA",
+    "id_municipality": "1520"
+  },
+  {
+    "parish": "CUARA",
+    "id_municipality": "1304"
+  },
+  {
+    "parish": "CUICAS",
+    "id_municipality": "2105"
+  },
+  {
+    "parish": "CUMANACOA",
+    "id_municipality": "1912"
+  },
+  {
+    "parish": "CUMBO",
+    "id_municipality": "1502"
+  },
+  {
+    "parish": "CUNAVICHE",
+    "id_municipality": "405"
+  },
+  {
+    "parish": "CÚPIRA",
+    "id_municipality": "1516"
+  },
+  {
+    "parish": "CURIAPO",
+    "id_municipality": "1001"
+  },
+  {
+    "parish": "CURIEPE",
+    "id_municipality": "1504"
+  },
+  {
+    "parish": "CURIMAGUA",
+    "id_municipality": "1117"
+  },
+  {
+    "parish": "DALLA COSTA",
+    "id_municipality": "701"
+  },
+  {
+    "parish": "DALLA COSTA",
+    "id_municipality": "709"
+  },
+  {
+    "parish": "DIEGO DE LOZADA",
+    "id_municipality": "1304"
+  },
+  {
+    "parish": "DIVINA PASTORA",
+    "id_municipality": "1805"
+  },
+  {
+    "parish": "DOLORES",
+    "id_municipality": "610"
+  },
+  {
+    "parish": "DOMINGA ORTIZ DE PÁEZ",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "DOMINGO PEÑA",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "DOMITILA FLORES",
+    "id_municipality": "2317"
+  },
+  {
+    "parish": "DONALDO GARCIA",
+    "id_municipality": "2316"
+  },
+  {
+    "parish": "DORADAS",
+    "id_municipality": "2016"
+  },
+  {
+    "parish": "DR. FRANCISCO ROMERO LOBO",
+    "id_municipality": "2023"
+  },
+  {
+    "parish": "EDMUNDO BARRIOS",
+    "id_municipality": "319"
+  },
+  {
+    "parish": "EL AMPARO",
+    "id_municipality": "404"
+  },
+  {
+    "parish": "EL AMPARO",
+    "id_municipality": "906"
+  },
+  {
+    "parish": "EL AMPARO",
+    "id_municipality": "1421"
+  },
+  {
+    "parish": "EL ARAGUANEY",
+    "id_municipality": "2101"
+  },
+  {
+    "parish": "EL BAJO",
+    "id_municipality": "2317"
+  },
+  {
+    "parish": "EL BAÑO",
+    "id_municipality": "2112"
+  },
+  {
+    "parish": "EL BATEY",
+    "id_municipality": "2320"
+  },
+  {
+    "parish": "EL BAÚL",
+    "id_municipality": "903"
+  },
+  {
+    "parish": "EL BLANCO",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "EL CAFÉ",
+    "id_municipality": "1501"
+  },
+  {
+    "parish": "EL CAFETAL",
+    "id_municipality": "1503"
+  },
+  {
+    "parish": "EL CALVARIO",
+    "id_municipality": "1208"
+  },
+  {
+    "parish": "EL CANTÓN",
+    "id_municipality": "611"
+  },
+  {
+    "parish": "EL CARITO",
+    "id_municipality": "311"
+  },
+  {
+    "parish": "EL CARMELO",
+    "id_municipality": "2309"
+  },
+  {
+    "parish": "EL CARMEN",
+    "id_municipality": "318"
+  },
+  {
+    "parish": "EL CARMEN",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "EL CARMEN",
+    "id_municipality": "2102"
+  },
+  {
+    "parish": "EL CARTANAL",
+    "id_municipality": "1511"
+  },
+  {
+    "parish": "EL CENIZO",
+    "id_municipality": "2110"
+  },
+  {
+    "parish": "EL CHAPARRO",
+    "id_municipality": "320"
+  },
+  {
+    "parish": "EL CHARAL",
+    "id_municipality": "1123"
+  },
+  {
+    "parish": "EL COROZO",
+    "id_municipality": "1608"
+  },
+  {
+    "parish": "EL CUJÍ",
+    "id_municipality": "1303"
+  },
+  {
+    "parish": "EL DIVIDIVE",
+    "id_municipality": "2110"
+  },
+  {
+    "parish": "ELEAZAR LÓPEZ CONTRERAS",
+    "id_municipality": "2026"
+  },
+  {
+    "parish": "ELEAZAR LÓPEZ CONTRERAS",
+    "id_municipality": "2310"
+  },
+  {
+    "parish": "EL FURRIAL",
+    "id_municipality": "1608"
+  },
+  {
+    "parish": "EL GUÁCHARO",
+    "id_municipality": "1604"
+  },
+  {
+    "parish": "EL GUAPO",
+    "id_municipality": "1514"
+  },
+  {
+    "parish": "EL GUAYABO",
+    "id_municipality": "2214"
+  },
+  {
+    "parish": "EL HATILLO",
+    "id_municipality": "1509"
+  },
+  {
+    "parish": "EL HATO",
+    "id_municipality": "1109"
+  },
+  {
+    "parish": "ELÍAS SANCHEZ RUBIO",
+    "id_municipality": "2315"
+  },
+  {
+    "parish": "EL JAGUITO",
+    "id_municipality": "2101"
+  },
+  {
+    "parish": "EL JARILLO",
+    "id_municipality": "1510"
+  },
+  {
+    "parish": "EL JUNKO",
+    "id_municipality": "2401"
+  },
+  {
+    "parish": "EL JUNQUITO",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "EL LLANO",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "EL LLANO",
+    "id_municipality": "1421"
+  },
+  {
+    "parish": "EL MENE",
+    "id_municipality": "2318"
+  },
+  {
+    "parish": "EL MOLINO",
+    "id_municipality": "1405"
+  },
+  {
+    "parish": "EL MORRO",
+    "id_municipality": "321"
+  },
+  {
+    "parish": "EL MORRO",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "EL MORRO DE PUERTO SANTO",
+    "id_municipality": "1903"
+  },
+  {
+    "parish": "ELOY PAREDES",
+    "id_municipality": "1414"
+  },
+  {
+    "parish": "EL PAO",
+    "id_municipality": "905"
+  },
+  {
+    "parish": "EL PAO DE BARCELONA",
+    "id_municipality": "305"
+  },
+  {
+    "parish": "EL PARAISO",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "EL PARAISO",
+    "id_municipality": "2117"
+  },
+  {
+    "parish": "EL PAUJIL",
+    "id_municipality": "1907"
+  },
+  {
+    "parish": "EL PILAR",
+    "id_municipality": "318"
+  },
+  {
+    "parish": "EL PILAR",
+    "id_municipality": "1904"
+  },
+  {
+    "parish": "EL PINTO",
+    "id_municipality": "1609"
+  },
+  {
+    "parish": "EL PLAYON",
+    "id_municipality": "1812"
+  },
+  {
+    "parish": "EL PROGRESO",
+    "id_municipality": "2109"
+  },
+  {
+    "parish": "EL RASTRO",
+    "id_municipality": "1208"
+  },
+  {
+    "parish": "EL REAL",
+    "id_municipality": "608"
+  },
+  {
+    "parish": "EL RECREO",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "EL RECREO",
+    "id_municipality": "407"
+  },
+  {
+    "parish": "EL REGALO",
+    "id_municipality": "611"
+  },
+  {
+    "parish": "EL RINCÓN",
+    "id_municipality": "1904"
+  },
+  {
+    "parish": "EL ROSARIO",
+    "id_municipality": "2316"
+  },
+  {
+    "parish": "EL SOCORRO",
+    "id_municipality": "606"
+  },
+  {
+    "parish": "EL SOCORRO",
+    "id_municipality": "1203"
+  },
+  {
+    "parish": "EL SOCORRO",
+    "id_municipality": "2107"
+  },
+  {
+    "parish": "EL SOMBRERO",
+    "id_municipality": "1207"
+  },
+  {
+    "parish": "EL TEJERO",
+    "id_municipality": "1606"
+  },
+  {
+    "parish": "EL VALLE",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "EL VÍNCULO",
+    "id_municipality": "1109"
+  },
+  {
+    "parish": "EL YAGUAL",
+    "id_municipality": "401"
+  },
+  {
+    "parish": "EMETERIO OCHOA",
+    "id_municipality": "2016"
+  },
+  {
+    "parish": "EMILIO CONSTANTINO GUERRERO",
+    "id_municipality": "2012"
+  },
+  {
+    "parish": "ENCONTRADOS",
+    "id_municipality": "2304"
+  },
+  {
+    "parish": "ESCUQUE",
+    "id_municipality": "2106"
+  },
+  {
+    "parish": "ESPINO",
+    "id_municipality": "1205"
+  },
+  {
+    "parish": "ESPINOZA DE LOS MONTEROS",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "ESTANQUES",
+    "id_municipality": "1420"
+  },
+  {
+    "parish": "FARIA",
+    "id_municipality": "2314"
+  },
+  {
+    "parish": "FERNÁNDEZ PEÑA",
+    "id_municipality": "1406"
+  },
+  {
+    "parish": "FERNANDO GIRÓN TOVAR",
+    "id_municipality": "203"
+  },
+  {
+    "parish": "FILAS DE MARICHES",
+    "id_municipality": "1519"
+  },
+  {
+    "parish": "FLOR DE PATRIA",
+    "id_municipality": "2113"
+  },
+  {
+    "parish": "FLORENCIO RAMÍREZ",
+    "id_municipality": "1407"
+  },
+  {
+    "parish": "FLORIDA",
+    "id_municipality": "1812"
+  },
+  {
+    "parish": "FRANCISCO ANICETO LUGO",
+    "id_municipality": "1001"
+  },
+  {
+    "parish": "FRANCISCO EUGENIO BUSTAMANTE",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "FRANCISCO FAJARDO",
+    "id_municipality": "1704"
+  },
+  {
+    "parish": "FRANCISCO JAVIER PULGAR",
+    "id_municipality": "2306"
+  },
+  {
+    "parish": "FRANCISCO OCHOA",
+    "id_municipality": "2317"
+  },
+  {
+    "parish": "FREITEZ",
+    "id_municipality": "1302"
+  },
+  {
+    "parish": "GABRIEL PICÓN GONZALEZ",
+    "id_municipality": "1401"
+  },
+  {
+    "parish": "GENERAL EN JEFE JOSÉ LAURENCIO SILVA",
+    "id_municipality": "909"
+  },
+  {
+    "parish": "GENERAL JUAN VICENTE GÓMEZ",
+    "id_municipality": "2004"
+  },
+  {
+    "parish": "GENERAL RIVAS",
+    "id_municipality": "2102"
+  },
+  {
+    "parish": "GENERAL URDANETA",
+    "id_municipality": "2302"
+  },
+  {
+    "parish": "GERMÁN RÍOS LINARES",
+    "id_municipality": "2303"
+  },
+  {
+    "parish": "GERÓNIMO MALDONADO",
+    "id_municipality": "1418"
+  },
+  {
+    "parish": "GIBRALTAR",
+    "id_municipality": "2320"
+  },
+  {
+    "parish": "GONZALO PICÓN FEBRES",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "GRAL. FRANCISCO ANTONIO VASQUEZ",
+    "id_municipality": "1904"
+  },
+  {
+    "parish": "GRANADOS",
+    "id_municipality": "2103"
+  },
+  {
+    "parish": "GUACHARA",
+    "id_municipality": "401"
+  },
+  {
+    "parish": "GUADARRAMA",
+    "id_municipality": "603"
+  },
+  {
+    "parish": "GUAIBACOA",
+    "id_municipality": "1106"
+  },
+  {
+    "parish": "GUAIMARAL",
+    "id_municipality": "1405"
+  },
+  {
+    "parish": "GUAJIRA",
+    "id_municipality": "2315"
+  },
+  {
+    "parish": "GUAJIRO",
+    "id_municipality": "1103"
+  },
+  {
+    "parish": "GUANAGUANA",
+    "id_municipality": "1609"
+  },
+  {
+    "parish": "GUANAPE",
+    "id_municipality": "312"
+  },
+  {
+    "parish": "GUANIAMO",
+    "id_municipality": "702"
+  },
+  {
+    "parish": "GUANTA",
+    "id_municipality": "306"
+  },
+  {
+    "parish": "GUARAMACAL",
+    "id_municipality": "2102"
+  },
+  {
+    "parish": "GUARATARO",
+    "id_municipality": "710"
+  },
+  {
+    "parish": "GUARAUNOS",
+    "id_municipality": "1904"
+  },
+  {
+    "parish": "GUARDATINAJAS",
+    "id_municipality": "1208"
+  },
+  {
+    "parish": "GUARENAS",
+    "id_municipality": "1517"
+  },
+  {
+    "parish": "GUÁRICO",
+    "id_municipality": "1305"
+  },
+  {
+    "parish": "GUATIRE",
+    "id_municipality": "1521"
+  },
+  {
+    "parish": "GUAYAPO",
+    "id_municipality": "204"
+  },
+  {
+    "parish": "GUEVARA",
+    "id_municipality": "1705"
+  },
+  {
+    "parish": "GÜIRIA",
+    "id_municipality": "1915"
+  },
+  {
+    "parish": "GUSTAVO VEGAS LEÓN",
+    "id_municipality": "1307"
+  },
+  {
+    "parish": "GUZMÁN GUILLERMO",
+    "id_municipality": "1114"
+  },
+  {
+    "parish": "HECTOR AMABLE MORA",
+    "id_municipality": "1401"
+  },
+  {
+    "parish": "HERAS",
+    "id_municipality": "2320"
+  },
+  {
+    "parish": "HERIBERTO ARROYO",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "HERNÁNDEZ",
+    "id_municipality": "2022"
+  },
+  {
+    "parish": "HIGUEROTE",
+    "id_municipality": "1504"
+  },
+  {
+    "parish": "HILARIO LUNA Y LUNA",
+    "id_municipality": "1305"
+  },
+  {
+    "parish": "HUMOCARO ALTO",
+    "id_municipality": "1305"
+  },
+  {
+    "parish": "HUMOCARO BAJO",
+    "id_municipality": "1305"
+  },
+  {
+    "parish": "IDELFONSO VASQUEZ",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "IGNACIO BRICEÑO",
+    "id_municipality": "609"
+  },
+  {
+    "parish": "IKABARÚ",
+    "id_municipality": "704"
+  },
+  {
+    "parish": "IMATACA",
+    "id_municipality": "1002"
+  },
+  {
+    "parish": "INDEPENDENCIA",
+    "id_municipality": "1110"
+  },
+  {
+    "parish": "INDEPENDENCIA",
+    "id_municipality": "1422"
+  },
+  {
+    "parish": "IRAPA",
+    "id_municipality": "1910"
+  },
+  {
+    "parish": "ISAÍAS MEDINA ANGARITA",
+    "id_municipality": "2004"
+  },
+  {
+    "parish": "ISLA DE TOAS",
+    "id_municipality": "2301"
+  },
+  {
+    "parish": "JACINTO PLAZA",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "JACURA",
+    "id_municipality": "1111"
+  },
+  {
+    "parish": "JADACAQUIVA",
+    "id_municipality": "1109"
+  },
+  {
+    "parish": "JAJÍ",
+    "id_municipality": "1406"
+  },
+  {
+    "parish": "JAJÓ",
+    "id_municipality": "2119"
+  },
+  {
+    "parish": "JALISCO",
+    "id_municipality": "2112"
+  },
+  {
+    "parish": "JESÚS MARÍA SEMPRUN",
+    "id_municipality": "2308"
+  },
+  {
+    "parish": "JORGE HERNÁNDEZ",
+    "id_municipality": "2303"
+  },
+  {
+    "parish": "JOSÉ ANTONIO PÁEZ",
+    "id_municipality": "705"
+  },
+  {
+    "parish": "JOSÉ ANTONIO PÁEZ",
+    "id_municipality": "2009"
+  },
+  {
+    "parish": "JOSÉ BERNARDO DURANTE",
+    "id_municipality": "1304"
+  },
+  {
+    "parish": "JOSÉ CENOVIO URRIBARRI",
+    "id_municipality": "2318"
+  },
+  {
+    "parish": "JOSE FÉLIX RIBAS",
+    "id_municipality": "609"
+  },
+  {
+    "parish": "JOSÉ GREGORIO BASTIDAS",
+    "id_municipality": "1306"
+  },
+  {
+    "parish": "JOSÉ GREGORIO HERNÁNDEZ",
+    "id_municipality": "2115"
+  },
+  {
+    "parish": "JOSÉ IGNACIO DEL PUMAR",
+    "id_municipality": "607"
+  },
+  {
+    "parish": "JOSÉ LEONARDO SUAREZ",
+    "id_municipality": "2116"
+  },
+  {
+    "parish": "JOSÉ MARÍA BLANCO",
+    "id_municipality": "1302"
+  },
+  {
+    "parish": "JOSÉ NUCETE SARDI",
+    "id_municipality": "1401"
+  },
+  {
+    "parish": "JOSÉ RAMÓN YEPEZ",
+    "id_municipality": "2307"
+  },
+  {
+    "parish": "JOSÉ VIDAL MARCANO",
+    "id_municipality": "1004"
+  },
+  {
+    "parish": "JUANA DE AVILA",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "JUAN ANGEL BRAVO",
+    "id_municipality": "908"
+  },
+  {
+    "parish": "JUAN ANTONIO RODRÍGUEZ DOMINGUEZ",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "JUAN BAUTISTA ARISMENDI",
+    "id_municipality": "1002"
+  },
+  {
+    "parish": "JUAN BAUTISTA RODRIGUEZ",
+    "id_municipality": "1304"
+  },
+  {
+    "parish": "JUAN DE MATA SUAREZ",
+    "id_municipality": "901"
+  },
+  {
+    "parish": "JUAN DE VILLEGAS",
+    "id_municipality": "1303"
+  },
+  {
+    "parish": "JUAN GERMAN ROSCIO",
+    "id_municipality": "2011"
+  },
+  {
+    "parish": "JUAN IGNACIO MONTILLA",
+    "id_municipality": "2120"
+  },
+  {
+    "parish": "JUAN MILLAN",
+    "id_municipality": "1004"
+  },
+  {
+    "parish": "JUAN PABLO PEÑALOZA",
+    "id_municipality": "2028"
+  },
+  {
+    "parish": "JUAN RODRÍGUEZ SUÁREZ",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "JUAREZ",
+    "id_municipality": "1303"
+  },
+  {
+    "parish": "JUDIBANA",
+    "id_municipality": "1112"
+  },
+  {
+    "parish": "JUNÍN",
+    "id_municipality": "2117"
+  },
+  {
+    "parish": "JUSEPÍN",
+    "id_municipality": "1608"
+  },
+  {
+    "parish": "LA AGUADITA",
+    "id_municipality": "904"
+  },
+  {
+    "parish": "LA CANDELARIA",
+    "id_municipality": "1305"
+  },
+  {
+    "parish": "LA CEIBA",
+    "id_municipality": "2109"
+  },
+  {
+    "parish": "LA CIÈNAGA",
+    "id_municipality": "1125"
+  },
+  {
+    "parish": "LA CONCEPCIÓN",
+    "id_municipality": "2105"
+  },
+  {
+    "parish": "LA CONCEPCIÓN",
+    "id_municipality": "2114"
+  },
+  {
+    "parish": "LA CONCEPCIÓN",
+    "id_municipality": "2307"
+  },
+  {
+    "parish": "LA CONCORDIA",
+    "id_municipality": "2023"
+  },
+  {
+    "parish": "LA DEMOCRACIA",
+    "id_municipality": "1512"
+  },
+  {
+    "parish": "LA DOLORITA",
+    "id_municipality": "1519"
+  },
+  {
+    "parish": "LA ESPERANZA",
+    "id_municipality": "2101"
+  },
+  {
+    "parish": "LA ESTACION",
+    "id_municipality": "1807"
+  },
+  {
+    "parish": "LA FLORIDA",
+    "id_municipality": "2005"
+  },
+  {
+    "parish": "LA GUAIRA",
+    "id_municipality": "2401"
+  },
+  {
+    "parish": "LA GUANOTA",
+    "id_municipality": "1604"
+  },
+  {
+    "parish": "LA LUZ",
+    "id_municipality": "608"
+  },
+  {
+    "parish": "LA MESA",
+    "id_municipality": "1406"
+  },
+  {
+    "parish": "LA MESA",
+    "id_municipality": "2119"
+  },
+  {
+    "parish": "LA PALMITA",
+    "id_municipality": "2019"
+  },
+  {
+    "parish": "LA PASTORA",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "LA PASTORA",
+    "id_municipality": "1101"
+  },
+  {
+    "parish": "LA PAZ",
+    "id_municipality": "2113"
+  },
+  {
+    "parish": "LA PEÑA",
+    "id_municipality": "1102"
+  },
+  {
+    "parish": "LA PETROLEA",
+    "id_municipality": "2014"
+  },
+  {
+    "parish": "LA PICA",
+    "id_municipality": "1608"
+  },
+  {
+    "parish": "LA PUEBLITA",
+    "id_municipality": "2115"
+  },
+  {
+    "parish": "LA PUERTA",
+    "id_municipality": "2120"
+  },
+  {
+    "parish": "LA QUEBRADA",
+    "id_municipality": "2119"
+  },
+  {
+    "parish": "LARA",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "LA ROSA",
+    "id_municipality": "2303"
+  },
+  {
+    "parish": "LA SABANITA",
+    "id_municipality": "705"
+  },
+  {
+    "parish": "LAS ALHÚACAS",
+    "id_municipality": "1607"
+  },
+  {
+    "parish": "LAS BRISAS",
+    "id_municipality": "1508"
+  },
+  {
+    "parish": "LAS CALDERAS",
+    "id_municipality": "1106"
+  },
+  {
+    "parish": "LAS COCUIZAS",
+    "id_municipality": "1608"
+  },
+  {
+    "parish": "LA SIERRITA",
+    "id_municipality": "2312"
+  },
+  {
+    "parish": "LAS MAJADAS",
+    "id_municipality": "710"
+  },
+  {
+    "parish": "LAS MERCEDES",
+    "id_municipality": "1206"
+  },
+  {
+    "parish": "LAS MERCEDES",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "LAS MINAS DE BARUTA",
+    "id_municipality": "1503"
+  },
+  {
+    "parish": "LA SOLEDAD",
+    "id_municipality": "1125"
+  },
+  {
+    "parish": "LAS PARCELAS",
+    "id_municipality": "2312"
+  },
+  {
+    "parish": "LAS PIEDRAS",
+    "id_municipality": "1408"
+  },
+  {
+    "parish": "LASSO DE LA VEGA",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "LAS VEGAS DEL TUY",
+    "id_municipality": "1123"
+  },
+  {
+    "parish": "LA TOMA",
+    "id_municipality": "1417"
+  },
+  {
+    "parish": "LA TOSCANA",
+    "id_municipality": "1609"
+  },
+  {
+    "parish": "LA TRAMPA",
+    "id_municipality": "1420"
+  },
+  {
+    "parish": "LA TRINIDAD",
+    "id_municipality": "406"
+  },
+  {
+    "parish": "LA UNIÓN",
+    "id_municipality": "603"
+  },
+  {
+    "parish": "LA UNIÓN",
+    "id_municipality": "2106"
+  },
+  {
+    "parish": "LA URBANA",
+    "id_municipality": "702"
+  },
+  {
+    "parish": "LA VEGA",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "LA VEGA DE GUARAMACAL",
+    "id_municipality": "2102"
+  },
+  {
+    "parish": "LA VELA DE CORO",
+    "id_municipality": "1106"
+  },
+  {
+    "parish": "LA VENTA",
+    "id_municipality": "1413"
+  },
+  {
+    "parish": "LA VICTORIA",
+    "id_municipality": "2321"
+  },
+  {
+    "parish": "LECHERÍAS",
+    "id_municipality": "321"
+  },
+  {
+    "parish": "LEONARDO RUIZ PINEDA",
+    "id_municipality": "1004"
+  },
+  {
+    "parish": "LEONCIO MARTÍNEZ",
+    "id_municipality": "1519"
+  },
+  {
+    "parish": "LEZAMA",
+    "id_municipality": "1209"
+  },
+  {
+    "parish": "LIBERTAD",
+    "id_municipality": "610"
+  },
+  {
+    "parish": "LIBERTAD",
+    "id_municipality": "1907"
+  },
+  {
+    "parish": "LIBERTAD",
+    "id_municipality": "2310"
+  },
+  {
+    "parish": "LIBERTAD",
+    "id_municipality": "2311"
+  },
+  {
+    "parish": "LIBERTAD DE COJEDES",
+    "id_municipality": "906"
+  },
+  {
+    "parish": "LIBERTAD DE ORITUCO",
+    "id_municipality": "1209"
+  },
+  {
+    "parish": "LIBERTADOR",
+    "id_municipality": "313"
+  },
+  {
+    "parish": "LIBERTADOR",
+    "id_municipality": "1101"
+  },
+  {
+    "parish": "LIBERTADOR",
+    "id_municipality": "2302"
+  },
+  {
+    "parish": "LOS BARALES",
+    "id_municipality": "1710"
+  },
+  {
+    "parish": "LOS BARRANCOS DE FAJARDO",
+    "id_municipality": "1612"
+  },
+  {
+    "parish": "LOS CAPRICHOS",
+    "id_municipality": "2107"
+  },
+  {
+    "parish": "LOS CEDROS",
+    "id_municipality": "2115"
+  },
+  {
+    "parish": "LOS CORTIJOS",
+    "id_municipality": "2317"
+  },
+  {
+    "parish": "LOS GUASIMITOS",
+    "id_municipality": "608"
+  },
+  {
+    "parish": "LOS NEVADOS",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "LOS TAQUES",
+    "id_municipality": "1112"
+  },
+  {
+    "parish": "LOS TEQUES",
+    "id_municipality": "1510"
+  },
+  {
+    "parish": "LUIS ALBERTO GÓMEZ",
+    "id_municipality": "203"
+  },
+  {
+    "parish": "LUIS BELTRAN PRIETO FIGUEROA",
+    "id_municipality": "1003"
+  },
+  {
+    "parish": "LUIS DE VICENTE",
+    "id_municipality": "2312"
+  },
+  {
+    "parish": "LUIS HURTADO HIGUERA",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "MACAPO",
+    "id_municipality": "904"
+  },
+  {
+    "parish": "MACARAO",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "MACARAPANA",
+    "id_municipality": "1905"
+  },
+  {
+    "parish": "MACHURUCUTO",
+    "id_municipality": "1516"
+  },
+  {
+    "parish": "MACORUCA",
+    "id_municipality": "1106"
+  },
+  {
+    "parish": "MACUTO",
+    "id_municipality": "2401"
+  },
+  {
+    "parish": "MAIQUETIA",
+    "id_municipality": "2401"
+  },
+  {
+    "parish": "MAMO",
+    "id_municipality": "307"
+  },
+  {
+    "parish": "MAMPORAL",
+    "id_municipality": "1505"
+  },
+  {
+    "parish": "MANICUARE",
+    "id_municipality": "1908"
+  },
+  {
+    "parish": "MANTECAL",
+    "id_municipality": "403"
+  },
+  {
+    "parish": "MANUEL DAGNINO",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "MANUEL FELIPE RUGELES",
+    "id_municipality": "2015"
+  },
+  {
+    "parish": "MANUEL GUANIPA MATOS",
+    "id_municipality": "2302"
+  },
+  {
+    "parish": "MANUEL MANRIQUE",
+    "id_municipality": "908"
+  },
+  {
+    "parish": "MANUEL MANRIQUE",
+    "id_municipality": "2319"
+  },
+  {
+    "parish": "MANUEL MORILLO",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "MANUEL PALACIO FAJARDO",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "MANUEL PIAR",
+    "id_municipality": "1002"
+  },
+  {
+    "parish": "MANUEL RENAUD",
+    "id_municipality": "1001"
+  },
+  {
+    "parish": "MANUEL SALVADOR ULLOA",
+    "id_municipality": "2104"
+  },
+  {
+    "parish": "MAPARARÍ",
+    "id_municipality": "1110"
+  },
+  {
+    "parish": "MAPIRE",
+    "id_municipality": "310"
+  },
+  {
+    "parish": "MARABAL",
+    "id_municipality": "1910"
+  },
+  {
+    "parish": "MARAWAKA",
+    "id_municipality": "201"
+  },
+  {
+    "parish": "MARCELINO BRICEÑO",
+    "id_municipality": "2302"
+  },
+  {
+    "parish": "MARCIAL HERNÁNDEZ",
+    "id_municipality": "2317"
+  },
+  {
+    "parish": "MARHUANTA",
+    "id_municipality": "705"
+  },
+  {
+    "parish": "MARÍA DE LA CONCEPCIÓN PALACIOS BLANCO",
+    "id_municipality": "1422"
+  },
+  {
+    "parish": "MARIANO PARRA LEÓN",
+    "id_municipality": "2307"
+  },
+  {
+    "parish": "MARIANO PICÓN SALAS",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "MARIÑO",
+    "id_municipality": "1901"
+  },
+  {
+    "parish": "MARISCAL ANTONIO JOSÉ DE SUCRE",
+    "id_municipality": "1004"
+  },
+  {
+    "parish": "MARIZAPA",
+    "id_municipality": "1501"
+  },
+  {
+    "parish": "MASPARRITO",
+    "id_municipality": "606"
+  },
+  {
+    "parish": "MATASIETE",
+    "id_municipality": "1705"
+  },
+  {
+    "parish": "MATRIZ",
+    "id_municipality": "1406"
+  },
+  {
+    "parish": "MATRÍZ",
+    "id_municipality": "2118"
+  },
+  {
+    "parish": "MAVACA",
+    "id_municipality": "201"
+  },
+  {
+    "parish": "MEDIO VENTUARI",
+    "id_municipality": "206"
+  },
+  {
+    "parish": "MENDOZA",
+    "id_municipality": "2120"
+  },
+  {
+    "parish": "MENE DE MAUROA",
+    "id_municipality": "1113"
+  },
+  {
+    "parish": "MERCEDES DÍAZ",
+    "id_municipality": "2120"
+  },
+  {
+    "parish": "MESA BOLÍVAR",
+    "id_municipality": "1403"
+  },
+  {
+    "parish": "MESA DE LAS PALMAS",
+    "id_municipality": "1403"
+  },
+  {
+    "parish": "MESA DE QUINTERO",
+    "id_municipality": "1409"
+  },
+  {
+    "parish": "MIGUEL OTERO SILVA",
+    "id_municipality": "319"
+  },
+  {
+    "parish": "MILLA",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "MITARE",
+    "id_municipality": "1114"
+  },
+  {
+    "parish": "MOITACO",
+    "id_municipality": "710"
+  },
+  {
+    "parish": "MONAGAS",
+    "id_municipality": "2301"
+  },
+  {
+    "parish": "MONSEÑOR ARGUIMIRO GARCIA",
+    "id_municipality": "1004"
+  },
+  {
+    "parish": "MONSEÑOR ARTURO CELESTINO ALVAREZ",
+    "id_municipality": "2320"
+  },
+  {
+    "parish": "MONSEÑOR CARRILLO",
+    "id_municipality": "2118"
+  },
+  {
+    "parish": "MONSEÑOR JAUREGUI",
+    "id_municipality": "2102"
+  },
+  {
+    "parish": "MONSEÑOR MARCOS SERGIO GODOY",
+    "id_municipality": "2312"
+  },
+  {
+    "parish": "MONSEÑOR MIGUEL ANTONIO SALAS",
+    "id_municipality": "2012"
+  },
+  {
+    "parish": "MONTALBÁN",
+    "id_municipality": "1406"
+  },
+  {
+    "parish": "MONTAÑA VERDE",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "MONTE CARMELO",
+    "id_municipality": "2111"
+  },
+  {
+    "parish": "MONTES DE OCA",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "MORALITO",
+    "id_municipality": "2305"
+  },
+  {
+    "parish": "MORAN",
+    "id_municipality": "1305"
+  },
+  {
+    "parish": "MOROTURO",
+    "id_municipality": "1309"
+  },
+  {
+    "parish": "MORUY",
+    "id_municipality": "1109"
+  },
+  {
+    "parish": "MOSQUEY",
+    "id_municipality": "2102"
+  },
+  {
+    "parish": "MOTATÁN",
+    "id_municipality": "2112"
+  },
+  {
+    "parish": "MUCUCHACHÍ",
+    "id_municipality": "1405"
+  },
+  {
+    "parish": "MÚCURA",
+    "id_municipality": "305"
+  },
+  {
+    "parish": "MUCURITAS",
+    "id_municipality": "401"
+  },
+  {
+    "parish": "MUCURUBÁ",
+    "id_municipality": "1417"
+  },
+  {
+    "parish": "MUCUTUY",
+    "id_municipality": "1405"
+  },
+  {
+    "parish": "MUNDUAPO",
+    "id_municipality": "204"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL ACOSTA",
+    "id_municipality": "1601"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL ARAURE",
+    "id_municipality": "1802"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL ARICAGUA",
+    "id_municipality": "1404"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL ARZOBISPO CHACÓN",
+    "id_municipality": "1405"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL AYACUCHO",
+    "id_municipality": "2003"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL BOLÍVAR",
+    "id_municipality": "2004"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL BRUZUAL",
+    "id_municipality": "2203"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL CAMATAGUA",
+    "id_municipality": "502"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL CARACCIOLO PARRA OLMEDO",
+    "id_municipality": "1407"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL CARDENAL QUINTERO",
+    "id_municipality": "1408"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL CÁRDENAS",
+    "id_municipality": "2005"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL CARIPE",
+    "id_municipality": "1604"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL CEDEÑO",
+    "id_municipality": "1605"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL DÍAZ",
+    "id_municipality": "1703"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL ESTELLER",
+    "id_municipality": "1803"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL EZEQUIEL ZAMORA",
+    "id_municipality": "1606"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL FERNÁNDEZ FEO",
+    "id_municipality": "2007"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL FRANCISCO LINARES ALCANTARA",
+    "id_municipality": "517"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL GARCÍA",
+    "id_municipality": "1704"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL GARCÍA DE HEVIA",
+    "id_municipality": "2009"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL GOMEZ",
+    "id_municipality": "1705"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL GUANARE",
+    "id_municipality": "1804"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL GUANARITO",
+    "id_municipality": "1805"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL GUARAQUE",
+    "id_municipality": "1409"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL INDEPENDENCIA",
+    "id_municipality": "2011"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL JÁUREGUI",
+    "id_municipality": "2012"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL JOSÉ FELIX RIBAS",
+    "id_municipality": "505"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL JULIO CESAR SALAS",
+    "id_municipality": "1410"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL JUNÍN",
+    "id_municipality": "2014"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL JUSTO BRICEÑO",
+    "id_municipality": "1411"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL LIBERTAD",
+    "id_municipality": "2015"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL LIBERTADOR",
+    "id_municipality": "507"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL LIBERTADOR",
+    "id_municipality": "1607"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL LIBERTADOR",
+    "id_municipality": "2016"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL LOBATERA",
+    "id_municipality": "2017"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL MANEIRO",
+    "id_municipality": "1706"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL MARCANO",
+    "id_municipality": "1707"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL MARIO BRICEÑO IRAGORRY",
+    "id_municipality": "508"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL MATURÍN",
+    "id_municipality": "1608"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL MIRANDA",
+    "id_municipality": "1413"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL MONSEÑOR JOSÉ VICENTE DE UNDA",
+    "id_municipality": "1806"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL NIRGUA",
+    "id_municipality": "2209"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL OBISPO RAMOS DE LORA",
+    "id_municipality": "1414"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL OSPINO",
+    "id_municipality": "1807"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL PAÉZ",
+    "id_municipality": "1808"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL PANAMERICANO",
+    "id_municipality": "2019"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL PAPELÓN",
+    "id_municipality": "1809"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL PEDRO MARÍA UREÑA",
+    "id_municipality": "2020"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL PENÍNSULA DE MACANAO",
+    "id_municipality": "1709"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL PEÑA",
+    "id_municipality": "2210"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL PIAR",
+    "id_municipality": "1609"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL PINTO SALINAS",
+    "id_municipality": "1403"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL PÚNCERES",
+    "id_municipality": "1610"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL RANGEL",
+    "id_municipality": "1417"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL RIVAS DÁVILA",
+    "id_municipality": "1418"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL SAMUEL DARIO MALDONADO",
+    "id_municipality": "2022"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL SAN CASIMIRO",
+    "id_municipality": "509"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL SAN FELIPE",
+    "id_municipality": "2211"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL SAN GENARO DE BOCONOÌTO",
+    "id_municipality": "1810"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL SAN RAFAEL DE ONOTO",
+    "id_municipality": "1811"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL SANTA ROSALÍA",
+    "id_municipality": "1812"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL SANTIAGO MARIÑO",
+    "id_municipality": "511"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL SANTOS MICHELENA",
+    "id_municipality": "512"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL SOTILLO",
+    "id_municipality": "1612"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL SUCRE",
+    "id_municipality": "513"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL SUCRE",
+    "id_municipality": "1420"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL SUCRE",
+    "id_municipality": "1813"
+  },
+  {
+    "parish": "MUNICÍPIO CAPITAL SUCRE",
+    "id_municipality": "2026"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL TUBORES",
+    "id_municipality": "1710"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL TULIO FEBRES CORDERO",
+    "id_municipality": "1422"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL TURÉN",
+    "id_municipality": "1814"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL URDANETA",
+    "id_municipality": "515"
+  },
+  {
+    "parish": "MUNICÍPIO CAPITAL URIBANTE",
+    "id_municipality": "2028"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL VEROES",
+    "id_municipality": "2214"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL VILLALBA",
+    "id_municipality": "1711"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL ZAMORA",
+    "id_municipality": "516"
+  },
+  {
+    "parish": "MUNICIPIO CAPITAL ZEA",
+    "id_municipality": "1423"
+  },
+  {
+    "parish": "NAIGUATA",
+    "id_municipality": "2401"
+  },
+  {
+    "parish": "NARICUAL",
+    "id_municipality": "318"
+  },
+  {
+    "parish": "NICOLÁS PULIDO",
+    "id_municipality": "602"
+  },
+  {
+    "parish": "NORTE",
+    "id_municipality": "1105"
+  },
+  {
+    "parish": "NO URBANA ALFREDO PACHECO MIRANDA",
+    "id_municipality": "511"
+  },
+  {
+    "parish": "NO URBANA AREVALO APONTE",
+    "id_municipality": "511"
+  },
+  {
+    "parish": "NO URBANA AUGUSTO MIJARES",
+    "id_municipality": "516"
+  },
+  {
+    "parish": "NO URBANA BELÉN",
+    "id_municipality": "802"
+  },
+  {
+    "parish": "NO URBANA BELLA VISTA",
+    "id_municipality": "513"
+  },
+  {
+    "parish": "NO URBANA BORBURATA",
+    "id_municipality": "811"
+  },
+  {
+    "parish": "NO URBANA CANOABO",
+    "id_municipality": "801"
+  },
+  {
+    "parish": "NO URBANA CARMEN DE CURA",
+    "id_municipality": "502"
+  },
+  {
+    "parish": "NO URBANA CHORONÍ",
+    "id_municipality": "503"
+  },
+  {
+    "parish": "NO URBANA CHUAO",
+    "id_municipality": "511"
+  },
+  {
+    "parish": "NO URBANA FRANCISCO DE MIRANDA",
+    "id_municipality": "517"
+  },
+  {
+    "parish": "NO URBANA GÜIRIPA",
+    "id_municipality": "509"
+  },
+  {
+    "parish": "NO URBANA LAS GUACAMAYAS",
+    "id_municipality": "505"
+  },
+  {
+    "parish": "NO URBANA LAS PEÑITAS",
+    "id_municipality": "515"
+  },
+  {
+    "parish": "NO URBANA MAGDALENO",
+    "id_municipality": "516"
+  },
+  {
+    "parish": "NO URBANA MONSEÑOR FELICIANO GONZALES",
+    "id_municipality": "517"
+  },
+  {
+    "parish": "NO URBANA NEGRO PRIMERO",
+    "id_municipality": "814"
+  },
+  {
+    "parish": "NO URBANA OLLAS DE CARAMACATE",
+    "id_municipality": "509"
+  },
+  {
+    "parish": "NO URBANA PAO DE ZÁRATE",
+    "id_municipality": "505"
+  },
+  {
+    "parish": "NO URBANA PATANEMO",
+    "id_municipality": "811"
+  },
+  {
+    "parish": "NO URBANA SAMÁN DE GÜERE",
+    "id_municipality": "511"
+  },
+  {
+    "parish": "NO URBANA SAN FRANCISCO DE ASÍS",
+    "id_municipality": "516"
+  },
+  {
+    "parish": "NO URBANA SAN FRANCISCO DE CARA",
+    "id_municipality": "515"
+  },
+  {
+    "parish": "NO URBANA SAN MARTÍN DE PORRES",
+    "id_municipality": "507"
+  },
+  {
+    "parish": "NO URBANA SIMÓN BOLÍVAR",
+    "id_municipality": "801"
+  },
+  {
+    "parish": "NO URBANA TACARIGUA",
+    "id_municipality": "802"
+  },
+  {
+    "parish": "NO URBANA TAGUAY",
+    "id_municipality": "515"
+  },
+  {
+    "parish": "NO URBANA TIARA",
+    "id_municipality": "512"
+  },
+  {
+    "parish": "NO URBANA URAMA",
+    "id_municipality": "805"
+  },
+  {
+    "parish": "NO URBANA VALLE MORÍN",
+    "id_municipality": "509"
+  },
+  {
+    "parish": "NO URBANA VALLES DE TUCUTUNEMO",
+    "id_municipality": "516"
+  },
+  {
+    "parish": "NO URBANA YAGUA",
+    "id_municipality": "804"
+  },
+  {
+    "parish": "NO URBANA ZUATA",
+    "id_municipality": "505"
+  },
+  {
+    "parish": "NUEVA ARCADIA",
+    "id_municipality": "2020"
+  },
+  {
+    "parish": "NUEVA CÚA",
+    "id_municipality": "1520"
+  },
+  {
+    "parish": "OBISPOS",
+    "id_municipality": "608"
+  },
+  {
+    "parish": "OCUMARE DEL TUY",
+    "id_municipality": "1512"
+  },
+  {
+    "parish": "OLEGARIO VILLALOBOS",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "ONCE DE ABRIL",
+    "id_municipality": "701"
+  },
+  {
+    "parish": "ONOTO",
+    "id_municipality": "309"
+  },
+  {
+    "parish": "ORINOCO",
+    "id_municipality": "705"
+  },
+  {
+    "parish": "ORTÍZ",
+    "id_municipality": "1210"
+  },
+  {
+    "parish": "OSUNA RODRÍGUEZ",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "PADRE BARRAL",
+    "id_municipality": "1001"
+  },
+  {
+    "parish": "PÁEZ",
+    "id_municipality": "609"
+  },
+  {
+    "parish": "PALACIOS FAJARDO",
+    "id_municipality": "610"
+  },
+  {
+    "parish": "PALMIRA",
+    "id_municipality": "1410"
+  },
+  {
+    "parish": "PALOTAL",
+    "id_municipality": "2004"
+  },
+  {
+    "parish": "PAMPÁN",
+    "id_municipality": "2113"
+  },
+  {
+    "parish": "PAMPANITO",
+    "id_municipality": "2114"
+  },
+  {
+    "parish": "PAMPANITO II",
+    "id_municipality": "2114"
+  },
+  {
+    "parish": "PANAMERICANA",
+    "id_municipality": "2105"
+  },
+  {
+    "parish": "PANAPANA",
+    "id_municipality": "705"
+  },
+  {
+    "parish": "PANAQUIRE",
+    "id_municipality": "1501"
+  },
+  {
+    "parish": "PAPARO",
+    "id_municipality": "1514"
+  },
+  {
+    "parish": "PARACOTOS",
+    "id_municipality": "1510"
+  },
+  {
+    "parish": "PARAISO DE SAN JOSÉ",
+    "id_municipality": "1304"
+  },
+  {
+    "parish": "PARAPARA",
+    "id_municipality": "1212"
+  },
+  {
+    "parish": "PARHUEÑA",
+    "id_municipality": "203"
+  },
+  {
+    "parish": "PARIAGUÁN",
+    "id_municipality": "305"
+  },
+  {
+    "parish": "PASO REAL DE MACAIRA",
+    "id_municipality": "1209"
+  },
+  {
+    "parish": "PAUJÍ",
+    "id_municipality": "1110"
+  },
+  {
+    "parish": "PAYARA",
+    "id_municipality": "1808"
+  },
+  {
+    "parish": "PECAYA",
+    "id_municipality": "1121"
+  },
+  {
+    "parish": "PEDERNALES",
+    "id_municipality": "1003"
+  },
+  {
+    "parish": "PEDREGAL",
+    "id_municipality": "1108"
+  },
+  {
+    "parish": "PEDRO BRICEÑO MENDEZ",
+    "id_municipality": "607"
+  },
+  {
+    "parish": "PEDRO COVA",
+    "id_municipality": "706"
+  },
+  {
+    "parish": "PEDRO LUCAS URRIBARRI",
+    "id_municipality": "2318"
+  },
+  {
+    "parish": "PEDRO MARÍA MORANTES",
+    "id_municipality": "2023"
+  },
+  {
+    "parish": "PEÑA BLANCA",
+    "id_municipality": "1806"
+  },
+  {
+    "parish": "PEÑALVER",
+    "id_municipality": "407"
+  },
+  {
+    "parish": "PETARE",
+    "id_municipality": "1519"
+  },
+  {
+    "parish": "PIAR",
+    "id_municipality": "310"
+  },
+  {
+    "parish": "PIEDRA GRANDE",
+    "id_municipality": "1108"
+  },
+  {
+    "parish": "PIJIGUAOS",
+    "id_municipality": "702"
+  },
+  {
+    "parish": "PIMPINELA",
+    "id_municipality": "1808"
+  },
+  {
+    "parish": "PIÑANGO",
+    "id_municipality": "1413"
+  },
+  {
+    "parish": "PIO TAMAYO",
+    "id_municipality": "1301"
+  },
+  {
+    "parish": "PÍRITU",
+    "id_municipality": "314"
+  },
+  {
+    "parish": "PÍRITU",
+    "id_municipality": "1118"
+  },
+  {
+    "parish": "PLATANILLAL",
+    "id_municipality": "203"
+  },
+  {
+    "parish": "POTOSÍ",
+    "id_municipality": "2028"
+  },
+  {
+    "parish": "POTRERITOS",
+    "id_municipality": "2309"
+  },
+  {
+    "parish": "POZO VERDE",
+    "id_municipality": "701"
+  },
+  {
+    "parish": "POZUELOS",
+    "id_municipality": "308"
+  },
+  {
+    "parish": "PRESIDENTE BETANCOURT",
+    "id_municipality": "1401"
+  },
+  {
+    "parish": "PRESIDENTE PÁEZ",
+    "id_municipality": "1401"
+  },
+  {
+    "parish": "PRESIDENTE RÒMULO GALLEGOS",
+    "id_municipality": "1401"
+  },
+  {
+    "parish": "PUEBLO CUMAREBO",
+    "id_municipality": "1125"
+  },
+  {
+    "parish": "PUEBLO NUEVO",
+    "id_municipality": "317"
+  },
+  {
+    "parish": "PUEBLO NUEVO",
+    "id_municipality": "1109"
+  },
+  {
+    "parish": "PUEBLO NUEVO",
+    "id_municipality": "2302"
+  },
+  {
+    "parish": "PUEBLO NUEVO DEL SUR",
+    "id_municipality": "1420"
+  },
+  {
+    "parish": "PUERTO CUMAREBO",
+    "id_municipality": "1125"
+  },
+  {
+    "parish": "PUERTO DE NUTRIAS",
+    "id_municipality": "611"
+  },
+  {
+    "parish": "PUERTO LA CRUZ",
+    "id_municipality": "308"
+  },
+  {
+    "parish": "PUERTO PÍRITU",
+    "id_municipality": "303"
+  },
+  {
+    "parish": "PUERTO SANTO",
+    "id_municipality": "1903"
+  },
+  {
+    "parish": "PUERTO VIVAS",
+    "id_municipality": "611"
+  },
+  {
+    "parish": "PULIDO MÈNDEZ",
+    "id_municipality": "1401"
+  },
+  {
+    "parish": "PUNTA CARDÓN",
+    "id_municipality": "1105"
+  },
+  {
+    "parish": "PUNTA DE PIEDRA",
+    "id_municipality": "1915"
+  },
+  {
+    "parish": "PUNTA GORDA",
+    "id_municipality": "2303"
+  },
+  {
+    "parish": "PURURECHE",
+    "id_municipality": "1108"
+  },
+  {
+    "parish": "QUEBRADA HONDA DE GUACHE",
+    "id_municipality": "1301"
+  },
+  {
+    "parish": "QUESERAS DEL MEDIO",
+    "id_municipality": "401"
+  },
+  {
+    "parish": "QUINIMARÍ",
+    "id_municipality": "2014"
+  },
+  {
+    "parish": "QUINTERO",
+    "id_municipality": "403"
+  },
+  {
+    "parish": "RACCIOLO PARRA PÉREZ",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "RAFAEL MARÍA BARALT",
+    "id_municipality": "2319"
+  },
+  {
+    "parish": "RAFAEL RANGEL",
+    "id_municipality": "2102"
+  },
+  {
+    "parish": "RAFAEL URDANETA",
+    "id_municipality": "2319"
+  },
+  {
+    "parish": "RAFAEL URDANETA",
+    "id_municipality": "2321"
+  },
+  {
+    "parish": "RAMÓN IGNACIO MENDEZ",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "RAMÓN IGNACIO MENDEZ",
+    "id_municipality": "607"
+  },
+  {
+    "parish": "RAMON PERAZA",
+    "id_municipality": "1808"
+  },
+  {
+    "parish": "RAÚL CUENCA",
+    "id_municipality": "2321"
+  },
+  {
+    "parish": "RAUL LEONI",
+    "id_municipality": "1914"
+  },
+  {
+    "parish": "RAÚL LEONI",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "RAÚL LEONI",
+    "id_municipality": "2401"
+  },
+  {
+    "parish": "RENDÓN",
+    "id_municipality": "1913"
+  },
+  {
+    "parish": "REYES VARCAS",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "RIBAS",
+    "id_municipality": "1501"
+  },
+  {
+    "parish": "RICAURTE",
+    "id_municipality": "2312"
+  },
+  {
+    "parish": "RINCÓN HONDO",
+    "id_municipality": "403"
+  },
+  {
+    "parish": "RÍO ACARIGUA",
+    "id_municipality": "1802"
+  },
+  {
+    "parish": "RÍO CARIBE",
+    "id_municipality": "1903"
+  },
+  {
+    "parish": "RÍO CHICO",
+    "id_municipality": "1514"
+  },
+  {
+    "parish": "RÍO NEGRO",
+    "id_municipality": "1409"
+  },
+  {
+    "parish": "RÍO NEGRO",
+    "id_municipality": "2311"
+  },
+  {
+    "parish": "RÍO SECO",
+    "id_municipality": "1114"
+  },
+  {
+    "parish": "RIVAS BERTI",
+    "id_municipality": "2003"
+  },
+  {
+    "parish": "RODRÍGUEZ DOMINGUEZ",
+    "id_municipality": "601"
+  },
+  {
+    "parish": "ROMÁN CARDENAS",
+    "id_municipality": "2011"
+  },
+  {
+    "parish": "RÓMULO BETANCOURT",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "RÓMULO BETANCOURT",
+    "id_municipality": "2303"
+  },
+  {
+    "parish": "RÓMULO GALLEGOS",
+    "id_municipality": "907"
+  },
+  {
+    "parish": "RÓMULO GALLEGOS",
+    "id_municipality": "1002"
+  },
+  {
+    "parish": "RÓMULO GALLEGOS",
+    "id_municipality": "1901"
+  },
+  {
+    "parish": "RÓMULO GALLEGOS",
+    "id_municipality": "2320"
+  },
+  {
+    "parish": "SABANA DE MENDOZA",
+    "id_municipality": "2117"
+  },
+  {
+    "parish": "SABANA DE PIEDRA",
+    "id_municipality": "1604"
+  },
+  {
+    "parish": "SABANA DE UCHIRE",
+    "id_municipality": "312"
+  },
+  {
+    "parish": "SABANA GRANDE",
+    "id_municipality": "2103"
+  },
+  {
+    "parish": "SABANA LIBRE",
+    "id_municipality": "2106"
+  },
+  {
+    "parish": "SABANETA",
+    "id_municipality": "601"
+  },
+  {
+    "parish": "SABANETA",
+    "id_municipality": "1114"
+  },
+  {
+    "parish": "SAGRARIO",
+    "id_municipality": "1412"
+  },
+  {
+    "parish": "SALOM",
+    "id_municipality": "708"
+  },
+  {
+    "parish": "SALÓM",
+    "id_municipality": "2209"
+  },
+  {
+    "parish": "SAMARIAPO",
+    "id_municipality": "204"
+  },
+  {
+    "parish": "SAN AGUSTÍN",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "SAN AGUSTÍN",
+    "id_municipality": "1604"
+  },
+  {
+    "parish": "SAN ANDRÉS",
+    "id_municipality": "2210"
+  },
+  {
+    "parish": "SAN ANTONIO",
+    "id_municipality": "603"
+  },
+  {
+    "parish": "SAN ANTONIO",
+    "id_municipality": "1114"
+  },
+  {
+    "parish": "SAN ANTONIO",
+    "id_municipality": "1404"
+  },
+  {
+    "parish": "SAN ANTONIO",
+    "id_municipality": "2314"
+  },
+  {
+    "parish": "SAN ANTONIO DE IRAPA",
+    "id_municipality": "1910"
+  },
+  {
+    "parish": "SAN ANTONIO DE LOS ALTOS",
+    "id_municipality": "1513"
+  },
+  {
+    "parish": "SAN ANTONIO DE YARE",
+    "id_municipality": "1518"
+  },
+  {
+    "parish": "SAN BENITO",
+    "id_municipality": "2303"
+  },
+  {
+    "parish": "SAN BERNARDINO",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "SAN CAMILO",
+    "id_municipality": "404"
+  },
+  {
+    "parish": "SAN CARLOS DE AUSTRIA",
+    "id_municipality": "908"
+  },
+  {
+    "parish": "SAN CARLOS DEL ZULIA",
+    "id_municipality": "2305"
+  },
+  {
+    "parish": "SAN CRISTÓBAL",
+    "id_municipality": "318"
+  },
+  {
+    "parish": "SAN CRISTÓBAL DE TORONDOY",
+    "id_municipality": "1411"
+  },
+  {
+    "parish": "SAN DIEGO DE CABRUTICA",
+    "id_municipality": "310"
+  },
+  {
+    "parish": "SAN FÉLIX",
+    "id_municipality": "1113"
+  },
+  {
+    "parish": "SAN FÉLIX",
+    "id_municipality": "1605"
+  },
+  {
+    "parish": "SAN FERNANDO",
+    "id_municipality": "1912"
+  },
+  {
+    "parish": "SAN FERNANDO DEL GUAPO",
+    "id_municipality": "1514"
+  },
+  {
+    "parish": "SAN FRANCISCO",
+    "id_municipality": "314"
+  },
+  {
+    "parish": "SAN FRANCISCO",
+    "id_municipality": "707"
+  },
+  {
+    "parish": "SAN FRANCISCO",
+    "id_municipality": "1421"
+  },
+  {
+    "parish": "SAN FRANCISCO",
+    "id_municipality": "1601"
+  },
+  {
+    "parish": "SAN FRANCISCO",
+    "id_municipality": "1709"
+  },
+  {
+    "parish": "SAN FRANCISCO",
+    "id_municipality": "2317"
+  },
+  {
+    "parish": "SAN FRANCISCO DE MACAIRA",
+    "id_municipality": "1209"
+  },
+  {
+    "parish": "SAN FRANCISCO DE TIZNADOS",
+    "id_municipality": "1210"
+  },
+  {
+    "parish": "SAN FRANCISCO DE YARE",
+    "id_municipality": "1518"
+  },
+  {
+    "parish": "SAN GABRIEL",
+    "id_municipality": "1114"
+  },
+  {
+    "parish": "SAN GERONIMO DE GUAYABAL",
+    "id_municipality": "1204"
+  },
+  {
+    "parish": "SAN ISIDRO",
+    "id_municipality": "709"
+  },
+  {
+    "parish": "SAN ISIDRO",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "SAN ISIDRO LABRADOR",
+    "id_municipality": "1814"
+  },
+  {
+    "parish": "SAN JAVIER",
+    "id_municipality": "2211"
+  },
+  {
+    "parish": "SAN JOAQUIN",
+    "id_municipality": "301"
+  },
+  {
+    "parish": "SAN JOAQUIN DE NAVAY",
+    "id_municipality": "2016"
+  },
+  {
+    "parish": "SAN JOSÉ",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "SAN JOSÉ",
+    "id_municipality": "1004"
+  },
+  {
+    "parish": "SAN JOSÉ",
+    "id_municipality": "1406"
+  },
+  {
+    "parish": "SAN JOSÉ",
+    "id_municipality": "2102"
+  },
+  {
+    "parish": "SAN JOSÉ",
+    "id_municipality": "2104"
+  },
+  {
+    "parish": "SAN JOSÉ",
+    "id_municipality": "2307"
+  },
+  {
+    "parish": "SAN JOSÉ",
+    "id_municipality": "2314"
+  },
+  {
+    "parish": "SAN JOSÉ DE AEROCUAR",
+    "id_municipality": "1902"
+  },
+  {
+    "parish": "SAN JOSÉ DE BARLOVENTO",
+    "id_municipality": "1502"
+  },
+  {
+    "parish": "SAN JOSÉ DE GUARIBE",
+    "id_municipality": "1213"
+  },
+  {
+    "parish": "SAN JOSÉ DE LA COSTA",
+    "id_municipality": "1118"
+  },
+  {
+    "parish": "SAN JOSÉ DE LA MONTAÑA",
+    "id_municipality": "1804"
+  },
+  {
+    "parish": "SAN JOSÉ DE PERIJÁ",
+    "id_municipality": "2311"
+  },
+  {
+    "parish": "SAN JOSÉ DE SAGUAZ",
+    "id_municipality": "1813"
+  },
+  {
+    "parish": "SAN JOSÉ DE TIZNADOS",
+    "id_municipality": "1210"
+  },
+  {
+    "parish": "SAN JUAN",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "SAN JUAN",
+    "id_municipality": "1420"
+  },
+  {
+    "parish": "SAN JUAN",
+    "id_municipality": "1914"
+  },
+  {
+    "parish": "SAN JUAN BAUTISTA",
+    "id_municipality": "2023"
+  },
+  {
+    "parish": "SAN JUAN DE GUANAGUANARE",
+    "id_municipality": "1804"
+  },
+  {
+    "parish": "SAN JUAN DE LAS GALDONAS",
+    "id_municipality": "1903"
+  },
+  {
+    "parish": "SAN JUAN DE LOS MORROS",
+    "id_municipality": "1212"
+  },
+  {
+    "parish": "SAN LORENZO",
+    "id_municipality": "1912"
+  },
+  {
+    "parish": "SAN LORENZO DE TIZNADOS",
+    "id_municipality": "1210"
+  },
+  {
+    "parish": "SAN LUIS",
+    "id_municipality": "1102"
+  },
+  {
+    "parish": "SAN LUÍS",
+    "id_municipality": "2120"
+  },
+  {
+    "parish": "SAN MATEO",
+    "id_municipality": "311"
+  },
+  {
+    "parish": "SAN MIGUEL",
+    "id_municipality": "303"
+  },
+  {
+    "parish": "SAN MIGUEL",
+    "id_municipality": "1304"
+  },
+  {
+    "parish": "SAN MIGUEL",
+    "id_municipality": "1309"
+  },
+  {
+    "parish": "SAN MIGUEL",
+    "id_municipality": "2102"
+  },
+  {
+    "parish": "SAN PABLO",
+    "id_municipality": "309"
+  },
+  {
+    "parish": "SAN PABLO",
+    "id_municipality": "2026"
+  },
+  {
+    "parish": "SAN PEDRO",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "SAN PEDRO",
+    "id_municipality": "1510"
+  },
+  {
+    "parish": "SAN PEDRO DEL RÍO",
+    "id_municipality": "2003"
+  },
+  {
+    "parish": "SAN RAFAEL",
+    "id_municipality": "1004"
+  },
+  {
+    "parish": "SAN RAFAEL",
+    "id_municipality": "1417"
+  },
+  {
+    "parish": "SAN RAFAEL",
+    "id_municipality": "2312"
+  },
+  {
+    "parish": "SAN RAFAEL DE ALCAZAR",
+    "id_municipality": "1414"
+  },
+  {
+    "parish": "SAN RAFAEL DE ATAMAICA",
+    "id_municipality": "407"
+  },
+  {
+    "parish": "SAN RAFAEL DE LAYA",
+    "id_municipality": "1211"
+  },
+  {
+    "parish": "SAN RAFAEL DE ORITUCO",
+    "id_municipality": "1209"
+  },
+  {
+    "parish": "SAN RAFAEL DE PALO ALZAO",
+    "id_municipality": "1813"
+  },
+  {
+    "parish": "SAN SEBASTIAN",
+    "id_municipality": "2023"
+  },
+  {
+    "parish": "SAN SILVESTRE",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "SAN SIMÓN",
+    "id_municipality": "1608"
+  },
+  {
+    "parish": "SANTA ANA",
+    "id_municipality": "317"
+  },
+  {
+    "parish": "SANTA ANA",
+    "id_municipality": "1105"
+  },
+  {
+    "parish": "SANTA ANA",
+    "id_municipality": "1114"
+  },
+  {
+    "parish": "SANTA ANA",
+    "id_municipality": "2113"
+  },
+  {
+    "parish": "SANTA APOLONIA",
+    "id_municipality": "2109"
+  },
+  {
+    "parish": "SANTA BARBARA",
+    "id_municipality": "1512"
+  },
+  {
+    "parish": "SANTA BÁRBARA",
+    "id_municipality": "304"
+  },
+  {
+    "parish": "SANTA BÁRBARA",
+    "id_municipality": "607"
+  },
+  {
+    "parish": "SANTA BÁRBARA",
+    "id_municipality": "707"
+  },
+  {
+    "parish": "SANTA BÁRBARA",
+    "id_municipality": "2305"
+  },
+  {
+    "parish": "SANTA CATALINA",
+    "id_municipality": "611"
+  },
+  {
+    "parish": "SANTA CATALINA",
+    "id_municipality": "1905"
+  },
+  {
+    "parish": "SANTA CLARA",
+    "id_municipality": "310"
+  },
+  {
+    "parish": "SANTA CRUZ",
+    "id_municipality": "1608"
+  },
+  {
+    "parish": "SANTA CRUZ",
+    "id_municipality": "1814"
+  },
+  {
+    "parish": "SANTA CRUZ",
+    "id_municipality": "1913"
+  },
+  {
+    "parish": "SANTA CRUZ",
+    "id_municipality": "2105"
+  },
+  {
+    "parish": "SANTA CRUZ DE BUCARAL",
+    "id_municipality": "1123"
+  },
+  {
+    "parish": "SANTA CRUZ DE GUACAS",
+    "id_municipality": "611"
+  },
+  {
+    "parish": "SANTA CRUZ DEL ZULIA",
+    "id_municipality": "2305"
+  },
+  {
+    "parish": "SANTA FÉ",
+    "id_municipality": "1811"
+  },
+  {
+    "parish": "SANTA FÉ",
+    "id_municipality": "1914"
+  },
+  {
+    "parish": "SANTA INES",
+    "id_municipality": "1914"
+  },
+  {
+    "parish": "SANTA INÉS",
+    "id_municipality": "311"
+  },
+  {
+    "parish": "SANTA INÉS",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "SANTA ISABEL",
+    "id_municipality": "2101"
+  },
+  {
+    "parish": "SANTA LUCIA",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "SANTA LUCIA",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "SANTA LUCÍA",
+    "id_municipality": "1515"
+  },
+  {
+    "parish": "SANTA MARÍA",
+    "id_municipality": "1913"
+  },
+  {
+    "parish": "SANTA MARIA DE IPIRE",
+    "id_municipality": "1214"
+  },
+  {
+    "parish": "SANTA MARÍA DEL HORCÓN",
+    "id_municipality": "2111"
+  },
+  {
+    "parish": "SANTA POLONIA",
+    "id_municipality": "1422"
+  },
+  {
+    "parish": "SANTA RITA",
+    "id_municipality": "2106"
+  },
+  {
+    "parish": "SANTA RITA",
+    "id_municipality": "2318"
+  },
+  {
+    "parish": "SANTA RITA MANAPIRE",
+    "id_municipality": "1206"
+  },
+  {
+    "parish": "SANTA ROSA",
+    "id_municipality": "313"
+  },
+  {
+    "parish": "SANTA ROSA",
+    "id_municipality": "610"
+  },
+  {
+    "parish": "SANTA ROSA",
+    "id_municipality": "1303"
+  },
+  {
+    "parish": "SANTA ROSA",
+    "id_municipality": "1905"
+  },
+  {
+    "parish": "SANTA ROSALÍA",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "SANTA TERESA",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "SANTA TERESA",
+    "id_municipality": "1905"
+  },
+  {
+    "parish": "SANTA TERESA DEL TUY",
+    "id_municipality": "1511"
+  },
+  {
+    "parish": "SANTIAGO",
+    "id_municipality": "2119"
+  },
+  {
+    "parish": "SAN TIMOTEO",
+    "id_municipality": "2302"
+  },
+  {
+    "parish": "SANTO DOMINGO",
+    "id_municipality": "2007"
+  },
+  {
+    "parish": "SANTOS DE ABELGAS",
+    "id_municipality": "1001"
+  },
+  {
+    "parish": "SAN VICENTE",
+    "id_municipality": "403"
+  },
+  {
+    "parish": "SAN VICENTE",
+    "id_municipality": "1608"
+  },
+  {
+    "parish": "SARARE",
+    "id_municipality": "1307"
+  },
+  {
+    "parish": "SECCIÓN CAPITAL CEDEÑO",
+    "id_municipality": "702"
+  },
+  {
+    "parish": "SECCIÓN CAPITAL GRAN SABANA",
+    "id_municipality": "704"
+  },
+  {
+    "parish": "SECCIÓN CAPITAL PIAR",
+    "id_municipality": "706"
+  },
+  {
+    "parish": "SECCIÓN CAPITAL RAÚL LEONI",
+    "id_municipality": "707"
+  },
+  {
+    "parish": "SECCIÓN CAPITAL ROSCIO",
+    "id_municipality": "708"
+  },
+  {
+    "parish": "SECCIÓN CAPITAL SIFONTES",
+    "id_municipality": "709"
+  },
+  {
+    "parish": "SECCIÓN CAPITAL SUCRE",
+    "id_municipality": "710"
+  },
+  {
+    "parish": "SEQUE",
+    "id_municipality": "1103"
+  },
+  {
+    "parish": "SIERRA PARIMA",
+    "id_municipality": "201"
+  },
+  {
+    "parish": "SIMÓN BOLÍVAR 1",
+    "id_municipality": "701"
+  },
+  {
+    "parish": "SIMÓN RODRÍGUEZ",
+    "id_municipality": "2306"
+  },
+  {
+    "parish": "SINAMAICA",
+    "id_municipality": "2315"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "315"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "501"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "504"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "506"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "510"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "514"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "518"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "703"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "711"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1104"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1107"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1116"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1119"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1402"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1415"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1416"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1419"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1602"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1603"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1611"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1613"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1701"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1702"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1708"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1801"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1906"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "1911"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2001"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2002"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2006"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2010"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2013"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2018"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2021"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2024"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2025"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2027"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2029"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2201"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2202"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2204"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2205"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2206"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2207"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2208"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2212"
+  },
+  {
+    "parish": "SIN parish",
+    "id_municipality": "2213"
+  },
+  {
+    "parish": "SIPAPO",
+    "id_municipality": "204"
+  },
+  {
+    "parish": "SIQUISIQUE",
+    "id_municipality": "1309"
+  },
+  {
+    "parish": "SIXTO ZAMBRANO",
+    "id_municipality": "2316"
+  },
+  {
+    "parish": "SOLANO",
+    "id_municipality": "207"
+  },
+  {
+    "parish": "SOLEDAD",
+    "id_municipality": "307"
+  },
+  {
+    "parish": "SORO",
+    "id_municipality": "1910"
+  },
+  {
+    "parish": "SOSA",
+    "id_municipality": "1207"
+  },
+  {
+    "parish": "SOUBLETTE",
+    "id_municipality": "1209"
+  },
+  {
+    "parish": "SUCRE",
+    "id_municipality": "101"
+  },
+  {
+    "parish": "SUCRE",
+    "id_municipality": "303"
+  },
+  {
+    "parish": "SUCRE",
+    "id_municipality": "903"
+  },
+  {
+    "parish": "SUCRE",
+    "id_municipality": "1121"
+  },
+  {
+    "parish": "SUCRE",
+    "id_municipality": "1705"
+  },
+  {
+    "parish": "TABASCA",
+    "id_municipality": "1607"
+  },
+  {
+    "parish": "TACARIGUA",
+    "id_municipality": "1504"
+  },
+  {
+    "parish": "TACARIGUA DE LA LAGUNA",
+    "id_municipality": "1514"
+  },
+  {
+    "parish": "TÁCATA",
+    "id_municipality": "1510"
+  },
+  {
+    "parish": "TAGUAYA",
+    "id_municipality": "1609"
+  },
+  {
+    "parish": "TAMACA",
+    "id_municipality": "1303"
+  },
+  {
+    "parish": "TAMARE",
+    "id_municipality": "2312"
+  },
+  {
+    "parish": "TAVERA ACOSTA",
+    "id_municipality": "1902"
+  },
+  {
+    "parish": "TEMERLA",
+    "id_municipality": "2209"
+  },
+  {
+    "parish": "TERESEN",
+    "id_municipality": "1604"
+  },
+  {
+    "parish": "THERMO MORLES",
+    "id_municipality": "1811"
+  },
+  {
+    "parish": "TICOPORO",
+    "id_municipality": "602"
+  },
+  {
+    "parish": "TINAQUILLO",
+    "id_municipality": "902"
+  },
+  {
+    "parish": "TINTORERO",
+    "id_municipality": "1304"
+  },
+  {
+    "parish": "TOCÓPERO",
+    "id_municipality": "1122"
+  },
+  {
+    "parish": "TOCUYO DE LA COSTA",
+    "id_municipality": "1115"
+  },
+  {
+    "parish": "TOMÁS ALFARO CALATRAVA",
+    "id_municipality": "320"
+  },
+  {
+    "parish": "TORRES",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "TORUNOS",
+    "id_municipality": "604"
+  },
+  {
+    "parish": "TOVAR",
+    "id_municipality": "1421"
+  },
+  {
+    "parish": "TRES DE FEBRERO",
+    "id_municipality": "2109"
+  },
+  {
+    "parish": "TRES ESQUINAS",
+    "id_municipality": "2118"
+  },
+  {
+    "parish": "TRINIDAD DE LA CAPILLA",
+    "id_municipality": "1805"
+  },
+  {
+    "parish": "TRINIDAD SAMUEL",
+    "id_municipality": "1308"
+  },
+  {
+    "parish": "TUCACAS",
+    "id_municipality": "1120"
+  },
+  {
+    "parish": "TUCUPIDO",
+    "id_municipality": "1211"
+  },
+  {
+    "parish": "TUNAPUICITO",
+    "id_municipality": "1904"
+  },
+  {
+    "parish": "TUNAPUY",
+    "id_municipality": "1909"
+  },
+  {
+    "parish": "TUÑAME",
+    "id_municipality": "2119"
+  },
+  {
+    "parish": "UCATA",
+    "id_municipality": "202"
+  },
+  {
+    "parish": "UDÓN PEREZ",
+    "id_municipality": "2304"
+  },
+  {
+    "parish": "UNARE",
+    "id_municipality": "701"
+  },
+  {
+    "parish": "UNIÓN",
+    "id_municipality": "1303"
+  },
+  {
+    "parish": "UNIÓN",
+    "id_municipality": "1904"
+  },
+  {
+    "parish": "UNIVERSIDAD",
+    "id_municipality": "701"
+  },
+  {
+    "parish": "URBANA ACHAGUAS",
+    "id_municipality": "401"
+  },
+  {
+    "parish": "URBANA AGUAS CALIENTES",
+    "id_municipality": "803"
+  },
+  {
+    "parish": "URBANA ANDRÉS ELOY BLANCO",
+    "id_municipality": "503"
+  },
+  {
+    "parish": "URBANA BARTOLOMÉ SALÓM",
+    "id_municipality": "811"
+  },
+  {
+    "parish": "URBANA BEJUMA",
+    "id_municipality": "801"
+  },
+  {
+    "parish": "URBANA BIRUACA",
+    "id_municipality": "402"
+  },
+  {
+    "parish": "URBANA BRUZUAL",
+    "id_municipality": "403"
+  },
+  {
+    "parish": "URBANA CANDELARIA",
+    "id_municipality": "814"
+  },
+  {
+    "parish": "URBANA CAÑA DE AZÚCAR",
+    "id_municipality": "508"
+  },
+  {
+    "parish": "URBANA CASTOR NIEVES RÍOS",
+    "id_municipality": "505"
+  },
+  {
+    "parish": "URBANA CATEDRAL",
+    "id_municipality": "814"
+  },
+  {
+    "parish": "URBANA CIUDAD ALIANZA",
+    "id_municipality": "804"
+  },
+  {
+    "parish": "URBANA DEMOCRACIA",
+    "id_municipality": "811"
+  },
+  {
+    "parish": "URBANA ELORZA",
+    "id_municipality": "406"
+  },
+  {
+    "parish": "URBANA EL SOCORRO",
+    "id_municipality": "814"
+  },
+  {
+    "parish": "URBANA FRATERNIDAD",
+    "id_municipality": "811"
+  },
+  {
+    "parish": "URBANA GOAIGOAZA",
+    "id_municipality": "811"
+  },
+  {
+    "parish": "URBANA GUACARA",
+    "id_municipality": "804"
+  },
+  {
+    "parish": "URBANA GUASDUALITO",
+    "id_municipality": "404"
+  },
+  {
+    "parish": "URBANA GÜIGÜE",
+    "id_municipality": "802"
+  },
+  {
+    "parish": "URBANA INDEPENDENCIA",
+    "id_municipality": "806"
+  },
+  {
+    "parish": "URBANA JOAQUIN CRESPO",
+    "id_municipality": "503"
+  },
+  {
+    "parish": "URBANA JOSÉ CASANOVA GODOY",
+    "id_municipality": "503"
+  },
+  {
+    "parish": "URBANA JUAN JOSÉ FLORES",
+    "id_municipality": "811"
+  },
+  {
+    "parish": "URBANA LAS DELICIAS",
+    "id_municipality": "503"
+  },
+  {
+    "parish": "URBANA LOS GUAYOS",
+    "id_municipality": "807"
+  },
+  {
+    "parish": "URBANA LOS TACARIGUAS",
+    "id_municipality": "503"
+  },
+  {
+    "parish": "URBANA MADRE MARÌA DE SAN",
+    "id_municipality": "503"
+  },
+  {
+    "parish": "URBANA MARIARA",
+    "id_municipality": "803"
+  },
+  {
+    "parish": "URBANA MIGUEL PEÑA",
+    "id_municipality": "814"
+  },
+  {
+    "parish": "URBANA MIRANDA",
+    "id_municipality": "808"
+  },
+  {
+    "parish": "URBANA MONTALBAN",
+    "id_municipality": "809"
+  },
+  {
+    "parish": "URBANA MORÓN",
+    "id_municipality": "805"
+  },
+  {
+    "parish": "URBANA NAGUANAGUA",
+    "id_municipality": "810"
+  },
+  {
+    "parish": "URBANA PEDRO JOSÉ OVALLES",
+    "id_municipality": "503"
+  },
+  {
+    "parish": "URBANA RAFAEL URDANETA",
+    "id_municipality": "814"
+  },
+  {
+    "parish": "URBANA SAN BLAS",
+    "id_municipality": "814"
+  },
+  {
+    "parish": "URBANA SAN DIEGO",
+    "id_municipality": "812"
+  },
+  {
+    "parish": "URBANA SAN FERNANDO",
+    "id_municipality": "407"
+  },
+  {
+    "parish": "URBANA SAN JOAQUÍN",
+    "id_municipality": "813"
+  },
+  {
+    "parish": "URBANA SAN JOSÉ",
+    "id_municipality": "814"
+  },
+  {
+    "parish": "URBANA SAN JUAN DE PAYARA",
+    "id_municipality": "405"
+  },
+  {
+    "parish": "URBANA SANTA ROSA",
+    "id_municipality": "814"
+  },
+  {
+    "parish": "URBANA TOCUYITO",
+    "id_municipality": "806"
+  },
+  {
+    "parish": "URBANA UNIÓN",
+    "id_municipality": "811"
+  },
+  {
+    "parish": "URDANETA",
+    "id_municipality": "404"
+  },
+  {
+    "parish": "URICA",
+    "id_municipality": "313"
+  },
+  {
+    "parish": "URRIBARRI",
+    "id_municipality": "2305"
+  },
+  {
+    "parish": "URUMACO",
+    "id_municipality": "1124"
+  },
+  {
+    "parish": "UVENCIO ANTONIO VELASQUEZ",
+    "id_municipality": "1813"
+  },
+  {
+    "parish": "UVERAL",
+    "id_municipality": "1803"
+  },
+  {
+    "parish": "UVERITO",
+    "id_municipality": "310"
+  },
+  {
+    "parish": "UVERITO",
+    "id_municipality": "1201"
+  },
+  {
+    "parish": "VALENTIN VALIENTE",
+    "id_municipality": "1914"
+  },
+  {
+    "parish": "VALERITA",
+    "id_municipality": "2110"
+  },
+  {
+    "parish": "VALLE DE GUANAPE",
+    "id_municipality": "304"
+  },
+  {
+    "parish": "VALLE DE LA PASCUA",
+    "id_municipality": "1205"
+  },
+  {
+    "parish": "VALMORE RODRÍGUEZ",
+    "id_municipality": "2117"
+  },
+  {
+    "parish": "VENANCIO PULGAR",
+    "id_municipality": "2313"
+  },
+  {
+    "parish": "VENEZUELA",
+    "id_municipality": "2310"
+  },
+  {
+    "parish": "VICENTE FUENTES",
+    "id_municipality": "1711"
+  },
+  {
+    "parish": "VICTORINO",
+    "id_municipality": "205"
+  },
+  {
+    "parish": "VIENTO FRESCO",
+    "id_municipality": "1605"
+  },
+  {
+    "parish": "VILLA ROSA",
+    "id_municipality": "1813"
+  },
+  {
+    "parish": "VIRGEN DE LA COROMOTO",
+    "id_municipality": "1804"
+  },
+  {
+    "parish": "VIRGEN DEL VALLE",
+    "id_municipality": "1004"
+  },
+  {
+    "parish": "VISTA AL SOL",
+    "id_municipality": "701"
+  },
+  {
+    "parish": "VISTA HERMOSA",
+    "id_municipality": "705"
+  },
+  {
+    "parish": "XAGUAS",
+    "id_municipality": "1309"
+  },
+  {
+    "parish": "YACAMBÚ",
+    "id_municipality": "1301"
+  },
+  {
+    "parish": "YACAPANA",
+    "id_municipality": "202"
+  },
+  {
+    "parish": "YAGUARAPARO",
+    "id_municipality": "1907"
+  },
+  {
+    "parish": "YOCOIMA",
+    "id_municipality": "701"
+  },
+  {
+    "parish": "ZABALA",
+    "id_municipality": "1703"
+  },
+  {
+    "parish": "ZARAZA",
+    "id_municipality": "1214"
+  },
+  {
+    "parish": "ZAZÁRIDA",
+    "id_municipality": "1103"
+  },
+  {
+    "parish": "ZAZÁRIDA",
+    "id_municipality": "1125"
+  },
+  {
+    "parish": "ZEA",
+    "id_municipality": "705"
+  },
+  {
+    "parish": "ZUATA",
+    "id_municipality": "310"
+  }
+]
