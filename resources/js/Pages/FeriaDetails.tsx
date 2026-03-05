@@ -10,7 +10,8 @@ import {
     Package,
     TrendingUp,
     ShieldCheck,
-    Truck
+    Truck,
+    Menu
 } from 'lucide-react';
 import { useState } from 'react';
 import { Feria } from '@/types';
@@ -24,7 +25,8 @@ interface FeriaDetailsProps {
 }
 
 export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
-    const feria = useFeriasStore(state => state.ferias.find(f => f.id_feria === feriaId));
+    const { ferias, setMobileSidebarOpen } = useFeriasStore();
+    const feria = ferias.find(f => f.id_feria === feriaId);
 
     if (!feria) {
         return <div className="p-8 text-center">Feria no encontrada.</div>;
@@ -50,10 +52,9 @@ export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
         <div className="flex h-screen w-full bg-slate-50 dark:bg-slate-900 overflow-hidden text-slate-800 dark:text-white transition-colors duration-300 font-sans">
             <Head title={`Feria ${feria.sector} - Ferias Mercal`} />
 
-            {/* Sidebar Injection for Main Navigation */}
-            <div className="hidden md:flex">
-                <Sidebar onRegisterClick={() => { }} />
-            </div>
+            <Head title={`Feria ${feria.sector} - Ferias Mercal`} />
+
+            <Sidebar onRegisterClick={() => { }} />
 
             {/* Main Content Scrollable Area */}
             <main className="flex-1 overflow-y-auto w-full relative">
@@ -61,6 +62,12 @@ export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
                 {/* Top Navigation Bar */}
                 <div className="sticky top-0 z-20 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 px-4 sm:px-8 py-4 transition-colors duration-300">
                     <div className="flex items-center gap-4">
+                        <button
+                            onClick={() => setMobileSidebarOpen(true)}
+                            className="md:hidden p-2 -ml-2 rounded-lg text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                        >
+                            <Menu className="w-6 h-6" />
+                        </button>
                         <Link
                             href={route('ferias') as string}
                             className="p-2 rounded-full hover:bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"

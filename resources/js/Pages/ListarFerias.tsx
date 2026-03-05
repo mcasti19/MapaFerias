@@ -1,13 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import { Head } from '@inertiajs/react';
 import Sidebar from '@/Layouts/Sidebar';
-import { Search, Filter, Calendar, MapPin, Tag, Inbox } from 'lucide-react';
+import { Search, Filter, Calendar, MapPin, Tag, Inbox, Menu } from 'lucide-react';
 import { format, isAfter, isBefore, parseISO } from 'date-fns';
 import { es } from 'date-fns/locale';
 import { useFeriasStore } from '@/store/feriasStore';
 
 export default function ListarFerias() {
-  const ferias = useFeriasStore(state => state.ferias);
+  const { ferias, setMobileSidebarOpen } = useFeriasStore();
   const [ searchTerm, setSearchTerm ] = useState('');
   const [ estadoFilter, setEstadoFilter ] = useState('Todos');
 
@@ -49,29 +49,37 @@ export default function ListarFerias() {
       <div className="flex h-screen w-full bg-slate-50 dark:bg-slate-900 overflow-hidden text-slate-800 dark:text-white transition-colors duration-300">
         <Sidebar onRegisterClick={() => { }} />
 
-        <div className="flex-1 overflow-y-auto bg-slate-100 dark:bg-slate-800 p-8 transition-colors duration-300">
-          <div className="max-w-7xl mx-auto space-y-8">
+        <div className="flex-1 overflow-y-auto bg-slate-100 dark:bg-slate-800 p-4 md:p-8 transition-colors duration-300">
+          <div className="max-w-7xl mx-auto space-y-6 md:space-y-8">
 
             {/* Header con estilo Dashboard */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <div>
-                <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">Historial de Ferias</h1>
-                <p className="text-slate-600 dark:text-slate-400 font-medium text-sm">Mostrando registros históricos, activos y programados.</p>
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => setMobileSidebarOpen(true)}
+                  className="md:hidden p-2 -ml-2 rounded-lg text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                >
+                  <Menu className="w-6 h-6" />
+                </button>
+                <div>
+                  <h1 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-1 md:mb-2 tracking-tight">Historial de Ferias</h1>
+                  <p className="text-slate-600 dark:text-slate-400 font-medium text-xs md:text-sm">Mostrando registros históricos, activos y programados.</p>
+                </div>
               </div>
-              <div className="flex items-center gap-2 bg-white dark:bg-slate-900 px-4 py-2 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
+              <div className="flex items-center gap-2 bg-white dark:bg-slate-900 px-3 md:px-4 py-2 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm self-start md:self-auto">
                 <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
-                <span className="text-sm font-semibold">{feriasFiltradas.length} Ferias encontradas</span>
+                <span className="text-xs md:text-sm font-semibold">{feriasFiltradas.length} Ferias encontradas</span>
               </div>
             </div>
 
             {/* Panel de Filtros Moderno */}
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <div className="relative flex-1">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                 <input
                   type="text"
                   placeholder="Buscar por nombre de feria..."
-                  className="w-full pl-11 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all shadow-sm"
+                  className="w-full pl-11 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all shadow-sm text-sm"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -79,7 +87,7 @@ export default function ListarFerias() {
               <div className="relative min-w-[200px]">
                 <Filter className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                 <select
-                  className="w-full pl-11 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none appearance-none cursor-pointer shadow-sm"
+                  className="w-full pl-11 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none appearance-none cursor-pointer shadow-sm text-sm"
                   value={estadoFilter}
                   onChange={(e) => setEstadoFilter(e.target.value)}
                 >

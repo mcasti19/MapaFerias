@@ -21,6 +21,12 @@ interface FeriasStore {
     // Theme
     mapTheme: 'light' | 'dark';
     toggleMapTheme: () => void;
+
+    // Layout UI State
+    isSidebarCollapsed: boolean;
+    isMobileSidebarOpen: boolean;
+    toggleSidebarCollapse: () => void;
+    setMobileSidebarOpen: (isOpen: boolean) => void;
 }
 
 const DEFAULT_FILTERS: FilterState = {
@@ -122,6 +128,16 @@ export const useFeriasStore = create<FeriasStore>()(
                 set((state) => ({
                     mapTheme: state.mapTheme === 'dark' ? 'light' : 'dark',
                 })),
+
+            // Layout UI state
+            isSidebarCollapsed: false,
+            isMobileSidebarOpen: false,
+            toggleSidebarCollapse: () =>
+                set((state) => ({
+                    isSidebarCollapsed: !state.isSidebarCollapsed,
+                })),
+            setMobileSidebarOpen: (isOpen) =>
+                set({ isMobileSidebarOpen: isOpen }),
         }),
         {
             name: 'ferias-storage', // Key for localStorage

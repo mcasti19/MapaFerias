@@ -1,6 +1,6 @@
 import { Head } from '@inertiajs/react';
 import Sidebar from '@/Layouts/Sidebar';
-import { Activity, MapPin, Target, Users } from 'lucide-react';
+import { Activity, MapPin, Target, Users, Menu } from 'lucide-react';
 import { useFeriasStore } from '@/store/feriasStore';
 import { getFeriaStatus } from '@/lib/feriaUtils';
 import { format, parseISO } from 'date-fns';
@@ -12,7 +12,7 @@ import {
 } from 'recharts';
 
 export default function Dashboard() {
-    const { ferias, filters, setFilter } = useFeriasStore();
+    const { ferias, filters, setFilter, setMobileSidebarOpen } = useFeriasStore();
 
     // Get filtered ferias properly
     const filteredList = useMemo(() => {
@@ -133,29 +133,37 @@ export default function Dashboard() {
             <div className="flex h-screen w-full bg-slate-50 dark:bg-slate-900 overflow-hidden text-slate-800 dark:text-white transition-colors duration-300">
                 <Sidebar onRegisterClick={() => { }} />
 
-                <div className="flex-1 overflow-y-auto bg-slate-100 dark:bg-slate-800 p-8 transition-colors duration-300">
-                    <div className="max-w-7xl mx-auto space-y-8">
+                <div className="flex-1 overflow-y-auto overflow-x-hidden bg-slate-100 dark:bg-slate-800 p-4 md:p-8 transition-colors duration-300">
+                    <div className="max-w-7xl mx-auto space-y-6 md:space-y-8">
                         {/* Header & Date Filters */}
-                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                            <div>
-                                <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">Reporte Estadístico Mercal</h1>
-                                <p className="text-slate-600 dark:text-slate-400 font-medium">Control de seguimiento de Ferias del Campo Soberano.</p>
+                        <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
+                            <div className="flex items-center gap-3">
+                                <button
+                                    onClick={() => setMobileSidebarOpen(true)}
+                                    className="md:hidden p-2 -ml-2 rounded-lg text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                                >
+                                    <Menu className="w-6 h-6" />
+                                </button>
+                                <div>
+                                    <h1 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-1 md:mb-2 tracking-tight">Reporte Estadístico Mercal</h1>
+                                    <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium">Control de seguimiento de Ferias del Campo Soberano.</p>
+                                </div>
                             </div>
 
-                            <div className="flex items-center gap-3 bg-white dark:bg-slate-900 p-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700/60">
-                                <span className="text-sm font-semibold text-slate-500 dark:text-slate-400">Rango de fechas:</span>
+                            <div className="flex items-center gap-2 md:gap-3 flex-wrap sm:flex-nowrap bg-white dark:bg-slate-900 p-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700/60 w-full xl:w-auto">
+                                <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 whitespace-nowrap">Rango de fechas:</span>
                                 <input
                                     type="date"
                                     value={filters.fechaDesde}
                                     onChange={(e) => setFilter('fechaDesde', e.target.value)}
-                                    className="text-sm bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="text-sm bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-blue-500 outline-none w-full sm:w-auto"
                                 />
-                                <span className="text-sm text-slate-400">a</span>
+                                <span className="text-sm text-slate-400 hidden sm:inline">a</span>
                                 <input
                                     type="date"
                                     value={filters.fechaHasta}
                                     onChange={(e) => setFilter('fechaHasta', e.target.value)}
-                                    className="text-sm bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="text-sm bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-blue-500 outline-none w-full sm:w-auto mt-2 sm:mt-0"
                                 />
                                 {(filters.fechaDesde || filters.fechaHasta) && (
                                     <button
