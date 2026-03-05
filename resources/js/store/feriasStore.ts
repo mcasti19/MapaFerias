@@ -18,9 +18,6 @@ interface FeriasStore {
     // Derived (computed)
     filteredFerias: () => Feria[];
     getStatusCounts: () => Record<FeriaStatus, number>;
-    // Theme
-    mapTheme: 'light' | 'dark';
-    toggleMapTheme: () => void;
 
     // Layout UI State
     isSidebarCollapsed: boolean;
@@ -121,13 +118,6 @@ export const useFeriasStore = create<FeriasStore>()(
                 });
                 return counts;
             },
-
-            // Theme state
-            mapTheme: 'dark',
-            toggleMapTheme: () =>
-                set((state) => ({
-                    mapTheme: state.mapTheme === 'dark' ? 'light' : 'dark',
-                })),
 
             // Layout UI state
             isSidebarCollapsed: false,

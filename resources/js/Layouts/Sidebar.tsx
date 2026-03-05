@@ -72,7 +72,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                 {/* Header / Brand */}
                 <div className="flex-shrink-0 px-4 py-4 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-300">
                     <div className={`flex items-center ${isSidebarCollapsed ? 'justify-center' : 'gap-3'}`}>
-                        <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 shadow-sm shrink-0 transition-all">
+                        <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/50 shadow-sm shrink-0 transition-all">
                             <img src="/MercalMarker.png" alt="Mercal Logo" className="w-6 h-6 object-contain drop-shadow-sm" />
                         </div>
                         {!isSidebarCollapsed && (
@@ -95,7 +95,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                         title="Dashboard"
                         className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-3'} py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isCurrent('dashboard')
                             ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800/50'
+                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                             }`}
                     >
                         <LayoutDashboard className="w-5 h-5 shrink-0" />
@@ -112,7 +112,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                         title="Mapa de Ferias"
                         className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-3'} py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isCurrent('ferias') && !isCurrent('lista-ferias')
                             ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800/50'
+                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                             }`}
                     >
                         <MapPin className="w-5 h-5 shrink-0" />
@@ -129,7 +129,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                         title="Historial de Ferias"
                         className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-3'} py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isCurrent('lista-ferias')
                             ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800/50'
+                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                             }`}
                     >
                         <Map className="w-5 h-5 shrink-0" />
@@ -209,7 +209,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                     <Link
                         href={route('profile.edit')}
                         title="Perfil"
-                        className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-4'} py-3 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 transition-colors border-b border-slate-200 dark:border-slate-800 relative group`}
+                        className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-4'} py-3 text-sm text-slate-600 hover:text-blue-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-slate-800/50 transition-colors border-b border-slate-200 dark:border-slate-800 relative group`}
                     >
                         <User className="w-4 h-4 shrink-0" />
                         {!isSidebarCollapsed && <span>Perfil</span>}
@@ -224,7 +224,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                         method="post"
                         as="button"
                         title="Cerrar Sesión"
-                        className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-4'} py-3 text-sm text-red-600 dark:text-red-400 hover:text-red-700 hover:bg-slate-100 dark:hover:text-red-300 dark:hover:bg-slate-800 transition-colors border-b border-slate-200 dark:border-slate-800 w-full relative group`}
+                        className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-4'} py-3 text-sm text-red-600 dark:text-red-400 hover:text-red-700 hover:bg-red-50 dark:hover:text-red-300 dark:hover:bg-red-900/20 transition-colors border-b border-slate-200 dark:border-slate-800 w-full relative group`}
                     >
                         <LogOut className="w-4 h-4 shrink-0" />
                         {!isSidebarCollapsed && <span>Cerrar Sesión</span>}
@@ -236,8 +236,8 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                     </Link>
                     <div className={`py-3 flex items-center ${isSidebarCollapsed ? 'justify-center flex-col gap-2 px-0' : 'justify-between px-4'}`}>
                         {!isSidebarCollapsed && (
-                            <p className="text-[10px] text-slate-400 dark:text-slate-500 truncate">
-                                MPPC Venezuela · {new Date().getFullYear()}
+                            <p className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">
+                                Mercal C.A. · {new Date().getFullYear()}
                             </p>
                         )}
                         <ThemeToggle />

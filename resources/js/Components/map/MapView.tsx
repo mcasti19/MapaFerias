@@ -1,6 +1,5 @@
 import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
-import { Sun, Moon } from 'lucide-react';
-import { useFeriasStore } from '@/store/feriasStore';
+import { useThemeStore } from '@/store/themeStore';
 import FeriaMarkerLayer from './FeriaMarkerLayer';
 import MapLegend from './MapLegend';
 
@@ -9,13 +8,12 @@ const VENEZUELA_CENTER: [ number, number ] = [ 7.0, -66.5 ];
 const DEFAULT_ZOOM = 6;
 
 export default function MapView() {
-    const { mapTheme, toggleMapTheme } = useFeriasStore();
+    const { theme } = useThemeStore();
+    const isDark = theme === 'dark';
 
-    const tileUrl = mapTheme === 'dark'
+    const tileUrl = isDark
         ? "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
         : "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
-
-    const isDark = mapTheme === 'dark';
 
     const themeStyles = {
         '--pop-bg': isDark ? '#1e293b' : '#ffffff',
@@ -30,30 +28,16 @@ export default function MapView() {
 
     return (
         <div className="relative w-full h-full" style={themeStyles}>
-            {/* Theme Toggle Button */}
-            <button
-                onClick={toggleMapTheme}
-                className={`absolute top-4 right-14 z-[1000] p-2.5 rounded-full shadow-lg transition-all duration-300
-                    ${mapTheme === 'dark'
-                        ? 'bg-slate-800 text-yellow-400 border border-slate-700 hover:bg-slate-700'
-                        : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
-                    }`}
-                title={`Cambiar a modo ${mapTheme === 'dark' ? 'claro' : 'oscuro'}`}
-            >
-                {mapTheme === 'dark' ? (
-                    <Sun className="w-5 h-5 animate-fade-in" />
-                ) : (
-                    <Moon className="w-5 h-5 animate-fade-in" />
-                )}
-            </button>
-
             <MapContainer
                 center={VENEZUELA_CENTER}
                 zoom={DEFAULT_ZOOM}
                 minZoom={6.5}
                 zoomControl={false}
-                className="w-full h-full"
-                style={{ background: mapTheme === 'dark' ? '#0f172a' : '#f8fafc' }}
+                className="w-full h-full z-0"
+                style={{ background: isDark ? '#0f172a' : '#f8fafc' }}
+                scrollWheelZoom={true}
+                dragging={true}
+                touchZoom={true}
             >
                 <TileLayer
                     url={tileUrl}

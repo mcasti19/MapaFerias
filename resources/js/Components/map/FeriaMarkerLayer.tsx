@@ -8,6 +8,8 @@ import { getFeriaStatus, getMarkerColor, getStatusLabel } from '@/lib/feriaUtils
 import { format, parseISO } from 'date-fns';
 import { es } from 'date-fns/locale';
 
+import { useThemeStore } from '@/store/themeStore';
+
 const TIPO_EMOJI: Record<string, string> = {
   'Proteína': '🥩',
   'Víveres': '🛒',
@@ -46,8 +48,8 @@ export default function FeriaMarkerLayer() {
   const map = useMap();
   const clusterRef = useRef<L.MarkerClusterGroup | null>(null);
   const ferias = useFeriasStore(useShallow((s) => s.filteredFerias()));
-  const mapTheme = useFeriasStore((s) => s.mapTheme);
-  const isDark = mapTheme === 'dark';
+  const { theme } = useThemeStore();
+  const isDark = theme === 'dark';
 
   useEffect(() => {
     // Remove existing cluster group
