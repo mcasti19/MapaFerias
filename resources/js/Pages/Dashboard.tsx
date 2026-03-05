@@ -6,18 +6,32 @@ import { useFeriasStore } from '@/store/feriasStore';
 import { getFeriaStatus } from '@/lib/feriaUtils';
 import { format, parseISO } from 'date-fns';
 import { es } from 'date-fns/locale';
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 import {
     BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
     PieChart, Pie, Cell
 } from 'recharts';
 
 import { useThemeStore } from '@/store/themeStore';
+import { usePlanificacionStore } from '@/store/planificacionStore';
 
 export default function Dashboard() {
     const { ferias, filters, setFilter } = useFeriasStore();
     const { theme } = useThemeStore();
     const isDark = theme === 'dark';
+
+    // Planificacion Store
+    const {
+        initializePlanificacion,
+        planificacionesGuardadas,
+        getTotalGlobalFerias: draftFerias,
+        getTotalFamilias: draftFamilias,
+        getTotalToneladas: draftToneladas
+    } = usePlanificacionStore();
+
+    useEffect(() => {
+        initializePlanificacion();
+    }, [ initializePlanificacion ]);
 
     // Chart colors based on theme
     const chartColors = {
@@ -126,17 +140,64 @@ export default function Dashboard() {
 
     const globalStats = useMemo(() => {
         return dataPorEstado.reduce((acc, curr) => {
-            acc.planificadas += curr.planificadas;
             acc.realizadas += curr.realizadas;
-            acc.toneladas += curr.toneladas;
-            acc.familias += curr.familias;
             return acc;
-        }, { planificadas: 0, realizadas: 0, toneladas: 0, familias: 0 });
+        }, { realizadas: 0 });
     }, [ dataPorEstado ]);
+
+    const historicalPlanStats = useMemo(() => {
+        // If there are no saved configurations, fallback to draft
+        if (!planificacionesGuardadas || planificacionesGuardadas.length === 0) {
+            return {
+                ferias: draftFerias(),
+                familias: draftFamilias(),
+                toneladas: draftToneladas()
+            };
+        }
+
+        // Filter saved planificaciones based on Dashboard's date filters
+        let applicablePlans = planificacionesGuardadas;
+
+        if (filters.fechaDesde || filters.fechaHasta) {
+            applicablePlans = planificacionesGuardadas.filter(plan => {
+                if (filters.fechaDesde && filters.fechaHasta) {
+                    return plan.fechaDesde <= filters.fechaHasta && plan.fechaHasta >= filters.fechaDesde;
+                } else if (filters.fechaDesde) {
+                    return plan.fechaHasta >= filters.fechaDesde;
+                } else if (filters.fechaHasta) {
+                    return plan.fechaDesde <= filters.fechaHasta;
+                }
+                return true;
+            });
+        }
+
+        // If no plans matched the filter, return 0. If no filters applied, sum ALL or get LATEST? User wants: "como quedo la planificacion de una fecha pasada". So we sum the matching ones. 
+        // If no filter, we will grab the LATEST saved week to show on default dashboard.
+        if (applicablePlans.length === 0 && (filters.fechaDesde || filters.fechaHasta)) {
+            return { ferias: 0, familias: 0, toneladas: 0 };
+        }
+
+        if (!filters.fechaDesde && !filters.fechaHasta) {
+            applicablePlans = [ planificacionesGuardadas[ planificacionesGuardadas.length - 1 ] ]; // just latest
+        }
+
+        // Sum applicable plans
+        return applicablePlans.reduce((acc, plan) => {
+            plan.estados.forEach(estado => {
+                acc.ferias += (Number(estado.emblematicas) || 0) + (Number(estado.puntos_distribucion) || 0);
+                acc.familias += (Number(estado.familias) || 0);
+            });
+            // Approximate Toneladas for those families
+            acc.toneladas = acc.familias * 0.002185;
+            return acc;
+        }, { ferias: 0, familias: 0, toneladas: 0 });
+
+    }, [ planificacionesGuardadas, filters, draftFerias, draftFamilias, draftToneladas ]);
+
 
     const pieData = [
         { name: 'Realizadas', value: globalStats.realizadas, color: '#3b82f6' },
-        { name: 'Planificadas', value: globalStats.planificadas, color: '#f97316' }
+        { name: 'Planificadas', value: historicalPlanStats.ferias, color: '#f97316' }
     ];
 
     return (
@@ -212,7 +273,7 @@ export default function Dashboard() {
                                             <Target className="w-5 h-5 text-orange-600 dark:text-orange-400" />
                                         </div>
                                     </div>
-                                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">{globalStats.planificadas}</h3>
+                                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">{historicalPlanStats.ferias}</h3>
                                     <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Ferias Planificadas</p>
                                 </div>
 
@@ -222,7 +283,7 @@ export default function Dashboard() {
                                             <Users className="w-5 h-5 text-purple-600 dark:text-purple-400" />
                                         </div>
                                     </div>
-                                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">{(globalStats.familias).toLocaleString()}</h3>
+                                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">{historicalPlanStats.familias.toLocaleString()}</h3>
                                     <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Familias Beneficiadas</p>
                                 </div>
                             </div>
@@ -341,14 +402,14 @@ export default function Dashboard() {
                                             <tfoot className="bg-slate-50 dark:bg-slate-800/50 font-bold text-slate-800 dark:text-white">
                                                 <tr>
                                                     <td className="px-4 py-3 rounded-l-xl">TOTALES</td>
-                                                    <td className="px-4 py-3 text-center">{globalStats.planificadas}</td>
+                                                    <td className="px-4 py-3 text-center">-</td>
                                                     <td className="px-4 py-3 text-center">{globalStats.realizadas}</td>
-                                                    <td className="px-4 py-3 text-center">{globalStats.toneladas}</td>
-                                                    <td className="px-4 py-3 text-center">{globalStats.familias.toLocaleString()}</td>
-                                                    <td className="px-4 py-3 text-center">{globalStats.familias.toLocaleString()}</td>
+                                                    <td className="px-4 py-3 text-center">{historicalPlanStats.toneladas.toLocaleString('es-VE', { minimumFractionDigits: 1, maximumFractionDigits: 3 })}</td>
+                                                    <td className="px-4 py-3 text-center">{historicalPlanStats.familias.toLocaleString('es-VE')}</td>
+                                                    <td className="px-4 py-3 text-center">{historicalPlanStats.familias.toLocaleString('es-VE')}</td>
                                                     <td className="px-4 py-3 rounded-r-xl text-center">
-                                                        {globalStats.realizadas + globalStats.planificadas > 0
-                                                            ? Math.round((globalStats.realizadas / (globalStats.realizadas + globalStats.planificadas)) * 100)
+                                                        {globalStats.realizadas + historicalPlanStats.ferias > 0
+                                                            ? Math.round((globalStats.realizadas / (globalStats.realizadas + historicalPlanStats.ferias)) * 100)
                                                             : 0}%
                                                     </td>
                                                 </tr>

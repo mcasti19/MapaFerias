@@ -31,6 +31,10 @@ Route::get('/ferias/{id}', [App\Http\Controllers\FeriaController::class, 'show']
     ->middleware(['auth', 'verified'])
     ->name('ferias.show');
 
+Route::get('/planificacion', function () {
+    return Inertia::render('Planificacion/Index');
+})->middleware(['auth', 'verified'])->name('planificacion');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

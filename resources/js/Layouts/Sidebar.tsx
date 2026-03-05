@@ -106,6 +106,22 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                             </div>
                         )}
                     </Link>
+                    <Link
+                        href={route('planificacion')}
+                        title="Planificacion"
+                        className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-3'} py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isCurrent('planificacion')
+                            ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
+                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
+                            }`}
+                    >
+                        <LayoutDashboard className="w-5 h-5 shrink-0" />
+                        {!isSidebarCollapsed && <span>Planificacion</span>}
+                        {isSidebarCollapsed && (
+                            <div className="absolute left-full ml-3 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap z-50">
+                                Planificacion
+                            </div>
+                        )}
+                    </Link>
 
                     <Link
                         href={route('ferias')}
