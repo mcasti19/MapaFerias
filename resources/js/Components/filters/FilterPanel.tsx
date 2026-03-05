@@ -34,7 +34,7 @@ export default function FilterPanel() {
                         type="text"
                         value={filters.busqueda}
                         onChange={(e) => setFilter('busqueda', e.target.value)}
-                        placeholder="Nombre de la feria..."
+                        placeholder="Sector o Parroquia..."
                         className="w-full pl-8 pr-8 py-2 rounded-lg bg-slate-800 border border-slate-700 text-sm text-white
               placeholder:text-slate-600 focus:outline-none focus:border-green-500/60 focus:ring-1 focus:ring-green-500/30
               transition-all"

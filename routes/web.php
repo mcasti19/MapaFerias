@@ -19,20 +19,17 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/ferias', function () {
-    return Inertia::render('Ferias');
-})->middleware(['auth', 'verified'])->name('ferias');
+Route::get('/ferias', [App\Http\Controllers\FeriaController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('ferias');
 
-//Listar Ferias
-Route::get('/lista-ferias', function () {
-    return Inertia::render('ListarFerias');
-})->middleware(['auth', 'verified'])->name('lista-ferias');
+Route::get('/lista-ferias', [App\Http\Controllers\FeriaController::class, 'lista'])
+    ->middleware(['auth', 'verified'])
+    ->name('lista-ferias');
 
-Route::get('/ferias/{id}', function ($id) {
-    return Inertia::render('FeriaDetails', [
-        'feriaId' => $id
-    ]);
-})->middleware(['auth', 'verified'])->name('ferias.show');
+Route::get('/ferias/{id}', [App\Http\Controllers\FeriaController::class, 'show'])
+    ->middleware(['auth', 'verified'])
+    ->name('ferias.show');
 
 
 Route::middleware('auth')->group(function () {

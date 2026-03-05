@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Head } from '@inertiajs/react';
 import MapView from '@/Components/map/MapView';
 import Sidebar from '@/Layouts/Sidebar';
 import RegisterFeriaModal from '@/Components/forms/RegisterFeriaModal';
+import { useFeriasStore } from '@/store/feriasStore';
+import { Feria } from '@/types';
 
 export default function Ferias() {
     const [ isRegisterModalOpen, setIsRegisterModalOpen ] = useState(false);

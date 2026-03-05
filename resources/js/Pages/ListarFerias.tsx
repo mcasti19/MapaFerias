@@ -1,13 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import { Head } from '@inertiajs/react';
 import Sidebar from '@/Layouts/Sidebar';
-// 1. Importamos la data y los iconos
-import { FERIAS_MOCK } from '@/data/ferias';
 import { Search, Filter, Calendar, MapPin, Tag, Inbox } from 'lucide-react';
 import { format, isAfter, isBefore, parseISO } from 'date-fns';
 import { es } from 'date-fns/locale';
+import { useFeriasStore } from '@/store/feriasStore';
 
-export default function ListarFerias () {
+export default function ListarFerias() {
+  const ferias = useFeriasStore(state => state.ferias);
   const [ searchTerm, setSearchTerm ] = useState('');
   const [ estadoFilter, setEstadoFilter ] = useState('Todos');
 
@@ -28,17 +28,19 @@ export default function ListarFerias () {
 
   // Filtros combinados
   const feriasFiltradas = useMemo(() => {
-    return FERIAS_MOCK.filter(feria => {
-      const matchesSearch = feria.nombre.toLowerCase().includes(searchTerm.toLowerCase());
+    return ferias.filter(feria => {
+      const matchSector = feria.sector.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchParroquia = feria.parroquia.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesSearch = matchSector || matchParroquia;
       const matchesEstado = estadoFilter === 'Todos' || feria.estado === estadoFilter;
       return matchesSearch && matchesEstado;
     });
-  }, [ searchTerm, estadoFilter ]);
+  }, [ searchTerm, estadoFilter, ferias ]);
 
   // Extraer estados únicos para el select
   const estadosUnicos = useMemo(() =>
-    [ 'Todos', ...new Set(FERIAS_MOCK.map(f => f.estado)) ],
-    []);
+    [ 'Todos', ...new Set(ferias.map(f => f.estado)) ],
+    [ ferias ]);
 
   return (
     <>
@@ -106,10 +108,10 @@ export default function ListarFerias () {
                       feriasFiltradas.map((feria) => {
                         const status = getStatusInfo(feria.fechaInicio, feria.fechaFin);
                         return (
-                          <tr key={feria.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors group">
+                          <tr key={feria.id_feria} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors group">
                             <td className="px-6 py-5">
-                              <div className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">{feria.nombre}</div>
-                              <div className="text-[10px] text-slate-400 font-mono mt-0.5 uppercase">{feria.id}</div>
+                              <div className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">{feria.sector} - {feria.parroquia}</div>
+                              <div className="text-[10px] text-slate-400 font-mono mt-0.5 uppercase">{feria.id_feria}</div>
                             </td>
                             <td className="px-6 py-5">
                               <div className="flex items-center gap-2 text-sm">

@@ -13,38 +13,42 @@ import {
     Truck
 } from 'lucide-react';
 import { useState } from 'react';
+import { Feria } from '@/types';
+import { getFeriaStatus } from '@/lib/feriaUtils';
+import { format, parseISO } from 'date-fns';
+import { es } from 'date-fns/locale';
+import { useFeriasStore } from '@/store/feriasStore';
 
-// Mocked Data for Demonstration
-const MOCK_FERIA_DATA = {
-    id: 1,
-    nombre: 'Mega Feria Integral Sucre',
-    estado: 'Miranda',
-    municipio: 'Sucre',
-    parroquia: 'Petare',
-    direccion: 'Av. Francisco de Miranda, a la altura de la redoma, estacionamiento techado.',
-    estatus: 'En Curso',
-    tipo: 'Integral',
-    fechaInicio: '2026-10-15',
-    fechaFin: '2026-10-17',
-    horario: '08:00 AM - 04:00 PM',
-    familiasEstimadas: 4500,
-    responsable: 'María González (Poder Popular)',
-    telefono: '+58 412-555-0192',
-    inventario: [
+interface FeriaDetailsProps {
+    feriaId: string;
+}
+
+export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
+    const feria = useFeriasStore(state => state.ferias.find(f => f.id_feria === feriaId));
+
+    if (!feria) {
+        return <div className="p-8 text-center">Feria no encontrada.</div>;
+    }
+    const estatusLabel = getFeriaStatus(feria);
+
+    // Fallbacks and mapped fields
+    const municipio = feria.municipio || 'No Especificado';
+    const parroquia = feria.parroquia || 'No Especificada';
+    const direccion = `${feria.sector}, ${feria.mission_base}, ${feria.circuit}, ${feria.clap}`;
+    const horario = '08:00 AM - 04:00 PM';
+    const familiasEstimadas = 4500;
+    const responsable = feria.full_name || 'Coordinador Estadal';
+    const telefono = feria.phone || 'No Disponible';
+    const inventario = [
         { item: 'Carne de Res', cantidad: '2.5 Toneladas', icono: Package },
         { item: 'Pollo Beneficiado', cantidad: '3.0 Toneladas', icono: Package },
         { item: 'Víveres Secos (Clap)', cantidad: '5000 Combos', icono: Package },
         { item: 'Hortalizas Mixtas', cantidad: '1.2 Toneladas', icono: Package },
-    ]
-};
-
-export default function FeriaDetails({ feriaId }: { feriaId: string }) {
-    // In a real app we'd fetch data using `feriaId`. Using mock for now.
-    const feria = MOCK_FERIA_DATA;
+    ];
 
     return (
         <div className="flex h-screen w-full bg-slate-50 dark:bg-slate-900 overflow-hidden text-slate-800 dark:text-white transition-colors duration-300 font-sans">
-            <Head title={`${feria.nombre} - Ferias Mercal`} />
+            <Head title={`Feria ${feria.sector} - Ferias Mercal`} />
 
             {/* Sidebar Injection for Main Navigation */}
             <div className="hidden md:flex">
@@ -83,19 +87,19 @@ export default function FeriaDetails({ feriaId }: { feriaId: string }) {
                             <div className="space-y-4 flex-1">
                                 <div className="flex flex-wrap items-center gap-3">
                                     <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-400 tracking-wide uppercase">
-                                        {feria.estatus}
+                                        {estatusLabel}
                                     </span>
                                     <span className="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300 tracking-wide">
-                                        Feria {feria.tipo}
+                                        Feria {feria.tipoFeria}
                                     </span>
                                 </div>
                                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.1]">
-                                    {feria.nombre}
+                                    Feria {feria.sector}
                                 </h1>
                                 <div className="flex items-start gap-2 text-slate-600 dark:text-slate-300 mt-2 max-w-2xl">
                                     <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-blue-500" />
                                     <p className="font-medium text-sm sm:text-base leading-relaxed">
-                                        {feria.direccion} <br /> <span className="opacity-70 text-xs sm:text-sm">{feria.parroquia}, {feria.municipio}, Estado {feria.estado}</span>
+                                        {direccion} <br /> <span className="opacity-70 text-xs sm:text-sm">{parroquia}, {municipio}, Estado {feria.estado}</span>
                                     </p>
                                 </div>
                             </div>
@@ -108,7 +112,7 @@ export default function FeriaDetails({ feriaId }: { feriaId: string }) {
                                             <Users className="w-5 h-5" />
                                         </div>
                                         <div>
-                                            <p className="text-xl font-bold text-slate-900 dark:text-white leading-none">{feria.familiasEstimadas.toLocaleString()}</p>
+                                            <p className="text-xl font-bold text-slate-900 dark:text-white leading-none">{familiasEstimadas.toLocaleString()}</p>
                                             <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Familias a Beneficiar</p>
                                         </div>
                                     </div>
@@ -137,8 +141,8 @@ export default function FeriaDetails({ feriaId }: { feriaId: string }) {
                                         </div>
                                         <div>
                                             <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Duración</p>
-                                            <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{feria.fechaInicio} al</p>
-                                            <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{feria.fechaFin}</p>
+                                            <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{format(parseISO(feria.fechaInicio), "d 'de' MMM, yyyy", { locale: es })} al</p>
+                                            <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{format(parseISO(feria.fechaFin), "d 'de' MMM, yyyy", { locale: es })}</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
@@ -147,7 +151,7 @@ export default function FeriaDetails({ feriaId }: { feriaId: string }) {
                                         </div>
                                         <div>
                                             <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Horario Operativo</p>
-                                            <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{feria.horario}</p>
+                                            <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{horario}</p>
                                             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Sujeto a cambios logísticos</p>
                                         </div>
                                     </div>
@@ -162,12 +166,12 @@ export default function FeriaDetails({ feriaId }: { feriaId: string }) {
                                         Requerimiento de Despacho Estimado
                                     </h3>
                                     <p className="text-sm text-slate-500 dark:text-slate-400 font-medium mt-1">
-                                        Inventario proyectado para la atención de {feria.familiasEstimadas.toLocaleString()} familias.
+                                        Inventario proyectado para la atención de {familiasEstimadas.toLocaleString()} familias.
                                     </p>
                                 </div>
                                 <div className="p-0">
                                     <ul className="divide-y divide-slate-100 dark:divide-slate-700/50">
-                                        {feria.inventario.map((item, idx) => {
+                                        {inventario.map((item, idx) => {
                                             const Icon = item.icono;
                                             return (
                                                 <li key={idx} className="p-4 sm:p-6 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-700/20 transition-colors">
@@ -200,11 +204,11 @@ export default function FeriaDetails({ feriaId }: { feriaId: string }) {
                                 <div className="space-y-5">
                                     <div>
                                         <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Responsable Principal</p>
-                                        <p className="font-semibold text-slate-800 dark:text-slate-200 text-sm">{feria.responsable}</p>
+                                        <p className="font-semibold text-slate-800 dark:text-slate-200 text-sm">{responsable}</p>
                                     </div>
                                     <div>
                                         <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Teléfono de Contacto</p>
-                                        <a href={`tel:${feria.telefono}`} className="font-semibold text-blue-600 dark:text-blue-400 text-sm hover:underline">{feria.telefono}</a>
+                                        <a href={`tel:${telefono}`} className="font-semibold text-blue-600 dark:text-blue-400 text-sm hover:underline">{telefono}</a>
                                     </div>
                                     <div className="pt-4 border-t border-slate-100 dark:border-slate-700/50">
                                         <button className="w-full py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">

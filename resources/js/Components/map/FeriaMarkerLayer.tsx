@@ -104,10 +104,10 @@ export default function FeriaMarkerLayer() {
             </div>
             <div style="padding-top:2px;">
               <h3 style="font-size:16px; font-weight:700; color:${colors.title}; margin:0; line-height:1.2;">
-                ${feria.nombre}
+                Feria ${feria.sector}
               </h3>
               <p style="font-size:13px; color:${colors.text}; margin:4px 0 0; display:flex; align-items:center; gap:4px;">
-                <span style="opacity:0.7;">📍</span> ${feria.estado}
+                <span style="opacity:0.7;">📍</span> ${feria.parroquia}, ${feria.estado}
               </p>
             </div>
           </div>
@@ -130,20 +130,20 @@ export default function FeriaMarkerLayer() {
             </div>
             <div style="display:flex; align-items:center; gap:8px; color:${colors.subtext}; font-size:12px;">
               <span style="font-size:14px;">🗺️</span>
-              <span style="font-family:monospace; letter-spacing:-0.01em;">${feria.lat.toFixed(5)}, ${feria.lng.toFixed(5)}</span>
+              <span style="font-family:monospace; letter-spacing:-0.01em;">${feria.coordinates.lat.toFixed(5)}, ${feria.coordinates.lng.toFixed(5)}</span>
             </div>
           </div>
 
           <!-- Action Button -->
           <div style="margin-top:14px;">
-            <a href="/ferias/${feria.id}" style="display:block; text-align:center; background:#2563eb; color:white; font-weight:600; text-decoration:none; padding:10px; border-radius:10px; font-size:14px; transition:all 0.2s;" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#2563eb'">
+            <a href="/ferias/${feria.id_feria}" style="display:block; text-align:center; background:#2563eb; color:white; font-weight:600; text-decoration:none; padding:10px; border-radius:10px; font-size:14px; transition:all 0.2s;" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#2563eb'">
               Ver más detalles ➔
             </a>
           </div>
         </div>
       `;
 
-      const marker = L.marker([ feria.lat, feria.lng ], { icon });
+      const marker = L.marker([ feria.coordinates.lat, feria.coordinates.lng ], { icon });
       marker.bindPopup(popupHtml, { maxWidth: 300 });
       cluster.addLayer(marker);
     });
