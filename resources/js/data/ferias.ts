@@ -150,7 +150,7 @@ export const FERIAS_HISTORICAS: Feria[] = [
         sector: 'Trapichito',
         mission_base: 'Base Zamorana',
         clap: 'Invencibles',
-        circuit: 'Circuito Comunal 8',
+        circuit: 'Circuito Comunal 9',
         coordinates: { lat: 10.4779, lng: -66.5451 },
         full_name: 'Roberto Díaz',
         cedula: 'V-17890123',
