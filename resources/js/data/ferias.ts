@@ -148,7 +148,7 @@ export const FERIAS_HISTORICAS: Feria[] = [
         municipio: 'Plaza',
         parroquia: 'Guarenas',
         sector: 'Trapichito',
-        mission_base: 'Base Zamorana',
+        mission_base: 'Base Zamora',
         clap: 'Invencibles',
         circuit: 'Circuito Comunal 9',
         coordinates: { lat: 10.4779, lng: -66.5451 },
