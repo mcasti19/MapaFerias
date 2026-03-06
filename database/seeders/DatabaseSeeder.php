@@ -32,6 +32,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ParishSeeder::class,
         ]);
+        $this->call([
+            RoleSeeder::class,
+        ]);
     
         $this->call([
            UsersSeeder::class,
