@@ -1,10 +1,9 @@
 import { Activity, Clock, History } from 'lucide-react';
-import { useFeriasStore } from '@/store/feriasStore';
+import { useThemeStore } from '@/store/themeStore';
 
 export default function MapLegend() {
-    const mapTheme = useFeriasStore((s) => s.mapTheme);
-
-    const isDark = mapTheme === 'dark';
+    const { theme } = useThemeStore();
+    const isDark = theme === 'dark';
 
     return (
         <div

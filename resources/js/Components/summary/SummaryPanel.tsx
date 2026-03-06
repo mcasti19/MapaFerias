@@ -15,11 +15,11 @@ interface StatCardProps {
 function StatCard({ label, value, icon, color, glowColor, pulsing }: StatCardProps) {
     return (
         <div
-            className={`relative flex items-center gap-3 px-3 py-3 rounded-xl bg-slate-800/60 border border-slate-700/50 overflow-hidden`}
+            className={`relative flex items-center gap-3 px-3 py-3 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 overflow-hidden shadow-sm dark:shadow-none transition-colors duration-300`}
         >
             {/* Glow bg */}
             <div
-                className="absolute inset-0 opacity-5"
+                className="absolute inset-0 opacity-5 dark:opacity-10"
                 style={{ background: `radial-gradient(ellipse at left, ${glowColor}, transparent 70%)` }}
             />
             <div
@@ -32,8 +32,8 @@ function StatCard({ label, value, icon, color, glowColor, pulsing }: StatCardPro
                 )}
             </div>
             <div className="relative">
-                <p className="text-2xl font-bold text-white leading-none">{value}</p>
-                <p className="text-xs text-slate-400 mt-0.5">{label}</p>
+                <p className="text-2xl font-bold text-slate-900 dark:text-white leading-none">{value}</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">{label}</p>
             </div>
         </div>
     );
@@ -56,11 +56,11 @@ export default function SummaryPanel() {
     return (
         <div className="space-y-2">
             <div className="flex items-center justify-between mb-2">
-                <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-widest">
+                <h2 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest">
                     Resumen
                 </h2>
                 {isFiltered && (
-                    <span className="text-xs text-amber-400 font-medium">
+                    <span className="text-xs text-amber-600 dark:text-amber-400 font-bold">
                         Mostrando {filtered.length} de {ferias.length}
                     </span>
                 )}

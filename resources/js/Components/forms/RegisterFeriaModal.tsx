@@ -57,11 +57,23 @@ export default function RegisterFeriaModal({ onClose }: RegisterFeriaModalProps)
 
     const onSubmit = (data: FeriaSchemaType) => {
         const newFeria: Feria = {
-            id: `feria-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
-            nombre: data.nombre,
-            lat: data.lat,
-            lng: data.lng,
+            id_feria: `feria-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
             estado: data.estado,
+            municipio: data.municipio,
+            parroquia: data.parroquia,
+            sector: data.sector,
+            mission_base: data.mission_base || 'No Aplica',
+            clap: data.clap || 'No Aplica',
+            circuit: data.circuit || 'No Aplica',
+            coordinates: {
+                lat: data.lat,
+                lng: data.lng,
+            },
+            full_name: data.full_name,
+            cedula: data.cedula,
+            phone: data.phone,
+            compliance: data.compliance || 'Programada',
+            observations: data.observations || '',
             tipoFeria: data.tipoFeria,
             fechaInicio: new Date(data.fechaInicio).toISOString(),
             fechaFin: new Date(data.fechaFin).toISOString(),
@@ -74,21 +86,22 @@ export default function RegisterFeriaModal({ onClose }: RegisterFeriaModalProps)
         <div className="fixed inset-0 z-[1001] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm transition-opacity" onClick={onClose}>
             <div
                 className="relative bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-2xl shadow-2xl
-          w-full max-w-lg mx-4 max-h-[90vh] overflow-y-auto transform transition-all"
+          w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto transform transition-all flex flex-col"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header */}
-                <div className="sticky top-0 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700/60 px-6 py-4 flex items-center justify-between rounded-t-2xl z-10 transition-colors duration-300">
+                <div className="sticky top-0 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700/60 px-6 py-4 flex items-center justify-between z-10 transition-colors duration-300">
                     <div className="flex items-center gap-3">
                         <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 shadow-sm border border-blue-200 dark:border-blue-500/30">
                             <MapPin className="w-4 h-4" />
                         </div>
                         <div>
                             <h2 className="text-base font-bold text-slate-900 dark:text-white">Registrar Nueva Feria</h2>
-                            <p className="text-xs text-slate-500 dark:text-slate-400">Complete todos los campos requeridos</p>
+                            <p className="text-xs text-slate-500 dark:text-slate-400">Complete todos los requerimientos operativos</p>
                         </div>
                     </div>
                     <button
+                        type="button"
                         onClick={onClose}
                         className="flex items-center justify-center w-8 h-8 rounded-lg text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-700 transition-all"
                     >
@@ -97,91 +110,122 @@ export default function RegisterFeriaModal({ onClose }: RegisterFeriaModalProps)
                 </div>
 
                 {/* Form */}
-                <form onSubmit={handleSubmit(onSubmit)} className="px-6 py-5 space-y-4">
-                    {/* Nombre */}
-                    <FormField label="Nombre de la Feria" error={errors.nombre?.message}>
-                        <input
-                            {...register('nombre')}
-                            type="text"
-                            placeholder="Ej: Feria Integral Catia"
-                            className={inputClass}
-                        />
-                    </FormField>
+                <form onSubmit={handleSubmit(onSubmit)} className="px-6 py-5 space-y-6 flex-1 overflow-y-auto">
 
-                    {/* Estado + Tipo */}
-                    <div className="grid grid-cols-2 gap-3">
-                        <FormField label="Estado" error={errors.estado?.message}>
-                            <select {...register('estado')} className={selectClass}>
-                                <option value="">Seleccionar...</option>
-                                {ESTADOS_VENEZUELA.map((e) => (
-                                    <option key={e} value={e}>{e}</option>
-                                ))}
-                            </select>
-                        </FormField>
+                    {/* Sección: Ubicación Geográfica */}
+                    <div>
+                        <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2 border-b border-slate-100 dark:border-slate-700 pb-2">
+                            1. Ubicación Geográfica
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <FormField label="Estado" error={errors.estado?.message}>
+                                <select {...register('estado')} className={selectClass}>
+                                    <option value="">Seleccionar...</option>
+                                    {ESTADOS_VENEZUELA.map((e) => (
+                                        <option key={e} value={e}>{e}</option>
+                                    ))}
+                                </select>
+                            </FormField>
+                            <FormField label="Municipio" error={errors.municipio?.message}>
+                                <input {...register('municipio')} type="text" placeholder="Ej: Libertador" className={inputClass} />
+                            </FormField>
+                            <FormField label="Parroquia" error={errors.parroquia?.message}>
+                                <input {...register('parroquia')} type="text" placeholder="Ej: Sucre" className={inputClass} />
+                            </FormField>
+                            <FormField label="Sector / Comunidad" error={errors.sector?.message}>
+                                <input {...register('sector')} type="text" placeholder="Ej: Casco Histórico" className={inputClass} />
+                            </FormField>
 
-                        <FormField label="Tipo de Feria" error={errors.tipoFeria?.message}>
-                            <select {...register('tipoFeria')} className={selectClass}>
-                                <option value="">Seleccionar...</option>
-                                {TIPOS_FERIA.map((t) => (
-                                    <option key={t} value={t}>{t}</option>
-                                ))}
-                            </select>
-                        </FormField>
+                            <div className="md:col-span-2">
+                                <label className="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">
+                                    Coordenadas Exactas
+                                </label>
+                                <div className="grid grid-cols-2 gap-3">
+                                    <FormField label="" error={errors.lat?.message}>
+                                        <input {...register('lat', { valueAsNumber: true })} type="number" step="any" placeholder="Latitud" className={inputClass} />
+                                    </FormField>
+                                    <FormField label="" error={errors.lng?.message}>
+                                        <input {...register('lng', { valueAsNumber: true })} type="number" step="any" placeholder="Longitud" className={inputClass} />
+                                    </FormField>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    {/* Coordinates */}
+                    {/* Sección: Organización Comunal */}
                     <div>
-                        <label className="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">
-                            Coordenadas
-                        </label>
-                        <div className="grid grid-cols-2 gap-3">
-                            <FormField label="" error={errors.lat?.message}>
-                                <input
-                                    {...register('lat', { valueAsNumber: true })}
-                                    type="number"
-                                    step="any"
-                                    placeholder="Latitud (ej: 10.48)"
-                                    className={inputClass}
-                                />
+                        <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2 border-b border-slate-100 dark:border-slate-700 pb-2">
+                            2. Organización Comunal
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <FormField label="Base de Misiones" error={errors.mission_base?.message}>
+                                <input {...register('mission_base')} type="text" placeholder="Opcional" className={inputClass} />
                             </FormField>
-                            <FormField label="" error={errors.lng?.message}>
-                                <input
-                                    {...register('lng', { valueAsNumber: true })}
-                                    type="number"
-                                    step="any"
-                                    placeholder="Longitud (ej: -66.90)"
-                                    className={inputClass}
-                                />
+                            <FormField label="CLAP" error={errors.clap?.message}>
+                                <input {...register('clap')} type="text" placeholder="Opcional" className={inputClass} />
+                            </FormField>
+                            <FormField label="Circuito Comunal" error={errors.circuit?.message}>
+                                <input {...register('circuit')} type="text" placeholder="Opcional" className={inputClass} />
                             </FormField>
                         </div>
-                        <p className="text-xs text-slate-500 dark:text-slate-600 mt-1">
-                            Venezuela: Lat 0.6 a 12.2 · Lng -73.4 a -59.8
-                        </p>
                     </div>
 
-                    {/* Dates */}
-                    <div className="grid grid-cols-2 gap-3">
-                        <FormField label="Fecha Inicio" error={errors.fechaInicio?.message}>
-                            <input
-                                {...register('fechaInicio')}
-                                type="date"
-                                className={inputClass}
-                            />
-                        </FormField>
-                        <FormField label="Fecha Fin" error={errors.fechaFin?.message}>
-                            <input
-                                {...register('fechaFin')}
-                                type="date"
-                                className={inputClass}
-                            />
-                        </FormField>
+                    {/* Sección: Responsable */}
+                    <div>
+                        <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2 border-b border-slate-100 dark:border-slate-700 pb-2">
+                            3. Responsable Principal
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <FormField label="Nombre Completo" error={errors.full_name?.message}>
+                                <input {...register('full_name')} type="text" placeholder="Nombre Apellido" className={inputClass} />
+                            </FormField>
+                            <FormField label="Cédula" error={errors.cedula?.message}>
+                                <input {...register('cedula')} type="text" placeholder="V-12345678" className={inputClass} />
+                            </FormField>
+                            <FormField label="Teléfono" error={errors.phone?.message}>
+                                <input {...register('phone')} type="text" placeholder="0412-1234567" className={inputClass} />
+                            </FormField>
+                        </div>
                     </div>
 
-                    {/* Divider */}
-                    <div className="border-t border-slate-200 dark:border-slate-700/60 my-4" />
+                    {/* Sección: Operatividad */}
+                    <div>
+                        <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2 border-b border-slate-100 dark:border-slate-700 pb-2">
+                            4. Detalles Operativos
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <FormField label="Tipo de Feria" error={errors.tipoFeria?.message}>
+                                <select {...register('tipoFeria')} className={selectClass}>
+                                    <option value="">Seleccionar...</option>
+                                    {TIPOS_FERIA.map((t) => (
+                                        <option key={t} value={t}>{t}</option>
+                                    ))}
+                                </select>
+                            </FormField>
+                            <FormField label="Estatus (Compliance)" error={errors.compliance?.message}>
+                                <select {...register('compliance')} className={selectClass}>
+                                    <option value="Programada">Programada</option>
+                                    <option value="En Curso">En Curso</option>
+                                    <option value="Finalizada">Finalizada</option>
+                                    <option value="Suspendida">Suspendida</option>
+                                </select>
+                            </FormField>
+                            <FormField label="Fecha Inicio" error={errors.fechaInicio?.message}>
+                                <input {...register('fechaInicio')} type="date" className={inputClass} />
+                            </FormField>
+                            <FormField label="Fecha Fin" error={errors.fechaFin?.message}>
+                                <input {...register('fechaFin')} type="date" className={inputClass} />
+                            </FormField>
+                            <div className="md:col-span-2">
+                                <FormField label="Observaciones" error={errors.observations?.message}>
+                                    <textarea {...register('observations')} rows={2} placeholder="Opcional..." className={`${inputClass} resize-none`} />
+                                </FormField>
+                            </div>
+                        </div>
+                    </div>
 
                     {/* Actions */}
-                    <div className="flex items-center gap-3">
+                    <div className="sticky bottom-0 bg-white dark:bg-slate-800 pt-4 border-t border-slate-200 dark:border-slate-700/60 mt-6 flex items-center gap-3">
                         <button
                             type="button"
                             onClick={onClose}

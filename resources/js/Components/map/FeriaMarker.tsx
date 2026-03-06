@@ -67,10 +67,10 @@ const FeriaPopupContent = ({ feria }: { feria: Feria }) => {
         </div>
         <div>
           <h3 className="text-base font-bold leading-tight m-0 text-slate-900 dark:text-white">
-            {feria.nombre}
+            Feria {feria.sector}
           </h3>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-1">
-            <MapPin size={14} className="opacity-70" /> {feria.estado}
+            <MapPin size={14} className="opacity-70" /> {feria.parroquia}, {feria.estado}
           </p>
         </div>
       </div>
@@ -93,7 +93,7 @@ const FeriaPopupContent = ({ feria }: { feria: Feria }) => {
         </div>
         <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-[11px]">
           <Hash size={14} className="opacity-50" />
-          <span className="font-mono">{feria.lat.toFixed(5)}, {feria.lng.toFixed(5)}</span>
+          <span className="font-mono">{feria.coordinates.lat.toFixed(5)}, {feria.coordinates.lng.toFixed(5)}</span>
         </div>
       </div>
     </div>
@@ -106,7 +106,7 @@ export default function FeriaMarker({ feria }: FeriaMarkerProps) {
   const icon = createIcon(color);
 
   return (
-    <Marker position={[ feria.lat, feria.lng ]} icon={icon}>
+    <Marker position={[ feria.coordinates.lat, feria.coordinates.lng ]} icon={icon}>
       <Popup className="custom-feria-popup">
         <FeriaPopupContent feria={feria} />
       </Popup>
