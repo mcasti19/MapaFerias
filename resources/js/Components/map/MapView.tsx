@@ -31,7 +31,7 @@ export default function MapView() {
             <MapContainer
                 center={VENEZUELA_CENTER}
                 zoom={DEFAULT_ZOOM}
-                minZoom={6.5}
+                minZoom={6}
                 zoomControl={false}
                 className="w-full h-full z-0"
                 style={{ background: isDark ? '#0f172a' : '#f8fafc' }}

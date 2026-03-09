@@ -8,7 +8,7 @@ export default function MapLegend() {
     return (
         <div
             className={`absolute bottom-8 right-4 z-[400] border transition-all duration-300
-                rounded-xl px-4 py-3 backdrop-blur-sm shadow-2xl
+                rounded-lg px-4 py-3 backdrop-blur-sm shadow-2xl
                 ${isDark
                     ? 'bg-slate-900/90 border-slate-700/60'
                     : 'bg-white/90 border-slate-200'

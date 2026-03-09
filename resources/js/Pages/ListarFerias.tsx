@@ -72,7 +72,7 @@ export default function ListarFerias() {
                 <h1 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Historial</h1>
                 <p className="text-slate-500 text-xs">Consulta registros anteriores.</p>
               </div>
-              <div className="flex items-center gap-2 bg-white dark:bg-slate-900 px-3 md:px-4 py-2 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm self-start md:self-auto">
+              <div className="flex items-center gap-2 bg-white dark:bg-slate-900 px-3 md:px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm self-start md:self-auto">
                 <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
                 <span className="text-xs md:text-sm font-semibold whitespace-nowrap">{feriasFiltradas.length} Encontradas</span>
               </div>
@@ -85,7 +85,7 @@ export default function ListarFerias() {
                 <input
                   type="text"
                   placeholder="Buscar por nombre de feria..."
-                  className="w-full pl-11 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all shadow-sm dark:shadow-none text-sm text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                  className="w-full pl-11 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition-all shadow-sm dark:shadow-none text-sm text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -93,7 +93,7 @@ export default function ListarFerias() {
               <div className="relative min-w-[200px]">
                 <Filter className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 dark:text-slate-500" />
                 <select
-                  className="w-full pl-11 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none appearance-none cursor-pointer shadow-sm dark:shadow-none text-sm text-slate-900 dark:text-white"
+                  className="w-full pl-11 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none appearance-none cursor-pointer shadow-sm dark:shadow-none text-sm text-slate-900 dark:text-white"
                   value={estadoFilter}
                   onChange={(e) => setEstadoFilter(e.target.value)}
                 >
@@ -105,7 +105,7 @@ export default function ListarFerias() {
             </div>
 
             {/* Results Table */}
-            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-3xl overflow-hidden shadow-sm dark:shadow-xl transition-all duration-300">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-xl overflow-hidden shadow-sm dark:shadow-xl transition-all duration-300">
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse">
                   <thead className="bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 border-b border-slate-100 dark:border-slate-800">
@@ -154,7 +154,7 @@ export default function ListarFerias() {
                               </div>
                             </td>
                             <td className="px-6 py-5 text-center whitespace-nowrap">
-                              <span className={`inline-block px-3 py-1.5 rounded-xl text-[11px] font-bold tracking-wide w-28 uppercase ${status.styles}`}>
+                              <span className={`inline-block px-3 py-1.5 rounded-lg text-[11px] font-bold tracking-wide w-28 uppercase ${status.styles}`}>
                                 {status.label}
                               </span>
                             </td>

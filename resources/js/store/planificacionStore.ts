@@ -1,32 +1,56 @@
+/**
+ * Planificacion Store v3 – Read-only & Reactive.
+ *
+ * Instead of holding editable draft states, this store now:
+ *  1. Reads Ferias from `feriasStore` for a selected Mes/Jornada/Anio.
+ *  2. Aggregates them by Estado into the `PlanificacionEstado` shape.
+ *  3. Provides computed totals.
+ *  4. Is completely read-only (no updateEstado, no guardar).
+ *
+ * The old `planificacionesGuardadas` history is kept for backward
+ * compatibility with the Dashboard, but new data comes from Ferias.
+ */
+
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { PlanificacionEstado, PLANIFICACION_MOCK, TONELADAS_FACTOR, PERSONAS_FACTOR } from '@/data/planificacion';
-import { format, addDays } from 'date-fns';
+import { useFeriasStore } from '@/store/feriasStore';
+import { getCurrentMes, getCurrentJornada, getCurrentAnio } from '@/lib/dateUtils';
+import { PlanificacionEstado } from '@/types';
+import { ESTADOS_VENEZUELA } from '@/types/constants';
+import { PERSONAS_FACTOR, TONELADAS_FACTOR } from '@/lib/feriaUtils';
 
 export interface PlanificacionGuardada {
-    id: string; // unique ID like "plan-16345..."
-    fechaDesde: string;
-    fechaHasta: string;
+    id: string;
+    mes: string;         // New field
+    jornada: number;     // New field
+    anio: number;        // New field
+    fechaDesde?: string; // Optional for backward compat
+    fechaHasta?: string; // Optional for backward compat
     estados: PlanificacionEstado[];
     createdAt: string;
 }
 
 interface PlanificacionStore {
-    // Current Draft (Borrador)
-    estados: PlanificacionEstado[];
-    fechaDesde: string;
-    fechaHasta: string;
+    // Selection filters
+    selectedMes: string;
+    selectedJornada: number;
+    selectedAnio: number;
 
-    // History
+    // History (kept for Dashboard backward compat)
     planificacionesGuardadas: PlanificacionGuardada[];
 
     isInitialized: boolean;
     initializePlanificacion: () => void;
-    updateEstado: (id: string, updates: Partial<PlanificacionEstado>) => void;
-    setFechasBorrador: (desde: string, hasta: string) => void;
-    guardarPlanificacion: () => void;
+    setSelectedMesJornada: (mes: string, jornada: number, anio?: number) => void;
 
-    // Getters / Computed for Current Draft
+    // Read-only computed from feriasStore
+    getEstadosFromFerias: () => PlanificacionEstado[];
+
+    // Save & Retrieve snapshots for Cumplimiento
+    guardarPlanificacion: () => void;
+    getPlanificacionGuardada: (mes: string, jornada: number, anio: number) => PlanificacionGuardada | undefined;
+
+    // Totals from computed states
     getTotalEmblematicas: () => number;
     getTotalPuntosDistribucion: () => number;
     getTotalGlobalFerias: () => number;
@@ -37,62 +61,125 @@ interface PlanificacionStore {
     getTotalToneladas: () => number;
 }
 
-const todayStr = format(new Date(), 'yyyy-MM-dd');
-const nextWeekStr = format(addDays(new Date(), 6), 'yyyy-MM-dd');
-
 export const usePlanificacionStore = create<PlanificacionStore>()(
     persist(
         (set, get) => ({
-            estados: [],
-            fechaDesde: todayStr,
-            fechaHasta: nextWeekStr,
+            selectedMes: getCurrentMes(),
+            selectedJornada: getCurrentJornada(),
+            selectedAnio: getCurrentAnio(),
             planificacionesGuardadas: [],
             isInitialized: false,
 
             initializePlanificacion: () => {
-                const { isInitialized, estados } = get();
-                if (!isInitialized || estados.length === 0) {
-                    set({ estados: [ ...PLANIFICACION_MOCK ], isInitialized: true });
+                if (!get().isInitialized) {
+                    set({ isInitialized: true });
                 }
             },
 
-            updateEstado: (id, updates) => {
-                set((state) => ({
-                    estados: state.estados.map((estado) =>
-                        estado.id === id ? { ...estado, ...updates } : estado
-                    ),
-                }));
+            setSelectedMesJornada: (mes, jornada, anio) => {
+                set({
+                    selectedMes: mes,
+                    selectedJornada: jornada,
+                    selectedAnio: anio ?? get().selectedAnio,
+                });
             },
 
-            setFechasBorrador: (desde, hasta) => {
-                set({ fechaDesde: desde, fechaHasta: hasta });
+            /**
+             * Build PlanificacionEstado[] by aggregating ferias that match
+             * the selected Mes + Jornada + Anio, grouped by estado.
+             */
+            getEstadosFromFerias: () => {
+                const { selectedMes, selectedJornada, selectedAnio } = get();
+                const ferias = useFeriasStore.getState().ferias;
+
+                // Use ESTADOS_VENEZUELA as the base (to get all 24 states + Distrito Capital at 0)
+                const estadoMap = new Map<string, PlanificacionEstado>();
+
+                ESTADOS_VENEZUELA.forEach((estadoNombre) => {
+                    const id = estadoNombre.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
+                    const estado_id = id.substring(0, 3).toUpperCase();
+
+                    estadoMap.set(estadoNombre.toUpperCase(), {
+                        id,
+                        estado_id,
+                        nombre_estado: estadoNombre.toUpperCase(),
+                        emblematicas: 0,
+                        puntos_distribucion: 0,
+                        clap: 0,
+                        familias: 0,
+                        observaciones: '',
+                    });
+                });
+
+                // Filter ferias for this jornada
+                const matchingFerias = ferias.filter(
+                    (f) => f.mes === selectedMes && f.jornada === selectedJornada && f.anio === selectedAnio
+                );
+
+                if (matchingFerias.length > 0) {
+                    // Aggregate ferias into each state
+                    matchingFerias.forEach((feria) => {
+                        const key = (feria.estado || '').toUpperCase();
+                        // Try to find matching state from template
+                        const existing = estadoMap.get(key);
+                        if (existing) {
+                            // Each feria counts as 1 feria for the state
+                            if (feria.tipoFeria === 'Integral' || feria.tipoFeria === 'Víveres') {
+                                existing.emblematicas += 1;
+                            } else {
+                                existing.puntos_distribucion += 1;
+                            }
+                            // CLAP increments with each feria
+                            existing.clap += 1;
+                            // Familias – use a reasonable default per feria of ~500
+                            existing.familias += 500;
+                        }
+                    });
+                }
+
+                return Array.from(estadoMap.values());
             },
 
             guardarPlanificacion: () => {
-                const state = get();
-                if (!state.fechaDesde || !state.fechaHasta) return;
+                const { selectedMes, selectedJornada, selectedAnio, planificacionesGuardadas, getEstadosFromFerias } = get();
+                const estadosCalculados = getEstadosFromFerias();
 
-                const nuevaPlanificacion: PlanificacionGuardada = {
-                    id: `plan-${Date.now()}`,
-                    fechaDesde: state.fechaDesde,
-                    fechaHasta: state.fechaHasta,
-                    // deep copy current states
-                    estados: JSON.parse(JSON.stringify(state.estados)),
-                    createdAt: new Date().toISOString()
+                const newPlanificacion: PlanificacionGuardada = {
+                    id: crypto.randomUUID(),
+                    mes: selectedMes,
+                    jornada: selectedJornada,
+                    anio: selectedAnio,
+                    estados: estadosCalculados,
+                    createdAt: new Date().toISOString(),
                 };
 
-                // Add to history (could also overwrite if same dates, but append for now)
-                set((s) => ({
-                    planificacionesGuardadas: [ ...s.planificacionesGuardadas, nuevaPlanificacion ]
-                }));
+                // Check if one already exists for this mes/jornada/anio and replace it, or add new
+                const existingIndex = planificacionesGuardadas.findIndex(
+                    p => p.mes === selectedMes && p.jornada === selectedJornada && p.anio === selectedAnio
+                );
+
+                let newHistory = [ ...planificacionesGuardadas ];
+                if (existingIndex >= 0) {
+                    newHistory[ existingIndex ] = newPlanificacion;
+                } else {
+                    newHistory.push(newPlanificacion);
+                }
+
+                set({ planificacionesGuardadas: newHistory });
+            },
+
+            getPlanificacionGuardada: (mes, jornada, anio) => {
+                return get().planificacionesGuardadas.find(
+                    p => p.mes === mes && p.jornada === jornada && p.anio === anio
+                );
             },
 
             getTotalEmblematicas: () => {
-                return get().estados.reduce((acc, curr) => acc + (Number(curr.emblematicas) || 0), 0);
+                return get().getEstadosFromFerias().reduce((a, c) => a + (Number(c.emblematicas) || 0), 0);
             },
 
             getTotalPuntosDistribucion: () => {
-                return get().estados.reduce((acc, curr) => acc + (Number(curr.puntos_distribucion) || 0), 0);
+                return get().getEstadosFromFerias().reduce((a, c) => a + (Number(c.puntos_distribucion) || 0), 0);
             },
 
             getTotalGlobalFerias: () => {
@@ -100,11 +187,11 @@ export const usePlanificacionStore = create<PlanificacionStore>()(
             },
 
             getTotalClap: () => {
-                return get().estados.reduce((acc, curr) => acc + (Number(curr.clap) || 0), 0);
+                return get().getEstadosFromFerias().reduce((a, c) => a + (Number(c.clap) || 0), 0);
             },
 
             getTotalFamilias: () => {
-                return get().estados.reduce((acc, curr) => acc + (Number(curr.familias) || 0), 0);
+                return get().getEstadosFromFerias().reduce((a, c) => a + (Number(c.familias) || 0), 0);
             },
 
             getTotalPersonas: () => {
@@ -116,24 +203,22 @@ export const usePlanificacionStore = create<PlanificacionStore>()(
             },
 
             getTotalToneladas: () => {
-                const rawFactor = get().estados.reduce((acc, curr) => {
+                const raw = get().getEstadosFromFerias().reduce((acc, curr) => {
                     const fams = Number(curr.familias) || 0;
-                    if (fams > 0) {
-                        acc += fams * TONELADAS_FACTOR;
-                    }
+                    if (fams > 0) acc += fams * TONELADAS_FACTOR;
                     return acc;
                 }, 0);
-                return Math.round(rawFactor * 1000) / 1000;
-            }
+                return Math.round(raw * 1000) / 1000;
+            },
         }),
         {
-            name: 'planificacion-storage-v2', // bump version to not collide with old cache optionally
+            name: 'planificacion-storage-v3',
             partialize: (state) => ({
-                estados: state.estados,
-                fechaDesde: state.fechaDesde,
-                fechaHasta: state.fechaHasta,
+                selectedMes: state.selectedMes,
+                selectedJornada: state.selectedJornada,
+                selectedAnio: state.selectedAnio,
                 planificacionesGuardadas: state.planificacionesGuardadas,
-                isInitialized: state.isInitialized
+                isInitialized: state.isInitialized,
             }),
         }
     )

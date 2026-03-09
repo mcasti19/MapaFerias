@@ -4,9 +4,10 @@ import { ESTADOS_VENEZUELA, TIPOS_FERIA } from '@/types/constants';
 import { FeriaStatus } from '@/types';
 
 const STATUS_OPTIONS: { value: FeriaStatus; label: string; color: string }[] = [
-    { value: 'activa', label: 'Activas', color: 'text-green-600 dark:text-green-400' },
-    { value: 'programada', label: 'Programadas', color: 'text-yellow-600 dark:text-yellow-400' },
-    { value: 'historica', label: 'Históricas', color: 'text-slate-600 dark:text-slate-400' },
+    { value: 'En Proceso', label: 'En Proceso', color: 'text-blue-600 dark:text-blue-400' },
+    { value: 'Por Ejecutar', label: 'Por Ejecutar', color: 'text-yellow-600 dark:text-yellow-400' },
+    { value: 'Ejecutada', label: 'Ejecutada', color: 'text-green-600 dark:text-green-400' },
+    { value: 'No ejecutada', label: 'No ejecutada', color: 'text-red-600 dark:text-red-400' },
 ];
 
 export default function FilterPanel() {

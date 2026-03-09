@@ -1,6 +1,6 @@
 // Types for ferias application
 
-export type FeriaStatus = 'activa' | 'programada' | 'historica';
+export type FeriaStatus = 'En Proceso' | 'Por Ejecutar' | 'Ejecutada' | 'No ejecutada';
 
 export type FeriaTipo = 'Proteína' | 'Víveres' | 'Hortalizas' | 'Integral';
 
@@ -46,13 +46,29 @@ export interface Feria {
     full_name: string;
     cedula: string;
     phone: string;
-    compliance: string;
+    compliance: boolean;
     observations: string;
 
     // Mantenemos estos campos visuales para compatibilidad
     tipoFeria: FeriaTipo;
     fechaInicio: string; // ISO string
     fechaFin: string;    // ISO string
+
+    // Jornada / Mes association
+    mes?: string;       // e.g. 'Marzo'
+    jornada?: number;   // 1-4
+    anio?: number;      // e.g. 2026
+}
+
+export interface PlanificacionEstado {
+    id: string; // usually state name in lowercase without spaces or accents
+    estado_id: string; // identifier
+    nombre_estado: string; // Exact Display Name
+    emblematicas: number;
+    puntos_distribucion: number;
+    clap: number;
+    familias: number;
+    observaciones: string;
 }
 
 export interface FilterState {
@@ -62,6 +78,8 @@ export interface FilterState {
     fechaDesde: string;
     fechaHasta: string;
     busqueda: string;
+    mes: string;
+    jornada: number[];
 }
 
 export interface FeriaFormData {

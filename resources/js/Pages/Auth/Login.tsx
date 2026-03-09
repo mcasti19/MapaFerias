@@ -41,7 +41,7 @@ export default function Login({
                 {/* Content */}
                 <div className="relative z-10 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                        <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-white border border-slate-200 shadow-sm shrink-0">
+                        <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-white border border-slate-200 shadow-sm shrink-0">
                             <img src="/MercalMarker.png" alt="Mercal Logo" className="w-10 h-10 object-contain drop-shadow-sm" />
                         </div>
                         <span className="text-3xl font-bold text-slate-800 dark:text-white tracking-tight">Mercal</span>
@@ -84,12 +84,12 @@ export default function Login({
                 </div>
 
                 <div className="w-full max-w-md relative z-10 animate-fade-in-up">
-                    <div className="bg-white/80 dark:bg-white/5 backdrop-blur-2xl border border-slate-200 dark:border-white/10 p-8 sm:p-10 rounded-3xl shadow-xl dark:shadow-2xl transition-colors duration-300">
+                    <div className="bg-white/80 dark:bg-white/5 backdrop-blur-2xl border border-slate-200 dark:border-white/10 p-8 sm:p-10 rounded-2xl shadow-xl dark:shadow-2xl transition-colors duration-300">
 
                         <div className="text-center mb-10">
                             {/* Mobile Logo */}
                             <div className="lg:hidden flex justify-center mb-6">
-                                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-md">
+                                <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-white border border-slate-200 shadow-md">
                                     <img src="/MercalMarker.png" alt="Mercal Logo" className="w-10 h-10 object-contain drop-shadow-sm" />
                                 </div>
                             </div>
@@ -98,7 +98,7 @@ export default function Login({
                         </div>
 
                         {status && (
-                            <div className="mb-6 p-4 rounded-xl bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-sm font-medium text-blue-700 dark:text-blue-400 flex items-center justify-center">
+                            <div className="mb-6 p-4 rounded-lg bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-sm font-medium text-blue-700 dark:text-blue-400 flex items-center justify-center">
                                 {status}
                             </div>
                         )}
@@ -116,7 +116,7 @@ export default function Login({
                                         type="email"
                                         name="email"
                                         value={data.email}
-                                        className="w-full pl-11 pr-4 py-3 bg-slate-50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700/50 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500 shadow-sm dark:shadow-none"
+                                        className="w-full pl-11 pr-4 py-3 bg-slate-50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700/50 text-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500 shadow-sm dark:shadow-none"
                                         placeholder="admin@mercal.gob.ve"
                                         autoComplete="username"
                                         autoFocus
@@ -148,7 +148,7 @@ export default function Login({
                                         type="password"
                                         name="password"
                                         value={data.password}
-                                        className="w-full pl-11 pr-4 py-3 bg-slate-50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700/50 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500 shadow-sm dark:shadow-none"
+                                        className="w-full pl-11 pr-4 py-3 bg-slate-50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700/50 text-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500 shadow-sm dark:shadow-none"
                                         placeholder="••••••••"
                                         autoComplete="current-password"
                                         onChange={(e) => setData('password', e.target.value)}
@@ -182,7 +182,7 @@ export default function Login({
                             <button
                                 type="submit"
                                 disabled={processing}
-                                className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl text-white font-bold bg-blue-600 hover:bg-blue-700 dark:bg-gradient-to-r dark:from-blue-600 dark:to-blue-500 dark:hover:from-blue-500 dark:hover:to-blue-400 shadow-lg shadow-blue-600/30 dark:shadow-blue-900/30 hover:shadow-blue-600/40 dark:hover:shadow-blue-900/50 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none mt-4"
+                                className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-lg text-white font-bold bg-blue-600 hover:bg-blue-700 dark:bg-gradient-to-r dark:from-blue-600 dark:to-blue-500 dark:hover:from-blue-500 dark:hover:to-blue-400 shadow-lg shadow-blue-600/30 dark:shadow-blue-900/30 hover:shadow-blue-600/40 dark:hover:shadow-blue-900/50 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none mt-4"
                             >
                                 {processing ? (
                                     <>

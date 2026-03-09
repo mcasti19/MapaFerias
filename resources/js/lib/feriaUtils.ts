@@ -5,18 +5,20 @@ import { Feria, FeriaStatus } from '@/types';
  * Determines the status of a feria based on current date.
  *
  * Logic order:
- *  1. If start is in the future → 'programada'
- *  2. If end is in the past     → 'historica'
- *  3. Otherwise (today falls within the range, or starts/ends today) → 'activa'
+ *  1. If start is in the future → 'Por Ejecutar'
+ *  2. If end is in the past → check compliance. If true → 'Ejecutada', else 'No ejecutada'
+ *  3. Otherwise (today falls within the range) → 'En Proceso'
  */
 export function getFeriaStatus(feria: Feria): FeriaStatus {
     const now = new Date();
     const start = startOfDay(parseISO(feria.fechaInicio));
     const end = endOfDay(parseISO(feria.fechaFin));
 
-    if (isAfter(start, endOfDay(now))) return 'programada';
-    if (isBefore(end, startOfDay(now))) return 'historica';
-    return 'activa';
+    if (isAfter(start, endOfDay(now))) return 'Por Ejecutar';
+    if (isBefore(end, startOfDay(now))) {
+        return feria.compliance ? 'Ejecutada' : 'No ejecutada';
+    }
+    return 'En Proceso';
 }
 
 /**
@@ -24,12 +26,14 @@ export function getFeriaStatus(feria: Feria): FeriaStatus {
  */
 export function getMarkerColor(status: FeriaStatus): string {
     switch (status) {
-        case 'activa':
-            return '#16a34a'; // green-600
-        case 'programada':
+        case 'En Proceso':
+            return '#3b82f6'; // blue-500
+        case 'Por Ejecutar':
             return '#ca8a04'; // yellow-600
-        case 'historica':
-            return '#6b7280'; // gray-500
+        case 'Ejecutada':
+            return '#16a34a'; // green-600
+        case 'No ejecutada':
+            return '#ef4444'; // red-500
     }
 }
 
@@ -37,12 +41,10 @@ export function getMarkerColor(status: FeriaStatus): string {
  * Returns the tailwind text-color class for a given status.
  */
 export function getStatusLabel(status: FeriaStatus): string {
-    switch (status) {
-        case 'activa':
-            return 'Activa';
-        case 'programada':
-            return 'Programada';
-        case 'historica':
-            return 'Histórica';
-    }
+    return status;
 }
+
+// Factor constants moved from planificacion.ts
+export const TONELADAS_FACTOR = 0.002185;
+export const PERSONAS_FACTOR = 4;
+

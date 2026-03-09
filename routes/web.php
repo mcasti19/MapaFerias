@@ -35,6 +35,10 @@ Route::get('/planificacion', function () {
     return Inertia::render('Planificacion/Index');
 })->middleware(['auth', 'verified'])->name('planificacion');
 
+Route::get('/cumplimiento', function () {
+    return Inertia::render('Cumplimiento/Index');
+})->middleware(['auth', 'verified'])->name('cumplimiento');
+
 
 //Listar Ferias
 Route::get('/lista-ferias', function () {

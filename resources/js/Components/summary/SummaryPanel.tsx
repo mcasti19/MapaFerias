@@ -2,6 +2,7 @@ import { Activity, Clock, History } from 'lucide-react';
 import { useFeriasStore } from '@/store/feriasStore';
 import { useShallow } from 'zustand/react/shallow';
 import { getFeriaStatus } from '@/lib/feriaUtils';
+import { FeriaStatus } from '@/types';
 
 interface StatCardProps {
     label: string;
@@ -44,11 +45,11 @@ export default function SummaryPanel() {
     const filtered = useFeriasStore(useShallow((s) => s.filteredFerias()));
 
     // Count by status from ALL ferias (global counts)
-    const allCounts = { activa: 0, programada: 0, historica: 0 };
+    const allCounts: Record<FeriaStatus, number> = { 'En Proceso': 0, 'Por Ejecutar': 0, 'Ejecutada': 0, 'No ejecutada': 0 };
     ferias.forEach((f) => { allCounts[ getFeriaStatus(f) ]++; });
 
     // Filtered counts
-    const filteredCounts = { activa: 0, programada: 0, historica: 0 };
+    const filteredCounts: Record<FeriaStatus, number> = { 'En Proceso': 0, 'Por Ejecutar': 0, 'Ejecutada': 0, 'No ejecutada': 0 };
     filtered.forEach((f) => { filteredCounts[ getFeriaStatus(f) ]++; });
 
     const isFiltered = filtered.length !== ferias.length;
@@ -67,26 +68,33 @@ export default function SummaryPanel() {
             </div>
 
             <StatCard
-                label="Activas Hoy"
-                value={isFiltered ? filteredCounts.activa : allCounts.activa}
-                icon={<Activity className="w-4 h-4 text-green-300" />}
-                color="bg-green-900/60"
-                glowColor="#16a34a"
+                label="En Proceso"
+                value={isFiltered ? filteredCounts[ 'En Proceso' ] : allCounts[ 'En Proceso' ]}
+                icon={<Activity className="w-4 h-4 text-blue-300" />}
+                color="bg-blue-900/60"
+                glowColor="#3b82f6"
                 pulsing
             />
             <StatCard
-                label="Programadas"
-                value={isFiltered ? filteredCounts.programada : allCounts.programada}
+                label="Por Ejecutar"
+                value={isFiltered ? filteredCounts[ 'Por Ejecutar' ] : allCounts[ 'Por Ejecutar' ]}
                 icon={<Clock className="w-4 h-4 text-yellow-300" />}
                 color="bg-yellow-900/60"
                 glowColor="#ca8a04"
             />
             <StatCard
-                label="Históricas"
-                value={isFiltered ? filteredCounts.historica : allCounts.historica}
-                icon={<History className="w-4 h-4 text-slate-300" />}
-                color="bg-slate-700/60"
-                glowColor="#6b7280"
+                label="Ejecutadas"
+                value={isFiltered ? filteredCounts[ 'Ejecutada' ] : allCounts[ 'Ejecutada' ]}
+                icon={<History className="w-4 h-4 text-green-300" />}
+                color="bg-green-900/60"
+                glowColor="#16a34a"
+            />
+            <StatCard
+                label="No ejecutadas"
+                value={isFiltered ? filteredCounts[ 'No ejecutada' ] : allCounts[ 'No ejecutada' ]}
+                icon={<History className="w-4 h-4 text-red-300" />}
+                color="bg-red-900/60"
+                glowColor="#ef4444"
             />
         </div>
     );

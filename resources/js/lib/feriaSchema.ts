@@ -25,7 +25,7 @@ export const feriaSchema = z
         full_name: z.string().min(3, 'El nombre responsable es requerido').max(100),
         cedula: z.string().min(5, 'Cédula inválida'),
         phone: z.string().min(10, 'Teléfono inválido'),
-        compliance: z.string().optional(),
+        compliance: z.boolean().optional().default(false),
         observations: z.string().optional(),
 
         tipoFeria: z.enum(TIPOS_FERIA, {

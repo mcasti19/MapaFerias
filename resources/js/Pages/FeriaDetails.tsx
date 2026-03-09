@@ -80,7 +80,7 @@ export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
                     <div className="p-4 sm:p-8 max-w-6xl mx-auto space-y-6 sm:space-y-8 pb-20">
 
                         {/* Hero Header Section */}
-                        <div className="bg-white dark:bg-slate-800 rounded-2xl md:rounded-3xl border border-slate-200 dark:border-slate-700/60 shadow-sm overflow-hidden transition-colors duration-300 relative">
+                        <div className="bg-white dark:bg-slate-800 rounded-xl md:rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm overflow-hidden transition-colors duration-300 relative">
                             {/* Decorative background element */}
                             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 dark:bg-blue-600/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
 
@@ -105,7 +105,7 @@ export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
                                     </div>
                                 </div>
 
-                                <div className="bg-slate-50 dark:bg-slate-900/50 rounded-2xl p-5 border border-slate-100 dark:border-slate-700/50 min-w-auto md:min-w-[280px] shrink-0">
+                                <div className="bg-slate-50 dark:bg-slate-900/50 rounded-xl p-5 border border-slate-100 dark:border-slate-700/50 min-w-auto md:min-w-[280px] shrink-0">
                                     <h3 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Métricas Rápidas</h3>
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-3">
@@ -129,7 +129,7 @@ export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
                             <div className="lg:col-span-2 space-y-6 sm:space-y-8">
 
                                 {/* Schedule Card */}
-                                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm p-6 sm:p-8 transition-colors duration-300">
+                                <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700/60 shadow-sm p-6 sm:p-8 transition-colors duration-300">
                                     <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
                                         <Calendar className="w-5 h-5 text-blue-500" />
                                         Planificación y Horario
@@ -137,7 +137,7 @@ export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                         <div className="flex items-start gap-4">
-                                            <div className="p-3 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                                            <div className="p-3 bg-slate-50 dark:bg-slate-900/50 rounded-lg border border-slate-100 dark:border-slate-700/50">
                                                 <Calendar className="w-5 h-5 text-slate-500 dark:text-slate-400" />
                                             </div>
                                             <div>
@@ -147,7 +147,7 @@ export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
                                             </div>
                                         </div>
                                         <div className="flex items-start gap-4">
-                                            <div className="p-3 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                                            <div className="p-3 bg-slate-50 dark:bg-slate-900/50 rounded-lg border border-slate-100 dark:border-slate-700/50">
                                                 <Clock className="w-5 h-5 text-slate-500 dark:text-slate-400" />
                                             </div>
                                             <div>
@@ -160,7 +160,7 @@ export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
                                 </div>
 
                                 {/* Inventory Estimation */}
-                                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm overflow-hidden transition-colors duration-300">
+                                <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700/60 shadow-sm overflow-hidden transition-colors duration-300">
                                     <div className="p-6 sm:p-8 border-b border-slate-200 dark:border-slate-700/60">
                                         <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
                                             <Truck className="w-5 h-5 text-emerald-500" />
@@ -177,7 +177,7 @@ export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
                                                 return (
                                                     <li key={idx} className="p-4 sm:p-6 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-700/20 transition-colors">
                                                         <div className="flex items-center gap-4">
-                                                            <div className="p-2.5 rounded-xl bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400">
+                                                            <div className="p-2.5 rounded-lg bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400">
                                                                 <Icon className="w-5 h-5" />
                                                             </div>
                                                             <span className="font-semibold text-sm sm:text-base text-slate-800 dark:text-slate-200">{item.item}</span>
@@ -197,7 +197,7 @@ export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
                             <div className="space-y-6 sm:space-y-8">
 
                                 {/* Organizer Info */}
-                                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm p-6 sm:p-8 transition-colors duration-300">
+                                <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700/60 shadow-sm p-6 sm:p-8 transition-colors duration-300">
                                     <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
                                         <ShieldCheck className="w-5 h-5 text-indigo-500" />
                                         Organización
@@ -212,7 +212,7 @@ export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
                                             <a href={`tel:${telefono}`} className="font-semibold text-blue-600 dark:text-blue-400 text-sm hover:underline">{telefono}</a>
                                         </div>
                                         <div className="pt-4 border-t border-slate-100 dark:border-slate-700/50">
-                                            <button className="w-full py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                                            <button className="w-full py-2.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
                                                 Ver Equipo Completo
                                             </button>
                                         </div>
