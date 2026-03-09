@@ -83,10 +83,10 @@ export default function RegisterFeriaModal({ onClose }: RegisterFeriaModalProps)
     };
 
     return (
-        <div className="fixed inset-0 z-[1001] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm transition-opacity" onClick={onClose}>
+        <div className="fixed modern-scrollbar inset-0 z-1001 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm transition-opacity" onClick={onClose}>
             <div
                 className="relative bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-xl shadow-2xl
-          w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto transform transition-all flex flex-col"
+          w-full max-w-4xl mx-4 max-h-[90vh] overflow-y-auto transform transition-all flex flex-col"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header */}
