@@ -49,7 +49,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                 className={`flex flex-col h-full bg-slate-50 dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 shadow-2xl transition-all duration-300 ease-in-out z-50
                     fixed inset-y-0 left-0 md:relative 
                     ${isMobileSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
-                    ${isSidebarCollapsed ? 'w-20 min-w-[5rem]' : 'w-[320px] min-w-[320px]'}
+                    ${isSidebarCollapsed ? 'w-20 min-w-5rem' : 'w-[320px] min-w-[320px]'}
                 `}
             >
                 {/* Desktop Collapse Toggle Button */}
@@ -70,7 +70,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                 </button>
 
                 {/* Header / Brand */}
-                <div className="flex-shrink-0 px-4 py-4 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-300">
+                <div className="shrink-0 px-4 py-4 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-300">
                     <div className={`flex items-center ${isSidebarCollapsed ? 'justify-center' : 'gap-3'}`}>
                         <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/50 shadow-sm shrink-0 transition-all">
                             <img src="/MercalMarker.png" alt="Mercal Logo" className="w-6 h-6 object-contain drop-shadow-sm" />
@@ -89,7 +89,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                 </div>
 
                 {/* Navigation */}
-                <nav className="flex-shrink-0 px-3 py-3 border-b border-slate-200 dark:border-slate-800 flex flex-col gap-1 transition-all duration-300">
+                <nav className="shrink-0 px-3 py-3 border-b border-slate-200 dark:border-slate-800 flex flex-col gap-1 transition-all duration-300">
                     <Link
                         href={route('dashboard')}
                         title="Dashboard"
@@ -103,6 +103,22 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                         {isSidebarCollapsed && (
                             <div className="absolute left-full ml-3 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap z-50">
                                 Dashboard
+                            </div>
+                        )}
+                    </Link>
+                    <Link
+                        href={route('ferias')}
+                        title="Mapa de Ferias"
+                        className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-3'} py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isCurrent('ferias') && !isCurrent('lista-ferias')
+                            ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
+                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
+                            }`}
+                    >
+                        <MapPin className="w-5 h-5 shrink-0" />
+                        {!isSidebarCollapsed && <span>Mapa de Ferias</span>}
+                        {isSidebarCollapsed && (
+                            <div className="absolute left-full ml-3 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap z-50">
+                                Mapa de Ferias
                             </div>
                         )}
                     </Link>
@@ -139,22 +155,6 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                         )}
                     </Link>
 
-                    <Link
-                        href={route('ferias')}
-                        title="Mapa de Ferias"
-                        className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-3'} py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isCurrent('ferias') && !isCurrent('lista-ferias')
-                            ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
-                            }`}
-                    >
-                        <MapPin className="w-5 h-5 shrink-0" />
-                        {!isSidebarCollapsed && <span>Mapa de Ferias</span>}
-                        {isSidebarCollapsed && (
-                            <div className="absolute left-full ml-3 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap z-50">
-                                Mapa de Ferias
-                            </div>
-                        )}
-                    </Link>
 
                     <Link
                         href={route('lista-ferias')}
@@ -176,11 +176,11 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
 
                 {/* Register button */}
                 {isCurrent('ferias') && (
-                    <div className="flex-shrink-0 px-3 py-3 border-b border-slate-200 dark:border-slate-800 transition-all duration-300">
+                    <div className="shrink-0 px-3 py-3 border-b border-slate-200 dark:border-slate-800 transition-all duration-300">
                         <button
                             onClick={onRegisterClick}
                             title="Registrar Nueva Feria"
-                            className={`flex items-center justify-center gap-2 rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-gradient-to-r dark:from-blue-600 dark:to-blue-500 dark:hover:from-blue-500 dark:hover:to-blue-400 text-white font-semibold text-sm transition-all duration-200 shadow-md shadow-blue-500/30 dark:shadow-blue-900/40 hover:shadow-blue-500/50 hover:scale-[1.02] active:scale-[0.98]
+                            className={`flex items-center justify-center gap-2 rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-linear-to-r dark:from-blue-600 dark:to-blue-500 dark:hover:from-blue-500 dark:hover:to-blue-400 text-white font-semibold text-sm transition-all duration-200 shadow-md shadow-blue-500/30 dark:shadow-blue-900/40 hover:shadow-blue-500/50 hover:scale-[1.02] active:scale-[0.98]
                                 ${isSidebarCollapsed ? 'w-10 h-10 mx-auto p-0 relative group' : 'w-full px-4 py-2.5'}
                             `}
                         >
@@ -232,7 +232,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                 </div>
 
                 {/* Footer with User Actions */}
-                <div className="flex-shrink-0 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 flex flex-col transition-all duration-300">
+                <div className="shrink-0 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 flex flex-col transition-all duration-300">
                     <Link
                         href={route('profile.edit')}
                         title="Perfil"
