@@ -35,6 +35,10 @@ Route::get('/planificacion', function () {
     return Inertia::render('Planificacion/Index');
 })->middleware(['auth', 'verified'])->name('planificacion');
 
+Route::get('/cumplimiento', function () {
+    return Inertia::render('Cumplimiento/Index');
+})->middleware(['auth', 'verified'])->name('cumplimiento');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

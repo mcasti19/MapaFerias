@@ -62,7 +62,7 @@ const FeriaPopupContent = ({ feria }: { feria: Feria }) => {
     <div className="min-width-[260px] max-w-[320px] p-1 antialiased text-slate-900 dark:text-slate-100">
       {/* Header */}
       <div className="flex items-start gap-3 mb-4">
-        <div className="text-2xl bg-slate-100 dark:bg-slate-800 p-2 rounded-xl border border-slate-200 dark:border-slate-700 flex-shrink-0">
+        <div className="text-2xl bg-slate-100 dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700 flex-shrink-0">
           {tipoEmoji}
         </div>
         <div>
@@ -86,7 +86,7 @@ const FeriaPopupContent = ({ feria }: { feria: Feria }) => {
       </div>
 
       {/* Info Box */}
-      <div className="bg-slate-50 dark:bg-slate-900/50 rounded-xl p-3 border border-slate-200 dark:border-slate-800 space-y-2">
+      <div className="bg-slate-50 dark:bg-slate-900/50 rounded-lg p-3 border border-slate-200 dark:border-slate-800 space-y-2">
         <div className="flex items-center gap-2 text-slate-700 dark:text-slate-200 text-xs font-medium">
           <Calendar size={14} className="text-blue-500" />
           <span>{formatDate(feria.fechaInicio)} — {formatDate(feria.fechaFin)}</span>

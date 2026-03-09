@@ -13,25 +13,12 @@ import {
 } from 'recharts';
 
 import { useThemeStore } from '@/store/themeStore';
-import { usePlanificacionStore } from '@/store/planificacionStore';
+import { MESES } from '@/lib/dateUtils';
 
 export default function Dashboard() {
     const { ferias, filters, setFilter } = useFeriasStore();
     const { theme } = useThemeStore();
     const isDark = theme === 'dark';
-
-    // Planificacion Store
-    const {
-        initializePlanificacion,
-        planificacionesGuardadas,
-        getTotalGlobalFerias: draftFerias,
-        getTotalFamilias: draftFamilias,
-        getTotalToneladas: draftToneladas
-    } = usePlanificacionStore();
-
-    useEffect(() => {
-        initializePlanificacion();
-    }, [ initializePlanificacion ]);
 
     // Chart colors based on theme
     const chartColors = {
@@ -93,6 +80,17 @@ export default function Dashboard() {
                 if (feria.fechaInicio.substring(0, 10) > filters.fechaHasta) return false;
             }
 
+            // Filter by mes
+            if (filters.mes && feria.mes && feria.mes !== filters.mes) {
+                return false;
+            }
+
+            // Filter by jornada (array)
+            const activeJornadas = filters.jornada || [];
+            if (activeJornadas.length > 0 && feria.jornada && !activeJornadas.includes(feria.jornada)) {
+                return false;
+            }
+
             return true;
         });
     }, [ ferias, filters ]);
@@ -117,21 +115,23 @@ export default function Dashboard() {
 
             const status = getFeriaStatus(feria);
 
-            if (status === 'programada') {
-                stats[ estado ].planificadas++;
-            } else if (status === 'activa' || status === 'historica') {
+            // All registered ferias count as 'planificadas'
+            stats[ estado ].planificadas++;
+
+            // Only those marked as executed count towards realized
+            if (status === 'Ejecutada') {
                 stats[ estado ].realizadas++;
             }
         });
 
         return Object.values(stats).map(s => {
-            // Mocking formulas standard in reports
+            // Formula metrics for Dashboard preview
             s.toneladas = s.realizadas * 2.5;
             s.familias = s.realizadas * 250;
             s.personas = s.familias * 4;
             s.combos = s.familias;
 
-            const total = s.realizadas + s.planificadas;
+            const total = s.planificadas;
             s.cumplimiento = total > 0 ? Math.round((s.realizadas / total) * 100) : 0;
 
             return s;
@@ -145,59 +145,32 @@ export default function Dashboard() {
         }, { realizadas: 0 });
     }, [ dataPorEstado ]);
 
-    const historicalPlanStats = useMemo(() => {
-        // If there are no saved configurations, fallback to draft
-        if (!planificacionesGuardadas || planificacionesGuardadas.length === 0) {
-            return {
-                ferias: draftFerias(),
-                familias: draftFamilias(),
-                toneladas: draftToneladas()
-            };
-        }
+    const dashboardStats = useMemo(() => {
+        const ferias = filteredList.length;
+        const familias = ferias * 500;
+        const toneladas = familias * 0.002185;
 
-        // Filter saved planificaciones based on Dashboard's date filters
-        let applicablePlans = planificacionesGuardadas;
+        return {
+            ferias,
+            familias,
+            toneladas: Math.round(toneladas * 1000) / 1000,
+        };
+    }, [ filteredList ]);
 
-        if (filters.fechaDesde || filters.fechaHasta) {
-            applicablePlans = planificacionesGuardadas.filter(plan => {
-                if (filters.fechaDesde && filters.fechaHasta) {
-                    return plan.fechaDesde <= filters.fechaHasta && plan.fechaHasta >= filters.fechaDesde;
-                } else if (filters.fechaDesde) {
-                    return plan.fechaHasta >= filters.fechaDesde;
-                } else if (filters.fechaHasta) {
-                    return plan.fechaDesde <= filters.fechaHasta;
-                }
-                return true;
-            });
-        }
-
-        // If no plans matched the filter, return 0. If no filters applied, sum ALL or get LATEST? User wants: "como quedo la planificacion de una fecha pasada". So we sum the matching ones. 
-        // If no filter, we will grab the LATEST saved week to show on default dashboard.
-        if (applicablePlans.length === 0 && (filters.fechaDesde || filters.fechaHasta)) {
-            return { ferias: 0, familias: 0, toneladas: 0 };
-        }
-
-        if (!filters.fechaDesde && !filters.fechaHasta) {
-            applicablePlans = [ planificacionesGuardadas[ planificacionesGuardadas.length - 1 ] ]; // just latest
-        }
-
-        // Sum applicable plans
-        return applicablePlans.reduce((acc, plan) => {
-            plan.estados.forEach(estado => {
-                acc.ferias += (Number(estado.emblematicas) || 0) + (Number(estado.puntos_distribucion) || 0);
-                acc.familias += (Number(estado.familias) || 0);
-            });
-            // Approximate Toneladas for those families
-            acc.toneladas = acc.familias * 0.002185;
-            return acc;
-        }, { ferias: 0, familias: 0, toneladas: 0 });
-
-    }, [ planificacionesGuardadas, filters, draftFerias, draftFamilias, draftToneladas ]);
-
+    const dataPorTipo = useMemo(() => {
+        const stats: Record<string, number> = {};
+        filteredList.forEach(feria => {
+            const tipo = feria.tipoFeria;
+            if (tipo) {
+                stats[ tipo ] = (stats[ tipo ] || 0) + 1;
+            }
+        });
+        return Object.entries(stats).map(([ name, value ]) => ({ name, value })).sort((a, b) => b.value - a.value);
+    }, [ filteredList ]);
 
     const pieData = [
         { name: 'Realizadas', value: globalStats.realizadas, color: '#3b82f6' },
-        { name: 'Planificadas', value: historicalPlanStats.ferias, color: '#f97316' }
+        { name: 'Planificadas', value: dashboardStats.ferias, color: '#f97316' }
     ];
 
     return (
@@ -219,24 +192,68 @@ export default function Dashboard() {
                                     <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium">Control de seguimiento de Ferias del Campo Soberano.</p>
                                 </div>
 
-                                <div className="flex items-center gap-2 md:gap-3 flex-wrap sm:flex-nowrap bg-white dark:bg-slate-900 p-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700/60 w-full xl:w-auto">
-                                    <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 whitespace-nowrap">Rango de fechas:</span>
-                                    <input
-                                        type="date"
-                                        value={filters.fechaDesde}
-                                        onChange={(e) => setFilter('fechaDesde', e.target.value)}
-                                        className="text-sm bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-blue-500 outline-none w-full sm:w-auto"
-                                    />
-                                    <span className="text-sm text-slate-400 hidden sm:inline">a</span>
-                                    <input
-                                        type="date"
-                                        value={filters.fechaHasta}
-                                        onChange={(e) => setFilter('fechaHasta', e.target.value)}
-                                        className="text-sm bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-blue-500 outline-none w-full sm:w-auto mt-2 sm:mt-0"
-                                    />
-                                    {(filters.fechaDesde || filters.fechaHasta) && (
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 md:gap-3 flex-wrap bg-white dark:bg-slate-900 p-3 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700/60 w-full xl:w-auto">
+                                    {/* Rango de Fechas */}
+                                    <div className="flex items-center gap-2 border-r border-slate-200 dark:border-slate-700/60 pr-3">
+                                        <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 whitespace-nowrap">Rango de fechas:</span>
+                                        <input
+                                            type="date"
+                                            value={filters.fechaDesde}
+                                            onChange={(e) => setFilter('fechaDesde', e.target.value)}
+                                            className="text-sm bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-blue-500 outline-none w-full sm:w-auto text-slate-700 dark:text-slate-200"
+                                        />
+                                        <span className="text-sm text-slate-400 hidden sm:inline">a</span>
+                                        <input
+                                            type="date"
+                                            value={filters.fechaHasta}
+                                            onChange={(e) => setFilter('fechaHasta', e.target.value)}
+                                            className="text-sm bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-blue-500 outline-none w-full sm:w-auto mt-2 sm:mt-0 text-slate-700 dark:text-slate-200"
+                                        />
+                                    </div>
+
+                                    {/* Mes y Jornadas */}
+                                    <div className="flex items-center gap-3">
+                                        <select
+                                            value={filters.mes || ''}
+                                            onChange={(e) => setFilter('mes', e.target.value)}
+                                            className="text-sm font-medium bg-slate-50 border border-slate-200 dark:border-slate-700 dark:bg-slate-800 rounded-lg px-3 py-1.5 focus:ring-2 focus:ring-blue-500 outline-none text-slate-700 dark:text-slate-200 cursor-pointer"
+                                        >
+                                            <option value="">Todos los meses</option>
+                                            {MESES.map((m) => (
+                                                <option key={m} value={m}>{m}</option>
+                                            ))}
+                                        </select>
+
+                                        <div className="flex items-center bg-slate-100 dark:bg-slate-800 p-0.5 rounded-lg border border-slate-200 dark:border-slate-700">
+                                            {[ 1, 2, 3, 4 ].map((j) => {
+                                                const currentJornadas = filters.jornada || [];
+                                                const isActive = currentJornadas.includes(j);
+                                                return (
+                                                    <button
+                                                        key={`j${j}`}
+                                                        onClick={() => {
+                                                            setFilter('jornada', isActive ? currentJornadas.filter(v => v !== j) : [ ...currentJornadas, j ]);
+                                                        }}
+                                                        className={`px-2 py-1 text-xs font-semibold rounded-md transition-colors ${isActive
+                                                            ? 'bg-blue-500 text-white shadow-sm'
+                                                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700'
+                                                            }`}
+                                                    >
+                                                        J{j}
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+
+                                    {(filters.fechaDesde || filters.fechaHasta || filters.mes || (filters.jornada || []).length > 0) && (
                                         <button
-                                            onClick={() => { setFilter('fechaDesde', ''); setFilter('fechaHasta', ''); }}
+                                            onClick={() => {
+                                                setFilter('fechaDesde', '');
+                                                setFilter('fechaHasta', '');
+                                                setFilter('mes', '');
+                                                setFilter('jornada', []);
+                                            }}
                                             className="text-xs text-red-500 hover:text-red-700 ml-2 font-medium"
                                         >
                                             Limpiar
@@ -247,9 +264,9 @@ export default function Dashboard() {
 
                             {/* Stats Grid */}
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-2xl p-6 shadow-sm flex flex-col">
+                                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-xl p-6 shadow-sm flex flex-col hover:shadow-md transition-shadow">
                                     <div className="flex justify-between items-start mb-4">
-                                        <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-500/20 flex items-center justify-center">
+                                        <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-500/20 flex items-center justify-center">
                                             <MapPin className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                                         </div>
                                     </div>
@@ -257,9 +274,9 @@ export default function Dashboard() {
                                     <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Total de Ferias (Rango)</p>
                                 </div>
 
-                                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-2xl p-6 shadow-sm flex flex-col">
+                                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-xl p-6 shadow-sm flex flex-col hover:shadow-md transition-shadow">
                                     <div className="flex justify-between items-start mb-4">
-                                        <div className="w-10 h-10 rounded-xl bg-green-100 dark:bg-green-500/20 flex items-center justify-center">
+                                        <div className="w-10 h-10 rounded-lg bg-green-100 dark:bg-green-500/20 flex items-center justify-center">
                                             <Activity className="w-5 h-5 text-green-600 dark:text-green-400" />
                                         </div>
                                     </div>
@@ -267,32 +284,32 @@ export default function Dashboard() {
                                     <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Ferias Realizadas</p>
                                 </div>
 
-                                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-2xl p-6 shadow-sm flex flex-col">
+                                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-xl p-6 shadow-sm flex flex-col hover:shadow-md transition-shadow">
                                     <div className="flex justify-between items-start mb-4">
-                                        <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-500/20 flex items-center justify-center">
+                                        <div className="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-500/20 flex items-center justify-center">
                                             <Target className="w-5 h-5 text-orange-600 dark:text-orange-400" />
                                         </div>
                                     </div>
-                                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">{historicalPlanStats.ferias}</h3>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Ferias Planificadas</p>
+                                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">{dashboardStats.ferias}</h3>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Ferias Planificadas (Mes Actual)</p>
                                 </div>
 
-                                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-2xl p-6 shadow-sm flex flex-col">
+                                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-xl p-6 shadow-sm flex flex-col hover:shadow-md transition-shadow">
                                     <div className="flex justify-between items-start mb-4">
-                                        <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-500/20 flex items-center justify-center">
+                                        <div className="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-500/20 flex items-center justify-center">
                                             <Users className="w-5 h-5 text-purple-600 dark:text-purple-400" />
                                         </div>
                                     </div>
-                                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">{historicalPlanStats.familias.toLocaleString()}</h3>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Familias Beneficiadas</p>
+                                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">{dashboardStats.familias.toLocaleString()}</h3>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Familias Beneficiadas (Mes Actual)</p>
                                 </div>
                             </div>
 
                             {/* Charts Section */}
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                                 {/* Bar Chart */}
-                                <div className="lg:col-span-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-sm transition-colors duration-300">
-                                    <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">Despacho por Estado (Toneladas)</h2>
+                                <div className="lg:col-span-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-xl p-6 shadow-sm transition-colors duration-300">
+                                    <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-6">Despacho por Estado (Toneladas)</h2>
                                     <div className="h-72 w-full min-h-[300px]">
                                         <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                                             <BarChart data={dataPorEstado} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
@@ -301,7 +318,7 @@ export default function Dashboard() {
                                                 <YAxis tick={{ fontSize: 12, fill: chartColors.text }} axisLine={false} tickLine={false} />
                                                 <Tooltip
                                                     contentStyle={{
-                                                        borderRadius: '12px',
+                                                        borderRadius: '8px',
                                                         border: isDark ? '1px solid #334155' : '1px solid #e2e8f0',
                                                         backgroundColor: chartColors.tooltipBg,
                                                         color: chartColors.tooltipText,
@@ -317,8 +334,8 @@ export default function Dashboard() {
                                 </div>
 
                                 {/* Pie Chart */}
-                                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-sm transition-colors duration-300">
-                                    <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">Estatus Global</h2>
+                                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-xl p-6 shadow-sm transition-colors duration-300">
+                                    <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-6">Estatus Global</h2>
                                     <div className="h-72 w-full min-h-[300px]">
                                         <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                                             <PieChart>
@@ -337,7 +354,7 @@ export default function Dashboard() {
                                                 </Pie>
                                                 <Tooltip
                                                     contentStyle={{
-                                                        borderRadius: '12px',
+                                                        borderRadius: '8px',
                                                         border: isDark ? '1px solid #334155' : '1px solid #e2e8f0',
                                                         backgroundColor: chartColors.tooltipBg,
                                                         color: chartColors.tooltipText,
@@ -355,22 +372,48 @@ export default function Dashboard() {
                                         </ResponsiveContainer>
                                     </div>
                                 </div>
+
+                                {/* Tipo de Feria Chart */}
+                                <div className="lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-xl p-6 shadow-sm transition-colors duration-300">
+                                    <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-6">Distribución por Tipo de Feria</h2>
+                                    <div className="h-64 w-full min-h-[250px]">
+                                        <ResponsiveContainer width="100%" height="100%" minWidth={0}>
+                                            <BarChart data={dataPorTipo} layout="vertical" margin={{ top: 10, right: 10, left: 10, bottom: 0 }}>
+                                                <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke={chartColors.grid} opacity={isDark ? 0.2 : 0.5} />
+                                                <XAxis type="number" tick={{ fontSize: 12, fill: chartColors.text }} axisLine={false} tickLine={false} />
+                                                <YAxis type="category" dataKey="name" tick={{ fontSize: 12, fill: chartColors.text }} axisLine={false} tickLine={false} width={80} />
+                                                <Tooltip
+                                                    contentStyle={{
+                                                        borderRadius: '8px',
+                                                        border: isDark ? '1px solid #334155' : '1px solid #e2e8f0',
+                                                        backgroundColor: chartColors.tooltipBg,
+                                                        color: chartColors.tooltipText,
+                                                        boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
+                                                    }}
+                                                    itemStyle={{ color: chartColors.tooltipText }}
+                                                    cursor={{ fill: isDark ? 'rgba(148, 163, 184, 0.1)' : 'rgba(203, 213, 225, 0.2)' }}
+                                                />
+                                                <Bar dataKey="value" name="Cantidad" fill="#10b981" radius={[ 0, 4, 4, 0 ]} maxBarSize={30} />
+                                            </BarChart>
+                                        </ResponsiveContainer>
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Data Table */}
-                            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-sm mt-8 overflow-hidden">
-                                <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">Reporte Consolidado por Estado</h2>
+                            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 rounded-xl p-6 shadow-sm mt-8 overflow-hidden">
+                                <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-6">Reporte Consolidado por Estado</h2>
                                 <div className="overflow-x-auto">
                                     <table className="w-full text-left text-sm text-slate-600 dark:text-slate-400">
                                         <thead className="text-xs uppercase bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-300">
                                             <tr>
-                                                <th className="px-4 py-3 rounded-l-xl font-semibold">Estado</th>
+                                                <th className="px-4 py-3 rounded-l-lg font-semibold">Estado</th>
                                                 <th className="px-4 py-3 font-semibold text-center">Planificadas</th>
                                                 <th className="px-4 py-3 font-semibold text-center">Realizadas</th>
                                                 <th className="px-4 py-3 font-semibold text-center">Toneladas</th>
                                                 <th className="px-4 py-3 font-semibold text-center">Familias</th>
                                                 <th className="px-4 py-3 font-semibold text-center">Combos</th>
-                                                <th className="px-4 py-3 rounded-r-xl font-semibold text-center">% Cumplimiento</th>
+                                                <th className="px-4 py-3 rounded-r-lg font-semibold text-center">% Cumplimiento</th>
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50">
@@ -404,12 +447,12 @@ export default function Dashboard() {
                                                     <td className="px-4 py-3 rounded-l-xl">TOTALES</td>
                                                     <td className="px-4 py-3 text-center">-</td>
                                                     <td className="px-4 py-3 text-center">{globalStats.realizadas}</td>
-                                                    <td className="px-4 py-3 text-center">{historicalPlanStats.toneladas.toLocaleString('es-VE', { minimumFractionDigits: 1, maximumFractionDigits: 3 })}</td>
-                                                    <td className="px-4 py-3 text-center">{historicalPlanStats.familias.toLocaleString('es-VE')}</td>
-                                                    <td className="px-4 py-3 text-center">{historicalPlanStats.familias.toLocaleString('es-VE')}</td>
+                                                    <td className="px-4 py-3 text-center">{dashboardStats.toneladas.toLocaleString('es-VE', { minimumFractionDigits: 1, maximumFractionDigits: 3 })}</td>
+                                                    <td className="px-4 py-3 text-center">{dashboardStats.familias.toLocaleString('es-VE')}</td>
+                                                    <td className="px-4 py-3 text-center">{dashboardStats.familias.toLocaleString('es-VE')}</td>
                                                     <td className="px-4 py-3 rounded-r-xl text-center">
-                                                        {globalStats.realizadas + historicalPlanStats.ferias > 0
-                                                            ? Math.round((globalStats.realizadas / (globalStats.realizadas + historicalPlanStats.ferias)) * 100)
+                                                        {globalStats.realizadas + dashboardStats.ferias > 0
+                                                            ? Math.round((globalStats.realizadas / (globalStats.realizadas + dashboardStats.ferias)) * 100)
                                                             : 0}%
                                                     </td>
                                                 </tr>

@@ -4,6 +4,7 @@ import { Feria, FilterState, FeriaStatus } from '@/types';
 import { getFeriaStatus } from '@/lib/feriaUtils';
 import { parseISO, startOfDay, endOfDay } from 'date-fns';
 import { FERIAS_MOCK } from '@/data/ferias';
+import { getCurrentMes, getCurrentJornada, getCurrentAnio } from '@/lib/dateUtils';
 
 interface FeriasStore {
     // Data
@@ -29,10 +30,12 @@ interface FeriasStore {
 const DEFAULT_FILTERS: FilterState = {
     estado: '',
     tipoFeria: '',
-    estatus: [ 'activa', 'programada', 'historica' ],
+    estatus: [ 'En Proceso', 'Por Ejecutar', 'Ejecutada', 'No ejecutada' ],
     fechaDesde: '',
     fechaHasta: '',
     busqueda: '',
+    mes: '',
+    jornada: [],
 };
 
 export const useFeriasStore = create<FeriasStore>()(
@@ -44,7 +47,14 @@ export const useFeriasStore = create<FeriasStore>()(
             setFerias: (ferias) => set({ ferias }),
 
             addFeria: (feria) =>
-                set((state) => ({ ferias: [ ...state.ferias, feria ] })),
+                set((state) => ({
+                    ferias: [ ...state.ferias, {
+                        ...feria,
+                        mes: feria.mes || getCurrentMes(),
+                        jornada: feria.jornada || getCurrentJornada(),
+                        anio: feria.anio || getCurrentAnio(),
+                    } ]
+                })),
 
             setFilter: (key, value) =>
                 set((state) => ({
@@ -102,6 +112,17 @@ export const useFeriasStore = create<FeriasStore>()(
                         if (parseISO(feria.fechaInicio) > rangeEnd) return false;
                     }
 
+                    // Filter by mes
+                    if (filters.mes && feria.mes && feria.mes !== filters.mes) {
+                        return false;
+                    }
+
+                    // Filter by jornada (array)
+                    const activeJornadas = filters.jornada || [];
+                    if (activeJornadas.length > 0 && feria.jornada && !activeJornadas.includes(feria.jornada)) {
+                        return false;
+                    }
+
                     return true;
                 });
             },
@@ -109,12 +130,13 @@ export const useFeriasStore = create<FeriasStore>()(
             getStatusCounts: () => {
                 const { ferias } = get();
                 const counts: Record<FeriaStatus, number> = {
-                    activa: 0,
-                    programada: 0,
-                    historica: 0,
+                    'En Proceso': 0,
+                    'Por Ejecutar': 0,
+                    'Ejecutada': 0,
+                    'No ejecutada': 0,
                 };
-                ferias.forEach((f) => {
-                    counts[ getFeriaStatus(f) ]++;
+                ferias.forEach((feria) => {
+                    counts[ getFeriaStatus(feria) ]++;
                 });
                 return counts;
             },

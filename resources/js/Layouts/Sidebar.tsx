@@ -1,4 +1,4 @@
-import { MapPin, Plus, RefreshCw, LayoutDashboard, Map, User, LogOut, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { MapPin, Plus, RefreshCw, LayoutDashboard, Map, User, LogOut, ChevronLeft, ChevronRight, X, ClipboardCheck } from 'lucide-react';
 import SummaryPanel from '@/Components/summary/SummaryPanel';
 import { useFeriasStore } from '@/store/feriasStore';
 import FilterPanel from '@/Components/filters/FilterPanel';
@@ -72,7 +72,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                 {/* Header / Brand */}
                 <div className="flex-shrink-0 px-4 py-4 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-300">
                     <div className={`flex items-center ${isSidebarCollapsed ? 'justify-center' : 'gap-3'}`}>
-                        <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/50 shadow-sm shrink-0 transition-all">
+                        <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/50 shadow-sm shrink-0 transition-all">
                             <img src="/MercalMarker.png" alt="Mercal Logo" className="w-6 h-6 object-contain drop-shadow-sm" />
                         </div>
                         {!isSidebarCollapsed && (
@@ -122,6 +122,22 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                             </div>
                         )}
                     </Link>
+                    <Link
+                        href={route('cumplimiento')}
+                        title="Cumplimiento"
+                        className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-3'} py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isCurrent('cumplimiento')
+                            ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
+                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
+                            }`}
+                    >
+                        <ClipboardCheck className="w-5 h-5 shrink-0" />
+                        {!isSidebarCollapsed && <span>Cumplimiento</span>}
+                        {isSidebarCollapsed && (
+                            <div className="absolute left-full ml-3 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap z-50">
+                                Cumplimiento
+                            </div>
+                        )}
+                    </Link>
 
                     <Link
                         href={route('ferias')}
@@ -164,7 +180,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                         <button
                             onClick={onRegisterClick}
                             title="Registrar Nueva Feria"
-                            className={`flex items-center justify-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-700 dark:bg-gradient-to-r dark:from-blue-600 dark:to-blue-500 dark:hover:from-blue-500 dark:hover:to-blue-400 text-white font-semibold text-sm transition-all duration-200 shadow-md shadow-blue-500/30 dark:shadow-blue-900/40 hover:shadow-blue-500/50 hover:scale-[1.02] active:scale-[0.98]
+                            className={`flex items-center justify-center gap-2 rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-gradient-to-r dark:from-blue-600 dark:to-blue-500 dark:hover:from-blue-500 dark:hover:to-blue-400 text-white font-semibold text-sm transition-all duration-200 shadow-md shadow-blue-500/30 dark:shadow-blue-900/40 hover:shadow-blue-500/50 hover:scale-[1.02] active:scale-[0.98]
                                 ${isSidebarCollapsed ? 'w-10 h-10 mx-auto p-0 relative group' : 'w-full px-4 py-2.5'}
                             `}
                         >

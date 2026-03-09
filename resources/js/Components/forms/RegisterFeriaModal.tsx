@@ -72,7 +72,7 @@ export default function RegisterFeriaModal({ onClose }: RegisterFeriaModalProps)
             full_name: data.full_name,
             cedula: data.cedula,
             phone: data.phone,
-            compliance: data.compliance || 'Programada',
+            compliance: data.compliance ?? false,
             observations: data.observations || '',
             tipoFeria: data.tipoFeria,
             fechaInicio: new Date(data.fechaInicio).toISOString(),
@@ -85,14 +85,14 @@ export default function RegisterFeriaModal({ onClose }: RegisterFeriaModalProps)
     return (
         <div className="fixed inset-0 z-[1001] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm transition-opacity" onClick={onClose}>
             <div
-                className="relative bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-2xl shadow-2xl
+                className="relative bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-xl shadow-2xl
           w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto transform transition-all flex flex-col"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header */}
                 <div className="sticky top-0 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700/60 px-6 py-4 flex items-center justify-between z-10 transition-colors duration-300">
                     <div className="flex items-center gap-3">
-                        <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 shadow-sm border border-blue-200 dark:border-blue-500/30">
+                        <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 shadow-sm border border-blue-200 dark:border-blue-500/30">
                             <MapPin className="w-4 h-4" />
                         </div>
                         <div>
@@ -202,12 +202,10 @@ export default function RegisterFeriaModal({ onClose }: RegisterFeriaModalProps)
                                     ))}
                                 </select>
                             </FormField>
-                            <FormField label="Estatus (Compliance)" error={errors.compliance?.message}>
-                                <select {...register('compliance')} className={selectClass}>
-                                    <option value="Programada">Programada</option>
-                                    <option value="En Curso">En Curso</option>
-                                    <option value="Finalizada">Finalizada</option>
-                                    <option value="Suspendida">Suspendida</option>
+                            <FormField label="¿Se Ejecutó Exitosamente?" error={errors.compliance?.message}>
+                                <select {...register('compliance', { setValueAs: (v) => v === 'true' })} className={selectClass}>
+                                    <option value="false">No (Por Ejecutar / No Ejecutada)</option>
+                                    <option value="true">Sí (Ejecutada)</option>
                                 </select>
                             </FormField>
                             <FormField label="Fecha Inicio" error={errors.fechaInicio?.message}>
@@ -229,7 +227,7 @@ export default function RegisterFeriaModal({ onClose }: RegisterFeriaModalProps)
                         <button
                             type="button"
                             onClick={onClose}
-                            className="flex-1 px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-semibold
+                            className="flex-1 px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-semibold
                 hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-all focus:outline-none focus:ring-2 focus:ring-slate-400"
                         >
                             Cancelar
@@ -237,7 +235,7 @@ export default function RegisterFeriaModal({ onClose }: RegisterFeriaModalProps)
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="flex-1 item-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold bg-blue-600 hover:bg-blue-700 dark:bg-gradient-to-r dark:from-blue-600 dark:to-blue-500 dark:hover:from-blue-500 dark:hover:to-blue-400 text-white transition-all shadow-md shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex"
+                            className="flex-1 item-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold bg-blue-600 hover:bg-blue-700 dark:bg-gradient-to-r dark:from-blue-600 dark:to-blue-500 dark:hover:from-blue-500 dark:hover:to-blue-400 text-white transition-all shadow-md shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex"
                         >
                             <Save className="w-4 h-4" />
                             Guardar Feria
