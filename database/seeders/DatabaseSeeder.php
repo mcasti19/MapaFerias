@@ -15,7 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
+        
+        $this->call([
+           StatusSeeder::class,
+        ]);
+    
         $this->call([
         StateSeeder::class,
         
@@ -37,5 +41,6 @@ class DatabaseSeeder extends Seeder
            UsersSeeder::class,
         ]);
     
+       
     }
 }
