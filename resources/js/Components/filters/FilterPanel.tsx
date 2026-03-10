@@ -26,7 +26,7 @@ export default function FilterPanel() {
         <div className="space-y-4">
             {/* Search */}
             <div>
-                <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1.5">
+                {/* <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1.5">
                     Buscar Feria
                 </label>
                 <div className="relative">
@@ -48,7 +48,7 @@ export default function FilterPanel() {
                             <X className="w-3.5 h-3.5" />
                         </button>
                     )}
-                </div>
+                </div> */}
             </div>
 
             {/* Estado dropdown */}
