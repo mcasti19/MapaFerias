@@ -18,6 +18,7 @@ return new class extends Migration
             $table->bigInteger('id_parish')->unsigned();
             $table->string('sector');
             $table->string('mission_base');
+            $table->string('date');
             $table->string('clap');
             $table->string('circuit');
             $table->string('coordinates');
@@ -26,8 +27,10 @@ return new class extends Migration
             $table->string('phone', 20);
             $table->string('compliance');
             $table->bigInteger('status')->unsigned();
+            $table->string('bm');
+            $table->string('emblematic');
             $table->string('observations');
-            
+                        
             $table->foreign('status')->references('id_status')->on('status');
             $table->foreign('id_state')->references('id_state')->on('state');
             $table->foreign('id_municipality')->references('id_municipality')->on('municipalities');
