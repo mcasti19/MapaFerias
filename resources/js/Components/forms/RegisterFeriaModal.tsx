@@ -25,7 +25,7 @@ function FormField({ label, error, children }: FieldProps) {
             {children}
             {error && (
                 <div className="flex items-center gap-1 mt-1">
-                    <AlertCircle className="w-3 h-3 text-red-500 dark:text-red-400 flex-shrink-0" />
+                    <AlertCircle className="w-3 h-3 text-red-500 dark:text-red-400 shrink-0" />
                     <p className="text-xs text-red-500 dark:text-red-400">{error}</p>
                 </div>
             )}
@@ -235,7 +235,7 @@ export default function RegisterFeriaModal({ onClose }: RegisterFeriaModalProps)
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="flex-1 item-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold bg-blue-600 hover:bg-blue-700 dark:bg-gradient-to-r dark:from-blue-600 dark:to-blue-500 dark:hover:from-blue-500 dark:hover:to-blue-400 text-white transition-all shadow-md shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex"
+                            className="flex-1 item-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold bg-blue-600 hover:bg-blue-700 dark:bg-linear-to-r dark:from-blue-600 dark:to-blue-500 dark:hover:from-blue-500 dark:hover:to-blue-400 text-white transition-all shadow-md shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex"
                         >
                             <Save className="w-4 h-4" />
                             Guardar Feria
