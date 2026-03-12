@@ -8,7 +8,9 @@
         "build": "tsc && vite build",
         "dev": "vite",
         "lint": "eslint .",
-        "type-check": "tsc --noEmit"
+        "type-check": "tsc --noEmit",
+        "serve": "php artisan serve",
+        "both": "concurrently \"pnpm run dev\" \"pnpm run serve\""
     },
     "dependencies": {
         "@headlessui/react": "^2.0.0",
