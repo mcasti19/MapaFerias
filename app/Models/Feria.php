@@ -25,6 +25,7 @@ class Feria extends Model
      'cedula',
      'phone',
      'compliance',
+     'status',
      'bm',
      'emblematic',
      'observations'

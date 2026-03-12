@@ -28,15 +28,13 @@ Route::get('/lista-ferias', [App\Http\Controllers\FeriaController::class, 'lista
     ->name('lista-ferias');
 
 Route::get('/ferias/{id}', [App\Http\Controllers\FeriaController::class, 'show'])
-    ->middleware(['auth', 'verified'])
+    //->middleware(['auth', 'verified'])
     ->name('ferias.show');
 
-Route::get('/ferias/create', [App\Http\Controllers\FeriaController::class, 'create'])
-    ->middleware(['auth', 'verified'])
-    ->name('ferias.create');
+Route::get('/ferias/create', [App\Http\Controllers\FeriaController::class, 'create'])->name('ferias.create');
 
-Route::post('/ferias/guardar', [App\Http\Controllers\FeriaController::class, 'store'])
-    ->middleware(['auth', 'verified'])
+Route::post('/feria', [App\Http\Controllers\FeriaController::class, 'store'])
+   // ->middleware(['auth', 'verified'])
     ->name('ferias.store');
 
 Route::get('/planificacion', function () {
@@ -65,8 +63,6 @@ Route::get('/ferias/{id}', function ($id) {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
-   // Route::resource('ferias', FeriasController::class);
 });
 
 require __DIR__.'/auth.php';
