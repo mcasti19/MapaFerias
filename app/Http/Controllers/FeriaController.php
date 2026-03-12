@@ -33,13 +33,13 @@ class FeriaController extends Controller
         ]);
     }
 
-public function create()
+    public function create()
 {
     $data = [
-        'states'         => \App\Models\State::orderBy('name_state')->get(),
-        'municipalities' => \App\Models\Municipality::orderBy('municipality')->get(),
-        'parishes'       => \App\Models\Parish::orderBy('parish')->get(),
-        'items'          => \App\Models\Item::orderBy('item')->get(),
+        'states'         => \App\Models\States::orderBy('name_state')->get(),
+        'municipalities' => \App\Models\Municipalities::orderBy('municipality')->get(),
+        'parishes'       => \App\Models\Parishes::orderBy('parish')->get(),
+        'items'          => \App\Models\Items::orderBy('item')->get(),
         'status'         => \App\Models\Status::all(),
     ];
 
