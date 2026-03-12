@@ -15,6 +15,7 @@ class Feria extends Model
      'id_state',
      'id_municipality', 
      'id_parish',
+     'date',
      'sector',
      'mission_base',
      'clap',
@@ -24,7 +25,11 @@ class Feria extends Model
      'cedula',
      'phone',
      'compliance',
+     'status',
+     'bm',
+     'emblematic',
      'observations'
+     
      ];
 
     public function state(): BelongsTo

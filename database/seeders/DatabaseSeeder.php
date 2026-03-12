@@ -15,7 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
+        
+        $this->call([
+           StatusSeeder::class,
+        ]);
+    
         $this->call([
         StateSeeder::class,
         
@@ -32,10 +36,14 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ParishSeeder::class,
         ]);
+        $this->call([
+            RoleSeeder::class,
+        ]);
     
         $this->call([
            UsersSeeder::class,
         ]);
     
+       
     }
 }

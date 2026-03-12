@@ -11,7 +11,9 @@ class Distributed extends Model
     protected $fillable = [
         'id_item',
         'id_feria',
-        'tons',
+        'tons_distributed',
+        'tons_received',
+        'tons_total'
     ];
 
     public function item(): BelongsTo

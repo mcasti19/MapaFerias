@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id("id_distributed");
             $table->bigInteger('id_item')->unsigned();
             $table->bigInteger('id_feria')->unsigned();
-            $table->string('tons');
-
+            $table->string('tons_distributed');
+            $table->string('tons_received');
+            $table->string('tons_total');
             $table->foreign('id_item')->references('id_item')->on('items');
             $table->foreign('id_feria')->references('id_feria')->on('feria');
             $table->timestamps();
