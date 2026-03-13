@@ -1,13 +1,13 @@
-import { MapPin, Plus, RefreshCw, LayoutDashboard, Map, User, LogOut, ChevronLeft, ChevronRight, X, ClipboardCheck } from 'lucide-react';
+import { MapPin, RefreshCw, LayoutDashboard, Map, User, LogOut, ChevronLeft, ChevronRight, X, ClipboardCheck, ChevronDown, FileText, FolderEdit } from 'lucide-react';
 import SummaryPanel from '@/Components/summary/SummaryPanel';
 import { useFeriasStore } from '@/store/feriasStore';
 import FilterPanel from '@/Components/filters/FilterPanel';
 import { Link } from '@inertiajs/react';
 import ThemeToggle from '@/Components/ui/ThemeToggle';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface SidebarProps {
-    onRegisterClick: () => void;
+    onRegisterClick?: () => void;
 }
 
 export default function Sidebar({ onRegisterClick }: SidebarProps) {
@@ -34,6 +34,18 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
     const isCurrent = (routeName: string) => {
         return (route as any)().current(routeName);
     };
+
+    const isReportesActive = isCurrent('planificacion') || isCurrent('cumplimiento');
+    const isGestionActive = isCurrent('registro') || isCurrent('seguimiento');
+
+    const [ isReportesOpen, setIsReportesOpen ] = useState(isReportesActive);
+    const [ isGestionOpen, setIsGestionOpen ] = useState(isGestionActive);
+
+    // Ensure submenus are open if their routes are active (e.g., initial load)
+    useEffect(() => {
+        if (isReportesActive) setIsReportesOpen(true);
+        if (isGestionActive) setIsGestionOpen(true);
+    }, [ isReportesActive, isGestionActive ]);
 
     return (
         <>
@@ -122,44 +134,116 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                             </div>
                         )}
                     </Link>
-                    <Link
-                        href={route('planificacion')}
-                        title="Planificacion"
-                        className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-3'} py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isCurrent('planificacion')
-                            ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
-                            }`}
-                    >
-                        <LayoutDashboard className="w-5 h-5 shrink-0" />
-                        {!isSidebarCollapsed && <span>Planificacion</span>}
-                        {isSidebarCollapsed && (
-                            <div className="absolute left-full ml-3 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap z-50">
-                                Planificacion
+                    {/* Gestión de Ferias Collapsible */}
+                    <div className="flex flex-col gap-1 pt-1">
+                        <button
+                            onClick={() => {
+                                setIsGestionOpen(!isGestionOpen);
+                                if (isSidebarCollapsed) toggleSidebarCollapse();
+                            }}
+                            className={`flex justify-between items-center px-3 py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isGestionActive
+                                ? 'bg-slate-100 dark:bg-slate-800/50 text-slate-900 dark:text-white'
+                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
+                                }`}
+                            title="Gestión de Ferias"
+                        >
+                            <div className={`flex items-center ${isSidebarCollapsed ? 'justify-center w-full' : 'gap-3'}`}>
+                                <FolderEdit className="w-5 h-5 shrink-0" />
+                                {!isSidebarCollapsed && <span>Gestión de Ferias</span>}
                             </div>
-                        )}
-                    </Link>
-                    <Link
-                        href={route('cumplimiento')}
-                        title="Cumplimiento"
-                        className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-3'} py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isCurrent('cumplimiento')
-                            ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
-                            }`}
-                    >
-                        <ClipboardCheck className="w-5 h-5 shrink-0" />
-                        {!isSidebarCollapsed && <span>Cumplimiento</span>}
-                        {isSidebarCollapsed && (
-                            <div className="absolute left-full ml-3 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap z-50">
-                                Cumplimiento
-                            </div>
-                        )}
-                    </Link>
+                            {!isSidebarCollapsed && (
+                                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isGestionOpen ? 'rotate-180' : ''}`} />
+                            )}
+                            {isSidebarCollapsed && (
+                                <div className="absolute left-full ml-3 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap z-50">
+                                    Gestión de Ferias
+                                </div>
+                            )}
+                        </button>
 
+                        <div className={`grid transition-all duration-300 ease-in-out ${isGestionOpen && !isSidebarCollapsed ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                            <div className="overflow-hidden flex flex-col gap-1">
+                                <Link
+                                    href={route('registro')}
+                                    className={`flex items-center gap-3 pl-11 pr-3 py-2 rounded-lg text-sm font-medium transition-colors ${isCurrent('registro')
+                                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
+                                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/30'
+                                        }`}
+                                >
+                                    <span className="w-1.5 h-1.5 rounded-full bg-current opacity-60"></span>
+                                    <span>Registro</span>
+                                </Link>
+                                <Link
+                                    href={route('seguimiento')}
+                                    className={`flex items-center gap-3 pl-11 pr-3 py-2 rounded-lg text-sm font-medium transition-colors ${isCurrent('seguimiento')
+                                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
+                                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/30'
+                                        }`}
+                                >
+                                    <span className="w-1.5 h-1.5 rounded-full bg-current opacity-60"></span>
+                                    <span>Seguimiento</span>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Reportes Collapsible */}
+                    <div className="flex flex-col gap-1 pt-1">
+                        <button
+                            onClick={() => {
+                                setIsReportesOpen(!isReportesOpen);
+                                if (isSidebarCollapsed) toggleSidebarCollapse();
+                            }}
+                            className={`flex justify-between items-center px-3 py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isReportesActive
+                                ? 'bg-slate-100 dark:bg-slate-800/50 text-slate-900 dark:text-white'
+                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
+                                }`}
+                            title="Reportes"
+                        >
+                            <div className={`flex items-center ${isSidebarCollapsed ? 'justify-center w-full' : 'gap-3'}`}>
+                                <FileText className="w-5 h-5 shrink-0" />
+                                {!isSidebarCollapsed && <span>Reportes</span>}
+                            </div>
+                            {!isSidebarCollapsed && (
+                                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isReportesOpen ? 'rotate-180' : ''}`} />
+                            )}
+                            {isSidebarCollapsed && (
+                                <div className="absolute left-full ml-3 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap z-50">
+                                    Reportes
+                                </div>
+                            )}
+                        </button>
+
+                        <div className={`grid transition-all duration-300 ease-in-out ${isReportesOpen && !isSidebarCollapsed ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                            <div className="overflow-hidden flex flex-col gap-1">
+                                <Link
+                                    href={route('planificacion')}
+                                    className={`flex items-center gap-3 pl-11 pr-3 py-2 rounded-lg text-sm font-medium transition-colors ${isCurrent('planificacion')
+                                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
+                                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/30'
+                                        }`}
+                                >
+                                    <span className="w-1.5 h-1.5 rounded-full bg-current opacity-60"></span>
+                                    <span>Planificación</span>
+                                </Link>
+                                <Link
+                                    href={route('cumplimiento')}
+                                    className={`flex items-center gap-3 pl-11 pr-3 py-2 rounded-lg text-sm font-medium transition-colors ${isCurrent('cumplimiento')
+                                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
+                                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/30'
+                                        }`}
+                                >
+                                    <span className="w-1.5 h-1.5 rounded-full bg-current opacity-60"></span>
+                                    <span>Cumplimiento</span>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
 
                     <Link
                         href={route('lista-ferias')}
                         title="Historial de Ferias"
-                        className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-3'} py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isCurrent('lista-ferias')
+                        className={`flex items-center ${isSidebarCollapsed ? 'justify-center px-0' : 'gap-3 px-3'} py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${isCurrent('lista-ferias') || isCurrent('ferias.show')
                             ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
                             : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                             }`}
@@ -174,26 +258,7 @@ export default function Sidebar({ onRegisterClick }: SidebarProps) {
                     </Link>
                 </nav>
 
-                {/* Register button */}
-                {isCurrent('ferias') && (
-                    <div className="shrink-0 px-3 py-3 border-b border-slate-200 dark:border-slate-800 transition-all duration-300">
-                        <button
-                            onClick={onRegisterClick}
-                            title="Registrar Nueva Feria"
-                            className={`flex items-center justify-center gap-2 rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-linear-to-r dark:from-blue-600 dark:to-blue-500 dark:hover:from-blue-500 dark:hover:to-blue-400 text-white font-semibold text-sm transition-all duration-200 shadow-md shadow-blue-500/30 dark:shadow-blue-900/40 hover:shadow-blue-500/50 hover:scale-[1.02] active:scale-[0.98]
-                                ${isSidebarCollapsed ? 'w-10 h-10 mx-auto p-0 relative group' : 'w-full px-4 py-2.5'}
-                            `}
-                        >
-                            <Plus className="w-5 h-5" />
-                            {!isSidebarCollapsed && <span>Registrar Nueva Feria</span>}
-                            {isSidebarCollapsed && (
-                                <div className="absolute left-full ml-3 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap z-50 font-normal">
-                                    Registrar Nueva Feria
-                                </div>
-                            )}
-                        </button>
-                    </div>
-                )}
+
 
                 {/* Scrollable content (Filters only visible on Ferias map) */}
                 <div className={`flex-1 overflow-y-auto overflow-x-hidden modern-scrollbar ${isSidebarCollapsed ? 'hidden md:block' : ''}`}>

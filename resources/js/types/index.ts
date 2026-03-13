@@ -4,6 +4,12 @@ export type FeriaStatus = 'En Proceso' | 'Por Ejecutar' | 'Ejecutada' | 'No ejec
 
 export type FeriaTipo = 'Proteína' | 'Víveres' | 'Hortalizas' | 'Integral';
 
+export interface FeriaRubro {
+    nombre: string;
+    habilitado: boolean;
+    toneladas: number;
+}
+
 export type EstadoVenezuela =
     | 'Distrito Capital'
     | 'Miranda'
@@ -52,12 +58,18 @@ export interface Feria {
     // Mantenemos estos campos visuales para compatibilidad
     tipoFeria: FeriaTipo;
     fechaInicio: string; // ISO string
-    fechaFin: string;    // ISO string
 
     // Jornada / Mes association
     mes?: string;       // e.g. 'Marzo'
     jornada?: number;   // 1-4
     anio?: number;      // e.g. 2026
+
+    // Nuevos campos Atención Esperada y Rubros
+    cantidadClap?: number;
+    cantidadFamilias?: number;
+    cantidadCombos?: number;
+    rubros?: FeriaRubro[];
+    toneladasTotales?: number;
 }
 
 export interface PlanificacionEstado {
@@ -89,7 +101,6 @@ export interface FeriaFormData {
     lat: number;
     lng: number;
     fechaInicio: string;
-    fechaFin: string;
 }
 
 // Laravel Breeze and Inertia specific types

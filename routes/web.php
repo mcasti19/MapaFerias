@@ -50,6 +50,13 @@ Route::get('/cumplimiento', function () {
     return Inertia::render('Cumplimiento/Index');
 })->middleware(['auth', 'verified'])->name('cumplimiento');
 
+Route::get('/registro', function () {
+    return Inertia::render('Registro/Index');
+})->middleware(['auth', 'verified'])->name('registro');
+
+Route::get('/seguimiento', function () {
+    return Inertia::render('Seguimiento/Index');
+})->middleware(['auth', 'verified'])->name('seguimiento');
 
 //Listar Ferias
 /*Route::get('/lista-ferias', function () {

@@ -26,3 +26,17 @@ export const ESTADOS_VENEZUELA = [
 ] as const;
 
 export const TIPOS_FERIA = [ 'Proteína', 'Víveres', 'Hortalizas', 'Integral' ] as const;
+
+export const RUBROS_MOCK = [
+    'HUEVOS',
+    'POLLO',
+    'CARNE',
+    'PERNIL',
+    'PESCADO',
+    'CHARCUTERIA',
+    'FRUVER',
+    'PAN',
+    'CAFÉ',
+    'RUBROS REGIONALES DE MERCAL',
+    'GRANOS'
+] as const;

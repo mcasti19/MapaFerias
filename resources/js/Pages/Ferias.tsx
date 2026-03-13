@@ -3,18 +3,15 @@ import { Head } from '@inertiajs/react';
 import MapView from '@/Components/map/MapView';
 import Sidebar from '@/Layouts/Sidebar';
 import MobileNavbar from '@/Layouts/MobileNavbar';
-import RegisterFeriaModal from '@/Components/forms/RegisterFeriaModal';
 
 export default function Ferias() {
-    const [ isRegisterModalOpen, setIsRegisterModalOpen ] = useState(false);
-
     return (
         <>
             <Head title="Mapa de Ferias" />
 
             <div className="flex h-screen w-full bg-slate-50 dark:bg-slate-900 overflow-hidden transition-colors duration-300">
                 {/* Sidebar - Desktop and Mobile (Off-canvas) */}
-                <Sidebar onRegisterClick={() => setIsRegisterModalOpen(true)} />
+                <Sidebar />
 
                 {/* Main Content Area */}
                 <main className="flex-1 flex flex-col min-w-0 h-full overflow-hidden">
@@ -30,11 +27,6 @@ export default function Ferias() {
                     </div>
                 </main>
             </div>
-
-            {/* Modals */}
-            {isRegisterModalOpen && (
-                <RegisterFeriaModal onClose={() => setIsRegisterModalOpen(false)} />
-            )}
         </>
     );
 }

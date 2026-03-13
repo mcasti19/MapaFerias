@@ -32,11 +32,17 @@ export const feriaSchema = z
             errorMap: () => ({ message: 'Seleccione un tipo de feria válido' }),
         }),
         fechaInicio: z.string().min(1, 'La fecha de inicio es requerida'),
-        fechaFin: z.string().min(1, 'La fecha de fin es requerida'),
-    })
-    .refine((data) => data.fechaFin >= data.fechaInicio, {
-        message: 'La fecha de fin debe ser igual o posterior a la de inicio',
-        path: [ 'fechaFin' ],
+
+        // Nuevos campos
+        cantidadClap: z.number().min(0).optional(),
+        cantidadFamilias: z.number().min(0).optional(),
+        cantidadCombos: z.number().min(0).optional(),
+        rubros: z.array(z.object({
+            nombre: z.string(),
+            habilitado: z.boolean(),
+            toneladas: z.number().min(0)
+        })).optional(),
+        toneladasTotales: z.number().min(0).optional(),
     });
 
 export type FeriaSchemaType = z.infer<typeof feriaSchema>;
