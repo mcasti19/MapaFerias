@@ -12,10 +12,9 @@ import { Feria, FeriaStatus } from '@/types';
 export function getFeriaStatus(feria: Feria): FeriaStatus {
     const now = new Date();
     const start = startOfDay(parseISO(feria.fechaInicio));
-    const end = endOfDay(parseISO(feria.fechaFin));
 
     if (isAfter(start, endOfDay(now))) return 'Por Ejecutar';
-    if (isBefore(end, startOfDay(now))) {
+    if (isBefore(startOfDay(start), startOfDay(now))) {
         return feria.compliance ? 'Ejecutada' : 'No ejecutada';
     }
     return 'En Proceso';

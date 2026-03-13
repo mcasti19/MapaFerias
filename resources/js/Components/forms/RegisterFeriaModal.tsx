@@ -76,7 +76,6 @@ export default function RegisterFeriaModal({ onClose }: RegisterFeriaModalProps)
             observations: data.observations || '',
             tipoFeria: data.tipoFeria,
             fechaInicio: new Date(data.fechaInicio).toISOString(),
-            fechaFin: new Date(data.fechaFin).toISOString(),
         };
         addFeria(newFeria);
         onClose();
@@ -210,9 +209,6 @@ export default function RegisterFeriaModal({ onClose }: RegisterFeriaModalProps)
                             </FormField>
                             <FormField label="Fecha Inicio" error={errors.fechaInicio?.message}>
                                 <input {...register('fechaInicio')} type="date" className={inputClass} />
-                            </FormField>
-                            <FormField label="Fecha Fin" error={errors.fechaFin?.message}>
-                                <input {...register('fechaFin')} type="date" className={inputClass} />
                             </FormField>
                             <div className="md:col-span-2">
                                 <FormField label="Observaciones" error={errors.observations?.message}>

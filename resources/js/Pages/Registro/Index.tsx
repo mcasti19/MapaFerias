@@ -54,6 +54,8 @@ const inputClass =
 
 const selectClass = inputClass + ' appearance-none cursor-pointer';
 
+const noSpinnerClass = '[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none';
+
 export default function RegistroFeria() {
     const addFeria = useFeriasStore((s) => s.addFeria);
     const [currentStep, setCurrentStep] = useState(1);
@@ -323,13 +325,13 @@ export default function RegistroFeria() {
                                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-50 dark:bg-slate-900/40 p-4 rounded-xl border border-slate-100 dark:border-slate-800">
                                                         <FormField label="Latitud" error={errors.lat?.message}>
                                                             <div className="relative">
-                                                                <input {...register('lat', { valueAsNumber: true })} type="number" step="any" placeholder="Ej: 10.4806" className={`${inputClass} pl-4`} />
+                                                                <input {...register('lat', { valueAsNumber: true })} type="number" step="any" placeholder="Ej: 10.4806" className={`${inputClass} pl-4 ${noSpinnerClass}`} />
                                                                 <span className="absolute right-3 top-2.5 text-xs text-slate-400 font-bold">N</span>
                                                             </div>
                                                         </FormField>
                                                         <FormField label="Longitud" error={errors.lng?.message}>
                                                             <div className="relative">
-                                                                <input {...register('lng', { valueAsNumber: true })} type="number" step="any" placeholder="Ej: -66.9036" className={`${inputClass} pl-4`} />
+                                                                <input {...register('lng', { valueAsNumber: true })} type="number" step="any" placeholder="Ej: -66.9036" className={`${inputClass} pl-4 ${noSpinnerClass}`} />
                                                                 <span className="absolute right-3 top-2.5 text-xs text-slate-400 font-bold">W</span>
                                                             </div>
                                                         </FormField>
@@ -361,10 +363,10 @@ export default function RegistroFeria() {
                                                     <input {...register('full_name')} type="text" placeholder="Nombre Apellido" className={inputClass} />
                                                 </FormField>
                                                 <FormField label="Cédula" error={errors.cedula?.message}>
-                                                    <input {...register('cedula')} type="text" placeholder="V-12345678" className={inputClass} />
+                                                    <input {...register('cedula')} type="text" inputMode="numeric" pattern="[0-9]*" onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, ''); }} placeholder="12345678" className={inputClass} />
                                                 </FormField>
                                                 <FormField label="Teléfono" error={errors.phone?.message}>
-                                                    <input {...register('phone')} type="text" placeholder="0412-1234567" className={inputClass} />
+                                                    <input {...register('phone')} type="text" inputMode="numeric" pattern="[0-9]*" onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, ''); }} placeholder="04121234567" className={inputClass} />
                                                 </FormField>
                                                 <FormField label="Circuito Comunal" error={errors.circuit?.message}>
                                                     <input {...register('circuit')} type="text" placeholder="Nombre del Circuito" className={inputClass} />
@@ -416,13 +418,13 @@ export default function RegistroFeria() {
                                                         </select>
                                                     </FormField>
                                                     <FormField label="Cant. de CLAP" error={errors.cantidadClap?.message}>
-                                                        <input {...register('cantidadClap', { valueAsNumber: true })} type="number" min={0} className={inputClass} />
+                                                        <input {...register('cantidadClap', { valueAsNumber: true })} type="number" min={0} className={`${inputClass} ${noSpinnerClass}`} />
                                                     </FormField>
                                                     <FormField label="Cant. de Familias" error={errors.cantidadFamilias?.message}>
-                                                        <input {...register('cantidadFamilias', { valueAsNumber: true })} type="number" min={0} className={inputClass} />
+                                                        <input {...register('cantidadFamilias', { valueAsNumber: true })} type="number" min={0} className={`${inputClass} ${noSpinnerClass}`} />
                                                     </FormField>
                                                     <FormField label="Cant. de Combos" error={errors.cantidadCombos?.message}>
-                                                        <input {...register('cantidadCombos', { valueAsNumber: true })} type="number" min={0} className={inputClass} />
+                                                        <input {...register('cantidadCombos', { valueAsNumber: true })} type="number" min={0} className={`${inputClass} ${noSpinnerClass}`} />
                                                     </FormField>
                                                 </div>
                                             </div>
@@ -471,7 +473,7 @@ export default function RegistroFeria() {
                                                                                 min="0"
                                                                                 placeholder="0.00"
                                                                                 {...register(`rubros.${index}.toneladas` as const, { valueAsNumber: true })}
-                                                                                className="w-full pl-3 pr-8 py-2 text-sm font-bold rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-blue-200 dark:border-blue-700/50 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 text-slate-900 dark:text-white"
+                                                                                className={`w-full pl-3 pr-8 py-2 text-sm font-bold rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-blue-200 dark:border-blue-700/50 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 text-slate-900 dark:text-white ${noSpinnerClass}`}
                                                                             />
                                                                             <span className="absolute right-2 top-2 text-[10px] font-bold text-slate-400 uppercase">T</span>
                                                                         </div>

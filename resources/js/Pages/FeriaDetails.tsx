@@ -142,8 +142,7 @@ export default function FeriaDetails({ feriaId }: FeriaDetailsProps) {
                                             </div>
                                             <div>
                                                 <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Duración</p>
-                                                <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{format(parseISO(feria.fechaInicio), "d 'de' MMM, yyyy", { locale: es })} al</p>
-                                                <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{format(parseISO(feria.fechaFin), "d 'de' MMM, yyyy", { locale: es })}</p>
+                                                <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{format(parseISO(feria.fechaInicio), "d 'de' MMM, yyyy", { locale: es })}</p>
                                             </div>
                                         </div>
                                         <div className="flex items-start gap-4">

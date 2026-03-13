@@ -96,17 +96,16 @@ export const useFeriasStore = create<FeriasStore>()(
                     // Filter by date range
                     if (filters.fechaDesde && filters.fechaHasta) {
                         const feriaStart = parseISO(feria.fechaInicio);
-                        const feriaEnd = parseISO(feria.fechaFin);
                         const rangeStart = startOfDay(parseISO(filters.fechaDesde));
                         const rangeEnd = endOfDay(parseISO(filters.fechaHasta));
 
                         // Feria overlaps with the selected date range
                         const overlaps =
-                            feriaStart <= rangeEnd && feriaEnd >= rangeStart;
+                            feriaStart >= rangeStart && feriaStart <= rangeEnd;
                         if (!overlaps) return false;
                     } else if (filters.fechaDesde) {
                         const rangeStart = startOfDay(parseISO(filters.fechaDesde));
-                        if (parseISO(feria.fechaFin) < rangeStart) return false;
+                        if (parseISO(feria.fechaInicio) < rangeStart) return false;
                     } else if (filters.fechaHasta) {
                         const rangeEnd = endOfDay(parseISO(filters.fechaHasta));
                         if (parseISO(feria.fechaInicio) > rangeEnd) return false;

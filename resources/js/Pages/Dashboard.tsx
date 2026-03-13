@@ -62,20 +62,11 @@ export default function Dashboard() {
 
             // Filter by date range
             if (filters.fechaDesde && filters.fechaHasta) {
-                const feriaStart = parseISO(feria.fechaInicio);
-                const feriaEnd = parseISO(feria.fechaFin);
-                // Simple string comparison works for YYYY-MM-DD
-                const rangeStartStr = filters.fechaDesde;
-                const rangeEndStr = filters.fechaHasta;
-
-                // Compare just the date parts 
                 const feriaStartStr = feria.fechaInicio.substring(0, 10);
-                const feriaEndStr = feria.fechaFin.substring(0, 10);
-
-                const overlaps = feriaStartStr <= rangeEndStr && feriaEndStr >= rangeStartStr;
+                const overlaps = feriaStartStr >= filters.fechaDesde && feriaStartStr <= filters.fechaHasta;
                 if (!overlaps) return false;
             } else if (filters.fechaDesde) {
-                if (feria.fechaFin.substring(0, 10) < filters.fechaDesde) return false;
+                if (feria.fechaInicio.substring(0, 10) < filters.fechaDesde) return false;
             } else if (filters.fechaHasta) {
                 if (feria.fechaInicio.substring(0, 10) > filters.fechaHasta) return false;
             }

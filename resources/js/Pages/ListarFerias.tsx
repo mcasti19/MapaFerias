@@ -3,7 +3,7 @@ import { Head, Link } from '@inertiajs/react';
 import Sidebar from '@/Layouts/Sidebar';
 import MobileNavbar from '@/Layouts/MobileNavbar';
 import { Search, Filter, Calendar, MapPin, Tag, Inbox, Truck } from 'lucide-react';
-import { format, isAfter, isBefore, parseISO } from 'date-fns';
+import { format, isAfter, isBefore, parseISO, startOfDay, endOfDay } from 'date-fns';
 import { es } from 'date-fns/locale';
 import { useFeriasStore } from '@/store/feriasStore';
 
@@ -12,15 +12,13 @@ export default function ListarFerias() {
   const [ searchTerm, setSearchTerm ] = useState('');
   const [ estadoFilter, setEstadoFilter ] = useState('Todos');
 
-  // Lógica de Estatus basada en tus fechas ISO
-  const getStatusInfo = (inicio: string, fin: string) => {
+  const getStatusInfo = (inicio: string) => {
     const hoy = new Date();
     const start = parseISO(inicio);
-    const end = parseISO(fin);
 
-    if (isBefore(hoy, start)) {
+    if (isBefore(hoy, startOfDay(start))) {
       return { label: 'Programada', styles: 'bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-400' };
-    } else if (isAfter(hoy, end)) {
+    } else if (isAfter(hoy, endOfDay(start))) {
       return { label: 'Finalizada', styles: 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300' };
     } else {
       return { label: 'En curso', styles: 'bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-400' };
@@ -120,7 +118,7 @@ export default function ListarFerias() {
                   <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50">
                     {feriasFiltradas.length > 0 ? (
                       feriasFiltradas.map((feria) => {
-                        const status = getStatusInfo(feria.fechaInicio, feria.fechaFin);
+                        const status = getStatusInfo(feria.fechaInicio);
                         return (
                           <tr key={feria.id_feria} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors group">
                             <td className="px-6 py-5 whitespace-nowrap">
@@ -143,7 +141,7 @@ export default function ListarFerias() {
                               <div className="flex flex-col gap-1">
                                 <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
                                   <Calendar className="w-3.5 h-3.5" />
-                                  <span>{format(parseISO(feria.fechaInicio), "d 'de' MMM", { locale: es })} - {format(parseISO(feria.fechaFin), "d 'de' MMM", { locale: es })}</span>
+                                  <span>{format(parseISO(feria.fechaInicio), "d 'de' MMM", { locale: es })}</span>
                                 </div>
                                 <div className="w-24 h-1 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
                                   <div

@@ -89,7 +89,7 @@ const FeriaPopupContent = ({ feria }: { feria: Feria }) => {
       <div className="bg-slate-50 dark:bg-slate-900/50 rounded-lg p-3 border border-slate-200 dark:border-slate-800 space-y-2">
         <div className="flex items-center gap-2 text-slate-700 dark:text-slate-200 text-xs font-medium">
           <Calendar size={14} className="text-blue-500" />
-          <span>{formatDate(feria.fechaInicio)} — {formatDate(feria.fechaFin)}</span>
+          <span>{formatDate(feria.fechaInicio)}</span>
         </div>
         <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-[11px]">
           <Hash size={14} className="opacity-50" />
@@ -213,7 +213,7 @@ export default function FeriaMarker({ feria }: FeriaMarkerProps) {
 //       <div style="background:${colors.innerBg}; border-radius:12px; padding:12px; border:1px solid ${colors.border}; display:flex; flex-direction:column; gap:8px;">
 //         <div style="display:flex; align-items:center; gap:8px; color:${colors.title}; font-size:13px; font-weight:500;">
 //           <span style="font-size:14px;">📅</span>
-//           <span>${formatDate(feria.fechaInicio)} — ${formatDate(feria.fechaFin)}</span>
+//           <span>${formatDate(feria.fechaInicio)}</span>
 //         </div>
 //         <div style="display:flex; align-items:center; gap:8px; color:${colors.subtext}; font-size:12px;">
 //           <span style="font-size:14px;">�️</span>

@@ -128,7 +128,7 @@ export default function FeriaMarkerLayer() {
           <div style="background:${colors.innerBg}; border-radius:12px; padding:12px; border:1px solid ${colors.border}; display:flex; flex-direction:column; gap:8px;">
             <div style="display:flex; align-items:center; gap:8px; color:${colors.title}; font-size:13px; font-weight:500;">
               <span style="font-size:14px;">📅</span>
-              <span>${formatDate(feria.fechaInicio)} — ${formatDate(feria.fechaFin)}</span>
+              <span>${formatDate(feria.fechaInicio)}</span>
             </div>
             <div style="display:flex; align-items:center; gap:8px; color:${colors.subtext}; font-size:12px;">
               <span style="font-size:14px;">🗺️</span>
